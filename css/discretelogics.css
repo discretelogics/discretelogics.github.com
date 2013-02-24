@@ -1,5 +1,5 @@
 ﻿body {
-  background-color: #f3f2f1;
+  background-color: #f5f3ee;
   overflow-y: scroll;
 }
 .logo,
@@ -427,4 +427,7 @@ section {
   line-height: 1.1em;
   padding: 20px 50px 10px 10px;
   background-color: white;
+}
+.carousel-control {
+  top: 48%;
 }
