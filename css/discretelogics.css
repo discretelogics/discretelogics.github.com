@@ -1,5 +1,5 @@
 ﻿body {
-  background-color: #fdfbf9;
+  background-color: #f3f2f1;
   overflow-y: scroll;
 }
 .logo,
@@ -124,7 +124,7 @@ form h4 {
   margin-bottom: 0.3em;
 }
 .cartcontainer {
-  background-color: #f2ece4;
+  background-color: #fff;
 }
 .fields {
   padding: 1em;
