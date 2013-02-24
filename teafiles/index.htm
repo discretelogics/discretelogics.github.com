@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discrete Logics : </title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/responsive.css" rel="stylesheet">
+    <link href="/css/discretelogics.css" rel="stylesheet">
+    <link href="/css/bootstrap-lightbox.css" rel="stylesheet">
+    
+    <link href="/css/code.css" rel="stylesheet">
+
+
+    
+</head>
+<body>
+
+<header class="container">
+    <a class="logo" href="/">DISCRETELOGICS</a>
+    <div class="container-fluid menu">
+        <div class="row-fluid">
+            <div class="navbar offset3">
+                <ul class="nav">
+                    <li     class="active"
+><a href="/">Products</a></li>
+                    <li ><a href="/shop">Shop</a></li>
+                    <li ><a href="/resources">Resources</a></li>
+                    <li ><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="navbar offset4 submenu">
+                    <ul class="nav">
+                        <li  ><a href="/">TeaTime</a></li>
+                        <li     class="active"
+ ><a href="/teafiles">TeaFiles</a></li>
+                        <li  ><a href="/teashell">TeaShell</a></li>
+                        <li  ><a href="/teahouse">TeaHouse</a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+</header>
+
+<div class="container">
+    <div class="row">
+            <div class="span9 article">                
+                
+<br />
+<br />
+<br />
+<h1>TeaFiles</h1>
+<h4>400 Million Values Per Second</h4>
+<div class="tags">
+    <span class="tag"><i class="icon-tag"></i>&nbsp;time series persistence</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;high performance</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;C++</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;C#</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;Python</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;Open Source</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;No-SQL</span>
+
+    <span class="tag"><i class="icon-tag"></i>&nbsp;Free</span>
+
+</div>
+
+<div class="row">
+    <div class="span9">
+            <h2 id="overview" >The bare speed of binary files. With sugar.</h2>
+
+        <ul class="synopsis">                        
+            <li>TeaFile is a <b>file format</b></li>
+            <li>to store <b>time series</b></li>
+            <li>in binary <b>flat files</b>.</li>
+            <li>An optional <b>header</b> holds a <b>description</b> of file contents</li>
+            <li>including a description of the <b>item type layout</b> (schema).</li>
+            <li>The file format is designed to be simple so that APIs are created easily.</li>
+            <li>DiscreteLogics publishes the format and</li>
+            <li>releases APIs for C#, C++, Python and R under the GPL</li>
+        </ul>
+
+        <p>TeaFiles provide <span class="claim">fast read/write access to time series data</span> from any software package on any platform. 
+            Time Series are considered homogeneous collections of items, ordered by their timestamp. Items are stored
+            in raw binary format, such that data can be memory mapped for fast read/write
+            access. In order to ensure correct data interpretation when data is exchanged between
+            multiple applications, TeaFiles optionally embedd a description of the data layout
+            in the file header, along with other optional description of the file's contents.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="design" >Design</h2>
+
+        <h4>Performant</h4>
+        <p>The most performant way to <i>write</i> time series into a persistent media are flat files. 
+            The most efficient way to <i>read</i> time series data from a persistent media is to memory map a file, possibly enhanced by a read ahead mechanism.</p>
+        <h4>Simple & Solid</h4>
+        <p>Simple time series persistence means to us easy to use APIs, simple file layout, well understood technologies involved. It happens that the file system
+            is just that: simple and rock solid on every operating system.</p>
+        <h4>Self contained</h4>
+        <p>The drawback of binary files is their opaqueness: Reading them requires knowledge about the structure of their content. TeaFiles overcome this by packing 
+            meta data into the file that describes the items in the file making it <b>self contained</b> and <b>self describing</b>. Every TeaFile can therefore be opened
+            without any further knowledge about its content and structure.</p>
+        <h4>Versatile</h4>
+        <p>Analysing time series data often involves more than a single software or tool, like R, Octave/Matlab,
+            custom C++, Java or C# programs. TeaFiles provide a simple, very loosely coupled way to make these
+            programs work together - the file is the interface. Number and time formats have been carefully examined to provide such universal accessibility.</p>
+        <h4>Open for all programs and operating systems</h4>
+        <p>To allow data exchange between arbitrary programs, the file format was designed to be as simple as possible, 
+            so that writing access libraries (APIs) for new targets remains as simple as possible.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="fileformatspec" >File Format Spec</h2>
+
+        <p>The file format specification is freely available at <a href="/resources/teafilespec">www.discretelogics.com/resources/teafilespec</a>.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9">
+            <h2 id="teafileapis" >TeaFile APIs</h2>
+
+        <p>TeaFiles can be read and written using raw file I/O methods available in every programming environment. APIs encapsulate access to TeaFiles more conveniently. 
+            We provide several open source APIs introduced below, all licensed under the <a href="http://www.gnu.org/copyleft/gpl.html">GPL</a>
+        . 
+        Find more detailed information about them in the corresponding repositories.
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="teafilesnet" >TeaFiles.Net</h2>
+
+        <p><b>TeaFiles.Net</b> is a .Net assembly, published at Codeplex: <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
+.</p>
+
+        <h4>Create a TeaFile and write values</h4>
+        <div class="highlight"><pre><span class="c1">// the time series item type</span>
+<span class="k">struct</span> <span class="nc">Tick</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">DateTime</span> <span class="n">Time</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">double</span> <span class="n">Price</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">int</span> <span class="n">Volume</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// create file and write some values</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">tf</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">new</span> <span class="n">Tick</span> <span class="p">{</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">Time</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">,</span> <span class="n">Volume</span> <span class="p">=</span> <span class="m">700</span> <span class="p">});</span>
+    <span class="n">tf</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">new</span> <span class="n">Tick</span> <span class="p">{</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">15</span><span class="p">,</span> <span class="n">Time</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">AddHours</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="n">Volume</span> <span class="p">=</span> <span class="m">1700</span> <span class="p">});</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+
+        <p>The call to TeaFile&lt;Tick&gt;.Create() does the whole work provided by the C#
+            API for TeaFiles: It analyzes the Tick struct to find fields names, types and field
+            offsets and writes these values into the file header. We just wrote our first TeaFile, so lets read it.</p>
+
+        <h4>Read the file - typed</h4>
+
+        <div class="highlight"><pre><span class="c1">// read typed</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">Tick</span> <span class="k">value</span> <span class="p">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+
+        <p>Notably the type expect to be stored in the file was provided up front calling TeaFile&lt;Tick&gt;.OpenRead().
+            This is perfectly fine if we have this knowledge. But what if not? "Untyped reading" allows to open a file 
+            without knowing the type inside:</p>
+
+        <h4>Read the file - untyped</h4>
+        <div class="highlight"><pre><span class="c1">// read untyped - we know nothing about the type of item in the file</span>
+<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="p">{</span>                
+    <span class="k">foreach</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span> <span class="k">in</span> <span class="n">tf</span><span class="p">.</span><span class="n">Items</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">Description</span><span class="p">.</span><span class="n">ItemDescription</span><span class="p">.</span><span class="n">GetNameValueString</span><span class="p">(</span><span class="n">item</span><span class="p">));</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+        <pre>
+output:
+Price=5 Time=20.8.2011 23:50
+Price=15 Time=21.8.2011 00:50
+</pre>
+
+        <p>This time the call to TeaFile.OpenRead() returns the untyped version of a TeaFile
+            that exposes a description of the item stored in the file. So TeaFile is the anonymous sister 
+            of TeaFile&lt;T&gt;, they are both unrelated classes from C# point of view, but logically 
+            related - they both serve as interface to the contents of a TeaFile, untyped or typed.</p>
+
+        <p>The item values are returned as collection of <i>Item</i> classes that hold a collection of values, one for each
+            field in the item struct. The ItemDescription instance in turn offers the GetNameValueString
+            method that can transform an item into a pretty printed string of that item. Such
+            anonymous file reading can be used in 2 ways: Either you really access the data
+            inside by iterating the collection of <i>Item</i> values, which is much slower than
+            accssing the file data the typed way. Or you simply open the file, check its ItemDescription
+            which gives all information about the items stored and use this information to create
+            such struct in C# then using it to instantiate a typed TeaFile&lt;T&gt; instance.</p>
+
+        <h4>Description</h4>
+        <p>Finally, lets see the description that was written into the file:</p>
+
+        <div class="highlight"><pre><span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">Description</span><span class="p">);</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;ItemAreaStart={0}&quot;</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">ItemAreaStart</span><span class="p">);</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;ItemAreaEnd={0}&quot;</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">ItemAreaEnd</span><span class="p">);</span>
+    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;ItemAreaSize={0}&quot;</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">ItemAreaSize</span><span class="p">);</span>
+    <span class="k">foreach</span> <span class="p">(</span><span class="n">Tick</span> <span class="n">tick</span> <span class="k">in</span> <span class="n">tf</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">Take</span><span class="p">(</span><span class="m">5</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">tick</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+        <pre>
+output:
+... TeaFile Description ...
+#Item
+Tick 24 3 fields:
+Time, 0, Int64
+Price, 8, Double
+Volume, 16, Int32
+#Content
+empty
+#NameValues
+empty
+... TeaFile Description End ...
+
+ItemAreaStart=144
+ItemAreaEnd=312
+ItemAreaSize=168
+Time=13.01.2012 21:00:57 Price=5 Volume=700
+Time=14.01.2012 21:00:57 Price=15 Volume=1700
+Time=15.01.2012 21:00:57 Price=25 Volume=3000
+Time=16.01.2012 21:00:57 Price=35 Volume=4000
+Time=17.01.2012 21:00:57 Price=505 Volume=5000
+</pre>
+
+        
+
+        <h4>Installation</h4>
+        <p>Using <b>NuGet</b> Package Manager: Add the package "TeaFiles.Net" to your project.<br />
+            Alternatively, download the assembly from <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
+ and reference it from your project.</p>
+
+        <h4>Source</h4>
+        <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
+
+
+        <h4>Documentation</h4>
+        <p><a href="http://discretelogics.com/doc/teafiles.net/">discretelogics.com/doc/teafiles.net</a></p>
+
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="teafilesc" >TeaFiles C++</h2>
+        
+        <p>TeaFiles C++ is a C++ library that compiles under Windows and Linux, using MSVC or g++.</p>
+
+        <div class="highlight"><pre><span class="k">struct</span> <span class="n">Tick</span>
+<span class="p">{</span>    
+  <span class="n">teatime</span><span class="o">::</span><span class="n">Time</span> <span class="n">Time</span><span class="p">;</span>
+  <span class="kt">double</span> <span class="n">Price</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">Volume</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="c1">// create file and write ticks</span>
+<span class="p">{</span>
+    <span class="k">auto</span> <span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">&lt;</span><span class="n">Tick</span><span class="o">&gt;::</span><span class="n">Create</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+    <span class="n">tf</span><span class="o">-&gt;</span><span class="n">Write</span><span class="p">(</span><span class="n">GetRandomTick</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="c1">// read the file memory mapped</span>
+<span class="k">auto</span> <span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">&lt;</span><span class="n">Tick</span><span class="o">&gt;::</span><span class="n">OpenRead</span><span class="p">(</span><span class="n">filename</span><span class="p">);</span>
+<span class="k">auto</span> <span class="n">items</span> <span class="o">=</span> <span class="n">tf</span><span class="o">-&gt;</span><span class="n">OpenReadableMapping</span><span class="p">();</span>
+<span class="k">for</span><span class="p">(</span><span class="n">Tick</span> <span class="o">*</span><span class="n">t</span> <span class="o">=</span> <span class="n">items</span><span class="o">-&gt;</span><span class="n">begin</span><span class="p">();</span> <span class="n">t</span> <span class="o">!=</span> <span class="n">items</span><span class="o">-&gt;</span><span class="n">end</span><span class="p">();</span> <span class="o">++</span><span class="n">t</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">t</span><span class="o">-&gt;</span><span class="n">Price</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+
+        <p>Looks quite similar as the .Net version. The read code now uses memory mapping, which is considerably faster 
+than normal file reading. There is a back difference however that is not visible yet here: The file holds 
+a rudimentary description of the item only, in particular the layout of the item is not included in the header 
+of the TeaFile. This makes it impossible to read this file untyped or to even inspect its content. In other words, 
+the file we wrote is not really self describing (at least a little bit of information is included: the name of the 
+item type "Tick" and its size). We will improve this:</p>
+
+        <h4>Reflection in C++</h4>
+        <p>In order to make our file self describing, we give our API code more knowledge about the type. Since C++ still lacks 
+serious reflection capabilities, we help out a bit as follows:</p>
+
+        <div class="highlight"><pre><span class="k">template</span><span class="o">&lt;&gt;</span>
+<span class="k">struct</span> <span class="n">Description</span><span class="o">&lt;</span><span class="n">Tick</span><span class="o">&gt;</span> <span class="o">:</span> <span class="k">public</span> <span class="n">DefaultDescription</span><span class="o">&lt;</span><span class="n">Tick</span><span class="o">&gt;</span>
+<span class="p">{</span>
+  <span class="n">Description</span><span class="p">()</span>
+  <span class="p">{</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">AddField</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Tick</span><span class="o">::</span><span class="n">Time</span><span class="p">,</span> <span class="s">&quot;Time&quot;</span><span class="p">);</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">AddField</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Tick</span><span class="o">::</span><span class="n">Price</span><span class="p">,</span> <span class="s">&quot;Price&quot;</span><span class="p">);</span>
+    <span class="k">this</span><span class="o">-&gt;</span><span class="n">AddField</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Tick</span><span class="o">::</span><span class="n">Volume</span><span class="p">,</span> <span class="s">&quot;Volume&quot;</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+
+        <p>This allows the C++ API to analyze the current struct and do the same checks as
+the .Net API when reading a TeaFile. (This Description class could easily be created
+by tools or even the C Preprocessor.)</p>
+
+        <h4>Source</h4>
+        <p><a href="http://github.com/discretelogics/TeaFiles" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles</a>
+</p>
+
+        <h4>Documentation</h4>
+        <p>Not available yet. The source code is well readable and examples are included in the source.</p>
+
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="teafilespython" >TeaFiles Python</h2>
+
+
+        <p>The Python API provides access to TeaFiles from a scripting environment that is available in quite every platform.</p>
+
+        <pre>
+>>> tf = TeaFile.create(""acme.tea"", ""Time Price Volume"", ""qdq"", ""ACME at NYSE"",
+    {""decimals"": 2, ""url"": ""www.acme.com"" })
+>>> tf.write(DateTime(2011, 3, 4,  9, 0), 45.11, 4500)
+>>> tf.write(DateTime(2011, 3, 4, 10, 0), 46.33, 1100)
+>>> tf.close()
+
+>>> tf = TeaFile.openread(""acme.tea"")
+>>> tf.read()
+    TPV(Time=2011-03-04 09:00:00:000, Price=45.11, Volume=4500)
+>>> tf.read()
+    TPV(Time=2011-03-04 10:00:00:000, Price=46.33, Volume=1100)
+>>> tf.read()
+>>> tf.close()
+</pre>
+
+        <p>Pretty useful is also the simple examiniation of file contents via the getsnapshot function:</p>
+
+        <pre>
+<b>>>> TeaFile.printsnapshot('acme.tea')</b>
+TeaFile('acme.tea') 53 items
+
+ItemDescription
+Name:       TPV
+Size:       24
+Fields:
+[Time         Type:  Int64   Offset: 0   IsTime:1   IsEventTime:1,
+ Price        Type: Double   Offset: 8   IsTime:0   IsEventTime:0,
+ Volume       Type:  Int64   Offset:16   IsTime:0   IsEventTime:0]
+
+ContentDescription
+acme prices
+
+NameValues
+{u'decimals': 2, u'exchange': u'nyse'}
+
+TimeScale
+Epoch:           719162
+Ticks per Day: 86400000
+Wellknown Scale:   Java
+
+Items
+TPV(Time=2000-01-01 00:00:00:000, Price=37.579128977028674, Volume=8047)
+TPV(Time=2000-01-08 00:00:00:000, Price=10.618929589509186, Volume=232)
+TPV(Time=2000-01-15 00:00:00:000, Price=73.08506970525428, Volume=1711)
+TPV(Time=2000-01-22 00:00:00:000, Price=73.7749103916519, Volume=4397)
+TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376)
+</pre>
+        <h4>Installation</h4>
+        <p><b>$ pip install teafiles</b>
+            <br />
+            The package is at <a href="http://pypi.python.org/pypi/teafiles">pypi.python.org/pypi/teafiles</a></p>
+
+        <h4>Source</h4>
+        <p><a href="https://bitbucket.org/discretelogics/teafiles.py">bitbucket.org/discretelogics/teafiles.py</a></p>
+
+        <h4>Documentation</h4>
+        <p>Full documentation is at <a href="http://discretelogics.com/doc/teafiles.py/">discretelogics.com/doc/teafiles.py</a></p>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="span9 ">
+            <h2 id="license" >License</h2>
+
+        <p>The TeaFile APIs available at these code repositories are licensed under the GNU General Public License v3.
+                In addition to the terms of this license, use and distribution of this code shall be attributed to discretelogics, referencing "discretelogics.com".</p>
+
+        <p>Details about GPLv3: <a href="http://www.gnu.org/copyleft/gpl.html" target=&#39;_blank&#39; >www.gnu.org/copyleft/gpl.html</a>
+.</p>
+        <p>APIs governed by this license:</p>
+        <ul>
+            <li><a href="https://bitbucket.org/discretelogics/teafiles.py" target=&#39;_blank&#39; >bitbucket.org/discretelogics/teafiles.py</a>
+</li>
+            <li><a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
+</li>
+            <li><a href="http://github.com/discretelogics/TeaFiles" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles</a>
+</li>
+        </ul>
+        <br />
+        <p>If your usage is not covered by GPLv3 please contact us to negotiate license conditions.</p>
+
+    </div>
+</div>
+
+
+            </div>
+            <aside class="span3">
+                <br />
+                <br />
+                <br />
+                
+                <ul class="nav nav-list">
+                    <li class="active"><a href="#">Top</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#design">Design</a></li>
+                        <li><a href="#fileformatspec">File Format Spec</a></li>
+                        <li><a href="#teafileapis">TeaFile APIs</a></li>
+                        <li><a href="#teafilesnet">C#</a></li>
+                        <li><a href="#teafilesc">C++</a></li>
+                        <li><a href="#teafilespython">Python</a></li>
+                        <li><a href="#license">License</a></li>
+                    
+                </ul>
+            </aside>
+    </div>
+</div>
+<div class="footer">
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span12">
+                <i class="icon-envelope"></i><a href="mailto:office@discretelogics.com">office@discretelogics.com</a>
+                <a class="follow twitter" href="http://twitter.com/discretelogics" target="extern">Follow on Twitter</a>
+                <a class="follow github" href="http://github.com/discretelogics" target="extern">Follow on Github </a>
+            </div>
+            <div class="span6"></div>
+        </div>
+    </div>
+</div>
+<script src="/js/jquery-1.9.0.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/bootstrap-lightbox.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(document.body).scrollspy({ target: "aside" });
+            $("aside > ul").affix();
+        });
+    </script>
+</body>
+</html>

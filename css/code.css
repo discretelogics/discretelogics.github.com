@@ -1,0 +1,52 @@
+﻿/* pygment theme */
+.cp
+{
+    color: #666633;
+}
+.rem
+{
+    color: #3F5E00;
+}
+.k, .kt
+{
+    color: #002851;
+}
+.n
+{
+    color: navy;
+}
+.nc
+{
+    color: Navy;
+    font-weight: bold;
+}
+.s
+{
+    color: #660033;
+}
+.cscode
+{
+}
+.c1
+{
+    color: #666633;
+}
+pre
+{    
+    line-height: 1.3em;
+    padding: 0.25em 0.5em;
+    font-family: Consolas, 'Courier New' , Courier, 'Monospace !important';
+    font-size: 0.9em;
+    _border: 1px solid #CDCDB4;
+    background-color: #fff;
+    margin: 20px 0px;
+    _box-shadow: 0 0 3px #777;
+    border-left: solid 5px #A2692B;
+    padding-left: .7em;    
+}
+.error
+{
+    color: Maroon;
+    border-left: solid 4px red;
+    padding-left: 8px;
+}

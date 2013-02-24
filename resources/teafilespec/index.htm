@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Discrete Logics : TeaFile Specification 1.0</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <link href="/css/code.css" rel="stylesheet" media="screen"/>
+    <link href="/css/spec.css" rel="stylesheet" media="screen"/>
+    
+</head>
+<body>
+
+<h1>TeaFile Specification</h1>
+
+<div id="docdesc">
+<p><span><b>Version 1.0</b></span></p>
+<p><span><b>Publication</b> March 1 2012</span></p>
+<p><span><b>Last Edit</b> March 1 2012</span></p>
+<p><span><b>Copyright</b> <a style="text-decoration:none">DiscreteLogics</a> 2012.</span></p>
+<p>&nbsp;</p>
+<p><i>Permission granted for free use and distribution, conditioned upon inclusion of the above attribution and copyright notice.</i></p>
+</div>
+
+<h3>Purpose</h3>
+<p>The TeaFile format provides a very efficient and simple way to persist time series data in flat files. Items of homogeneous time series are stored in raw binary format. 
+The header holds optional descriptions of the binary layout of the items or the file content. This removes the opaqueness from the binary data stored, making TeaFiles a 
+self contained transparent storage method that also serves as the data centric interface between applications.</p>
+
+<h3>Audience</h3>
+<p>TeaFiles can easily be read using the canonical file I/O functions. APIs will provide a more convenient and safe way to access such files and will be prefered 
+most times. This document targets API writers and those accessing or analyzing TeaFiles directly. It assumes basic background in data representations and programming.</p>
+
+<h3>Goals and Forces</h3>
+<ul class="arrows">
+<li>The origin and focus of TeaFiles is best achievable <b>performance</b> of time series data access.</li>
+<li>Making binary formatted time series file <b>self contained</b> removing their opaqueness was the second goal: Someone who receives the file "x-series" by email, not 
+knowing anything about its contents, can open it and read it.</li>
+<li>Such self contained files are suitable for <b>data interchange</b> between applications, a very common and important task in time series 
+data analysis. To ease data exchange between arbitrary appplications, was the third principle that guided the file format design.</li>
+<li>Finally, the file format shall make no assumptions about <b>hardware or operating system</b> used.</li>
+</ul>
+
+<h3>Design</h3>
+<p>To achive best possible performance, time series data is stored in TeaFiles such that it <b>can be mapped directly into memory</b>. Data might also be written by traditional read/write 
+IO functions, but ensuring the possibility to memory map the data puts a stronger constraint upon the file format, as it requires 
+the data to be written in the form of the data item's binary memory footprint. The platform neutrality requirement therefore can only be achieved if the file has 
+no fixed endianness specification. On a little endian machine, a TeaFile must be in little endian format to allow memory mapping, while on a big endian it must be in big endian format.</p>
+
+<p>Platform compatibility (operating sysytem, cpu type or application) is approached by <b>restriction to ubiquitious number formats</b>, in particular the IEEE 754 floating 
+point numbers. Other platform specific data types are still allowed. If used, they will affect portability.</p>
+
+<p>To ease data exchange via TeaFiles, simple access to their data via primitive IO functions is provided. 
+Raw access requires not more than reading of the first 4 mandatory values in the file. 
+A useful API is therefore written within minutes and can then be <b>incrementally extended</b> to read also the optional sections inside the file
+that describe the item layout and content in the file.</p>
+
+<h3>Items</h3>
+<p>Items must be primitive types like integers or doubles or structures of such primitive types. Pointers to memory or strings can not be stored. 
+While the design targeted time series storage, in which case each item has one value that holds a time value, 
+the file format is also useful to generally store homogeneous collections of items (arrays) without time stamp. </p>
+
+<h3>File Format Progression</h3>
+<p>Thi file format specification is expected to change rarely. Upcoming needs for changes are supposed to be handled by a adding new sections or possibly accompanied by dropping others. 
+If for instance the Item Layout Section should be changed, a new section (Item-Layout-2) with a different id would be proposed that has the new format.</p>
+
+<div class="api">
+<h3>API implementation annotations</h3>
+<p>Appart from the pure file format description, this document occasionally holds annotations about the implementation of APIs.</p>
+</div>
+
+
+
+<br />
+<h3>Sample File</h3>
+
+<p>A sample TeaFile holding Time/Price/Volume data, a content description, name value description and a description of the time format used might have the following binary layout:</p>
+<div class="highlight"><pre><span class="k">struct</span> <span class="nc">Tick</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="n">Time</span> <span class="n">Time</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">double</span> <span class="n">Price</span><span class="p">;</span>
+    <span class="k">public</span> <span class="kt">long</span> <span class="n">Volume</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="s">&quot;ACME prices&quot;</span><span class="p">,</span> <span class="n">NameValueCollection</span><span class="p">.</span><span class="n">From</span><span class="p">(</span><span class="s">&quot;decimals&quot;</span><span class="p">,</span> <span class="m">2</span><span class="p">));</span>
+</pre></div>
+
+<p>The C# code above creates this binary file:</p>
+<code>
+
+</code>
+<table class="sample">
+<tr><td>0</td><td>Magic Value</td><td>0x0d0e0a0402080500</td><td >byte order, file type identifier. <a href="#magic">spec</a></td></tr>
+<tr><td>8</td><td>ItemStart</td><td>200</td><td >binary data area starts at absolute posiition 200. <a href="#itemstart">spec</a></td></tr>
+<tr><td>16</td><td>Itemend</td><td>0</td><td >binary data area ends at the phsyical end of file. <a href="#itemend">spec</a></td></tr>
+<tr class="cut"><td>24</td><td>Section Count</td><td>4</td><td >header holds 4 sections. <a href="#sectioncount">spec</a></td></tr>
+
+<tr><td>32</td><td>Section Id</td> <td>10</td>
+<td><span class="section">ItemSection</span> describes the item stored in the file. <a href="#sectionid">spec</a></td></tr>
+<tr><td>36</td><td>Next Section Offset</td><td>67</td><td >next section begins at 36 + 4 + 67 = 107 <a href="#nso">spec</a></td></tr>
+<tr><td>40</td><td>ItemSize</td><td>24</td><td >items have a size of 24 byte <a href="#itemsize">spec</a></td></tr>
+<tr><td></td><td>Item Type Name 'Tick'</td><td></td><td >the name of the item is "Tick" <a href="#itemname">spec</a></td></tr>
+<tr><td>44</td><td>bytes length<td>4</td><td>length if "Tick"</td></tr>
+<tr><td>48</td><td>bytes</td><td>84,105,99,107</td><td >UTF8 bytes of "Tick"</td></tr>
+<tr class="cutdot"><td>52</td><td>Field Count</td><td>3</td><td >the item holds 3 fields</td></tr>
+<tr><td>56</td><td>Field Type </td><td>4</td><td >first field is of field type 4 (long). <a href="#fieldtype">spec</a></td></tr>
+<tr><td>60</td><td>Field Offset</td><td>0</td><td >it has an offset of 0 inside the item. <a href="#fieldoffset">spec</a></td></tr>
+<tr><td></td><td>Field Name 'Time'</td><td></td><td>its name is "Time". <a href="#fieldname">spec</a></td></tr>
+<tr><td>64</td><td>bytes length</td><td>4</td><td>length of "Time"</td></tr>
+<tr class="cutdot"><td>68</td><td>bytes </td><td>84,105,109,101</td><td>UTF8 bytes of "Time"</td></tr>
+<tr><td>72</td><td>Field Type</td><td>10</td><td colspan="5">second field is of field type 10 (double)</td></tr>
+<tr><td>76</td><td>Field Offset</td><td>8</td><td>byte offset = 8</td></tr>
+<tr><td></td><td>Field Name 'Price'</td><td></td><td>name = "price"</td></tr>
+<tr><td>80</td><td>bytes length</td><td>5</td></tr>
+<tr class="cutdot"><td>84</td><td>bytes</td><td>80,114,105,99,101</td><td></td></tr>
+<tr><td>89</td><td>Field Type</td><td>4</td><td colspan="5">third field is of type 4 (long)</td></tr>
+<tr><td>93</td><td>Field Offset </td><td>16</td><td>offset 16</td></tr>
+<tr><td></td><td>Field Name 'Volume'</td><td></td><td>name = "Volume"</td></tr>
+<tr><td>97</td><td>bytes length</td><td>6</td></tr>
+<tr class="cut"><td>101</td><td>bytes</td><td>86,111,108,117,109,101</td><td></td></tr>
+
+<tr><td>107</td><td>Section Id </td><td>128</td><td><span class="section">Content Description Section</span> <a href="#cds">spec</a></td></tr>
+<tr><td>111</td><td>Next Section Offset</td><td>15</td><td>next section begins at 111 + 4 + 15 = 130</td></tr>
+<tr><td>115</td><td>bytes length </td><td>11</td><td>length of "ACME prices"</td></tr>
+<tr class="cut"><td>119</td><td>bytes</td><td>65,67,77,69,32,112,114,105,99,101,115</td><td>UTF8 bytes of "ACME prices"</td></tr>
+
+<tr><td>130</td><td>Section Id</td><td>129</td><td><span class="section">NameValue Section</span> <a href="nvs">spec</a></td></tr>
+<tr><td>134</td><td>Next Section Offset</td><td>24</td><td>next section begins at 134 + 4 + 24 = 162</td></tr>
+<tr><td>138</td><td>Name Value Count </td><td>1</td><td>1 name/value pair follows <a href="#nvc">spec</a></td></tr>
+<tr><td>142</td><td>bytes length</td><td>8</td><td>length of "decimals"</td></tr>
+<tr><td>146</td><td>bytes</td><td>100,101,99,105,109,97,108,115</td><td>UTF8 bytes of "decimals"</td></tr>
+<tr><td>154</td><td>NameValue.Kind</td><td>1</td><td>1 (int) <a href="#nvk">spec</a></td></tr>
+<tr class="cut"><td>158</td><td>NameValue.Value</td><td>2</td><td>value = 2</td></tr>
+
+<tr><td>162</td><td>Section Id</td><td>64</td><td><span class="section">TimeSection</span> <a href="#timesection">spec</a></td></tr>
+<tr><td>166</td><td>Next Section Offset</td><td>24</td><td>next section would be at 166 + 4 + 24 = 194. <a href="#nsolast">spec</a></td></tr>
+<tr><td>170</td><td>epoch</td><td>719162</td><td>epoch is 719162. time is measured from 1.1.1970.<a href="#epoch">spec</a></td></tr>
+<tr><td>178</td><td>ticks per day</td><td>86400000</td><td>86400000 ticks are counted per day, so here we count milliseconds.</td></tr>
+<tr><td>186</td><td>time fields count</td><td>1</td><td>the item holds 1 time field.</td></tr>
+<tr><td>190</td><td>time field offset</td><td>0</td><td>The first (and last) time field is the field at offset 0. <a href="#tsfo">spec</a></td></tr>
+<tr class="cut"><td>194</td><td>Padding Bytes</td><td>0,0,0,0,0,0</td><td>this file aligns the data area at the next 8byte boundary. <a href="#datapadding">spec</a></td></tr>
+<tr><td>200</td><td colspan="2" >item area ...</td></tr>
+</table>
+
+<br />
+<h1>File Format</h1>
+
+<h3>Header + Data</h3>
+<p>TeaFiles start with a <b>header</b> followed by the <b>item area</b> holding the data in binary format.</p>
+
+<h2>Mandatory Header Fields</h2>
+
+<h3><a id="magic">Magic Value</a></h3>
+<div class="he">
+    <label>position</label><span>0</span>
+    <label>type</label><span>byte[8]</span>
+    <span>mandatory</span>
+</div>
+<h4>Magic value for byte order checking and file detections.</h4>
+
+<p>The first octet of a TeaFile 
+are alays the magic number <b>0x0d0e0a0402080500</b> which can be memorized as follows:</p>
+
+<pre class="note">
+0d  0e  0a  04  02  08  05  00
+ T   e   a for two  at   5 :00
+</pre>
+
+<p>If an application does not find this sequence at the file begin, it should raise an exception. In such case, the file might have been written by 
+a different endianness application. TeaFiles must have the endianness of the local machine so they can be mapped directly into memory. 
+If files are transfered between systems, the file might need endian conversion before it can be read correctly or mapped into memory.<p>
+
+<p>This magic number allows to
+<ul>
+<li>check if the file's endianness matches the local endianness and to</li>
+<li>detect whether a file is a TeaFile.</li>
+</ul>
+</p>
+
+<p>An API can translate different endian-formatted files on the fly for read and write operations, for memory mapping purposess the file would need to be converted.</p>
+
+<div class="api">
+<p>This specification treats these 8 bytes as a byte sequence. API writers may use an unsigned 8 byte integer type like unsigned long. It is however also safe 
+to use a signed 64bit wide integer without causing overflow, since whatever the byte order on a machine is, 
+all byte values within 0x0d0e0a0402080500 are < 0x10. Signed int 64 is actually recommended, as all other 64 bit wide numbers inside the header are unsigned, so it reduces the number of types to be read from the file.</p>
+</div>
+
+<h3><a id="itemstart">Item Area Start (ItemStart)</a></h3>
+<div class="he">
+    <label>position</label><span>8</span>
+    <label>type</label><span>int 64</span>
+    <span>mandatory</span>
+</div>
+<h4>The absolute byte offset of the item area.</h4>
+<p>Setting the file pointer to this position allows reading of the first item in the file. If the first value is placed directly after the header, this value 
+equals the size of the header. Often however, it will be larger: First, the data area should be aligned at the 8 byte boundary to avoid considerable 
+performance penalties from unaligned double or long values. Second, if the description of the file is modified at a time it contains data, 
+the header might increase in size and the change will thus require the item area to be moved. To avoid costly data moving, the file can be created with some 
+headroom behind the header.</p>
+
+<h3><a id="itemend">Item Area End (ItemEnd)</a></h3>
+<div class="he">
+    <label>position</label><span>16</span>
+    <label>type</label><span>int 64</span>
+    <span>mandatory</span>
+</div>
+<h4>The absolute byte offset of the item area end.</h4>
+<p>If this value is 0, then the end of the physical file equals the end of the item area. Otherwise it specifies the absolute byte offset of the end of the item area from the 
+begin of the file.</p>
+
+<p>Leaving this value at 0 provides simple addition of new items to the file. Besides writing new items to the end of the file, no further updates are required. To avoid fragmentation, files might initially be preallocated at a larger size. To allow this, the ItemEnd value can be set to determine the logical end of file. The value 
+of ItemEnd will always be in the range</p>
+<div class="formula">ItemStart <= ItemEnd < physical file size.</div>
+
+<div class="api">
+Usage of preallocation requires attention to fsync calls: To be safe in case of failures, items should be fsync'ed before the ItemEnd value is increased. Conversely, 
+in case of deletion, ItemEnd should be decreased on disk first before deletion.
+</div>
+
+<h3><a id="sectioncount">Sections Count</a></h3>
+<div class="he">
+    <label>position</label><span>24</span>
+    <label>type</label><span>int 64</span>
+    <span>mandatory</span>
+</div>
+<p>The TeaFile header can optionally hold an arbitrary number of sections. This is the number of such sections.</p>
+
+<div class="notes">
+<h5>Mandatory header fields and the shortest valid TeaFile</h5>
+<p>The 4 values above are the only mandatory values of a TeaFile. This means that the shortest possible TeaFile has 4 * 8 = 32 bytes. Such file will have these values:</p>
+
+<table>
+    <tr><td>0</td><td class="val">0x0d0e0a0402080500</td><td><abbr>Magic Value</abbr></td><td><i>magic number</i></td></tr>
+    <tr><td>8</td><td class="val">32</td><td><abbr>ItemStart</abbr></td><td><i>item area directly follows header</i></td></tr>
+    <tr><td>16</td><td class="val">0</td><td><abbr>ItemEnd</abbr></td><td><i>logical end of file is not used</i></td></tr>
+    <tr><td>24</td><td class="val">0</td><td><abbr>Section Count</abbr></td><td><i>no sections</i></td></tr>
+    <tr><td>32</td><td class="">file end</td><td></td><td><i>item area</i></td></tr>
+</table>
+
+<p>Theoretically there is another 32 byte long TeaFile that is also valid:</p>
+
+<table>
+    <tr><td>0</td><td class="val">0x0d0e0a0402080500</td><td><abbr>Magic Value</abbr></td><td><i>magic number</i></td></tr>
+    <tr><td>8</td><td class="val">32</td><td><abbr>ItemStart</abbr></td><td><i>item area directly follows header</i></td></tr>
+    <tr><td>16</td><td class="val highlight">32</td><td><abbr>ItemEnd</abbr></td><td class="highlight"><i>logical end of file is used</i></td></tr>
+    <tr><td>24</td><td class="val">0</td><td><abbr>Section Count</abbr></td><td><i>no sections</i></td></tr>
+    <tr><td>32</td><td class="">file end</td><td></td><td><i>item area</i></td></tr>
+</table>
+
+<p>In the latter sample, the ItemEnd value is set although no preallocation is done as the file is by definition 32 bytes long. This will hardly make good sense but 
+the file is still valid.</p>
+
+<br />
+<br />
+<h5>Computing the number of items in the file</h5>
+<p>The number of items requires knnowledge of the size of the items in the file. This size is either known up front or it is read from the Item Layout section (see below).
+Given the item size, the number of items in the file is computed by</p>
+
+<div class="formula"><b>N = (physical file size - ItemStart) / Item Size</b>    if ItemEnd == 0 or</div>
+<div class="formula"><b>N = (ItemEnd - ItemStart) / Item Size</b>          if ItemEnd != 0</div>
+
+<p>For the 32 byte long TeaFile samples above we get:<br />
+<i>N = 32 -32 / ItemSize</i>  which is 0 regardless of the item size and<br />
+<i>N = 32 -32 / ItemSize</i>  which is also 0, the only difference being that the first number 32 is now ItemEnd while it was the FileSize before.</p>
+</div>
+
+<h2>Optional Header Fields - Sections</h2>
+
+<p>TeaFiles may contain sections describing their content. Each section is optional, if it occurs it must occur only once. This document defines several sections and 
+leaves room for custom sections that allow storage of additional features. For each section (official or custom) the following fields are written:</p>
+
+<h3><a id="sectionid">Section Id</a></h3>
+<div class="he optional">
+    <label>position</label><span>32, ...</span>
+    <label>type</label><span>int 32</span>
+</div>
+<p>Each section has a unique ID. The id of the first section is always at position 32 in the file. Its value is one the of the section id values 
+specified in this document or a custom section id above 0xffff. The IDs specified in this document are:</p>
+
+<table>
+    <tr><td>0x0a</td><td>Item Section</td></tr>
+    <tr><td>0x40</td><td>Time Section</td></tr>
+    <tr><td>0x80</td><td>Content Section</td></tr>
+    <tr><td>0x81</td><td>NameValue Section</td></tr>
+</table>
+
+<h3><a id="nso">Next Section Offset</a></h3>
+<div class="he optional">
+    <label>position</label><span>36, ...</span>
+    <label>type</label><span>int 32</span>
+</div>
+<p>Sections are written into the file one after another. Users interested in specific sections only can read the Section Id, decide whether to read the section 
+and optionally skip it by reading the next section offset and adding it to the file pointer to reach the next section id.</p>
+<p>This value might equal the length of the section but might also be higher due to padding or because some headroom was reserved for the section such that 
+modifications of the section can be done without affecting other sections or the file's item area.</p>
+
+<p><a id="nsolast" />For the last section, the next section offset shall be ignored by file readers.</p>
+
+<p class="api">
+Ignoring the next section offset for the last section is easy for readers, as they read the section count before and know when the last section is read. 
+On the other hand, imposing that he last section must have a section offset of 0, which would make good sense, makes API writing considerable harder.
+</p>
+
+<h2>Item Section</h2>
+<p>The Item Section describes the layout of the items stored in the file, in case of structured items the name, type and offset of its fields. This is the most 
+important section as it allows reading the data without any further knowledge about the file.</p>
+<p>All fields below are written without any padding in between.</p>
+
+<h3><a id="itemsize">Item Size</a></h3>
+<div class="he optional">
+    <label>type</label><span>int 32</span>
+</div>
+<p>The size of the item. This is the space occupied by each item in the file, including any padding bytes.</p>
+
+<h3><a id="itemname">Item Name</a></h3>
+<div class="he optional">
+    <label>type</label><span>string</span>
+</div>
+<p>The name of the type, like "OHLCV", as UTF8 string. Strings are written length prefixed (int32) following by the text data in UTF8.</p>
+
+<h3><a id="fieldcount">Field Count</a></h3>
+<div class="he optional">
+    <label>type</label><span>int 32</span>
+</div>
+<p>The number of fields in the item. This value must be >= 1. If the Item Type of a TeaFile is a plain primitive value, 
+the Item Name might be "Int" while the single field value might be "Value". In other words primitives are treated as structs with one field having 
+the type of the primitive.</p>
+
+<h3>Fields</h3>
+<div class="he optional">
+    <label>type</label><span>struct - Field</span>
+</div>
+<p>For each field, a Field description is written holding:</p>
+
+<ul>
+<li>Type of the field</li>
+<li>Offset of the field inside the item data structure</li>
+<li>Name</li>
+</ul>
+
+<h3><a id="fieldtype">Field.Type</a></h3>
+<div class="he optional">
+    <label>type</label><span>int32</span>
+</div>
+<p>The types of fields inside a TeaFile should be available on as many platforms as possible to support versatile data access. 
+At the same time, TeaFiles might be used in focused scenarios were such ubiquitous data access possibility is not required and 
+where other formats are desirable. The file format foresees this possibility.</p>
+
+<p>FieldType is either a value from 1 to 10, indicating a platform agnostic, ubiquitous type or a platform specific type which currently
+encompasses the <a href="http://msdn.microsoft.com/en-us/library/system.decimal(v=vs.100).aspx">.Net decimal</a>. For fields holding 
+other types, one can use value the values >= 0x1000.</p>
+
+<pre>
+    // platform agnostic
+    Int8 = 1,
+    Int16 = 2,
+    Int32 = 3,
+    Int64 = 4,
+
+    UInt8 = 5,
+    UInt16 = 6,
+    UInt32 = 7,
+    UInt64 = 8,
+
+    Float = 9, // IEEE 754
+    Double = 10, // IEEE 754
+
+    // platform specific
+    NetDecimal = 0x200,
+
+    // private extensions must have integer identifiers above 0x1000.
+    Custom = 0x1000
+</pre>
+
+<h3><a id="fieldoffset">Field.Offset</a></h3>
+<div class="he optional">
+    <label>type</label><span>int32</span>
+</div>
+<p>The field's byte-offset inside the item.</p>
+
+<h3><a id="fieldname">Field.Name</a></h3>
+<div class="he optional">
+    <label>type</label><span>string</span>
+</div>
+<p>The name of the field as UTF8 string. Strings are written length prefixed (int32) following by the text data in UTF8.</p>
+
+
+
+<h2><a id="cds">Content Description Section</a></h2>
+<h3>Description</h3>
+<div class="he optional">
+    <label>type</label><span>string</span>
+</div>
+<p>A string that describes the content of the file. Examples: "Daily average temperature Easy Village", "Prices of ACME at NYSE".</p>
+
+
+
+<h2><a id="cds">Name/Value Section</a></h2>
+
+<h3>Name/Value Count</h3>
+<div class="he optional">
+    <label>type</label><span>int32</span>
+</div>
+<p>The number of name/Value pairs to follow.</p>
+
+<h3>Name/Value Pairs</h3>
+<div class="he optional">
+    <label>type</label><span>struct - NameValue</span>
+</div>
+<p>For each Name/Value pair, the following values are written</p>
+<ul>
+<li>Name</li>
+<li>Kind</li>
+<li>Value</li>
+</ul>
+
+<h3>NameValue.Name</h3>
+<div class="he optional">
+    <label>type</label><span>string</span>
+</div>
+<p>The name.</p>
+
+<h3>NameValue.Kind</h3>
+<div class="he optional">
+    <label>type</label><span>int32</span>
+</div>
+<p>One of the following integer values, indicating the type of the value to follow:</p>
+<ul>
+<li>1 - Int32</li>
+<li>2 - Double</li>
+<li>3 - Text</li>
+<li>4 - Uuid</li>
+</ul>
+
+<h3>NameValue.Value</h3>
+<div class="he optional">
+    <label>type</label><span>int32/double/string/uuid</span>
+</div>
+<p>Dependant on the previous value of Kind, the value will hold an int32, double, string or uuid value. A uuid value is a sequence of 16 bytes considered to 
+be unique.</p>
+
+<h2><a id="timesection">Time Section</a></h2>
+<p>This section describes how a number is interpreted as time and which fields in the item are to be interpreted as time.</p>
+
+<h3><a id="epoch">Epoch</a></h3>
+<div class="he optional">
+    <label>type</label><span>int64</span>
+</div>
+<p>Time is specified as the number of "tick" intervals that elapsed since some origin. The epoch value gives this origin as the number of 
+days that passed between since 1.1.0000 and the origin. For the .Net System.DateTime Type, that counts ticks since 1.1.0000 this value 
+would be 0. For time systems counting from 1.1.1970, the epoch is 719162.</p>
+
+<h3>Ticks Per Day</h3>
+<div class="he optional">
+    <label>type</label><span>int64</span>
+</div>
+<p>This value specifies how many ticks are counted per day. Conversely this number specifies the length of the tick interval. A value of 1 would 
+mean that days are counted, 86400 would mean seconds and 86400000 milliseconds.</p>
+
+<p>For TeaFiles that shall be accessed from various platforms, the Java Time format is recommended, as it often sufficient resolution of milliseconds 
+and due to its origin at 1.1.1970, its values remain much smaller than that of .Net System.DateTime that gives values hard to deal with in applications
+that cannot handle 64 bit integers like R.</p>
+
+<h3>Time Fields Count</h3>
+<div class="he optional">
+    <label>type</label><span>int32</span>
+</div>
+<p>For time series, the item will hold one field that is the event time, the time at which the observation or the event occured. If the file holds a plain collection 
+of values and is not a time series, then no time field might exist. On the other hand items might have an event time and in addition ther time fields. In summary 
+the number of time fields is between 0 and the number fo fields in the item.</p>
+
+<p>If an item has more than one time field, the firstone is considered the event time. The values of this field must then be non-decreasing. In other words each event must 
+have a time >= time of the previous event.</p>
+
+<h3>Time Fields</h3>
+<div class="he optional">
+    <label>type</label><span>int32[]</span>
+</div>
+<p>As many int32 values follow as [Time Fields Count] indicates. Each of these values holds the offset of the corresponding field.</p>
+
+<p>The reason to use the offset instead of the field index is that an application that shall select an interval of values from a TeaFile, is required to 
+read the Time Section only in order to deliver all values from t1 to t2.</p>
+</body>
+</html>

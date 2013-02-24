@@ -1,0 +1,430 @@
+﻿body {
+  background-color: #fdfbf9;
+  overflow-y: scroll;
+}
+.logo,
+.logo:hover {
+  position: absolute;
+  top: 0;
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 100px;
+}
+header .menu {
+  background: url(/img/dlttlogo2.png);
+  background-repeat: no-repeat;
+  background-position: 0px 4px;
+  border-bottom: solid 1px #333;
+  padding-top: 64px;
+}
+.navbar .nav > li {
+  position: relative;
+  top: 4px;
+}
+h4 {
+  margin: .2em 0;
+  line-height: 1.2em;
+  color: #A2692B;
+  margin-top: 1em;
+}
+.footer {
+  margin-top: 1em;
+  padding: 1em 0;
+  background-color: #f1f0ef;
+  border-top: solid 1px #ddd;
+  min-height: 120px;
+}
+.footer a {
+  margin-right: 1em;
+}
+h2 {
+  font-size: 1.5em;
+  margin-top: 2em;
+}
+h2 a {
+  color: inherit;
+  /* tags that are just used as anchors, shall not be colorized */
+
+}
+h5 {
+  padding-bottom: 2px;
+  font-size: 1.7em;
+  __font-size: 18px;
+  color: #777;
+  font-weight: normal;
+  border-bottom: solid 1px #aaa;
+}
+pre {
+  border-radius: 0;
+}
+p + h5 {
+  margin-top: 1em;
+}
+.icon-github {
+  background-image: url("../img/github20.png");
+  background-position: 0 0;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: -2px;
+  left: -2px;
+}
+.icon-codeplex {
+  background-image: url("../img/codeplex20.png");
+  background-position: 0 0;
+  width: 24px;
+  height: 24px;
+}
+.btn a {
+  color: white;
+}
+p,
+li {
+  line-height: 1.4em;
+}
+.synopsis {
+  border: dashed 1px navy;
+  padding: 1em 2em;
+  background-color: white;
+  margin: 2em;
+}
+/* shop */
+form {
+  width: 100%;
+}
+form h4 {
+  margin: 0;
+}
+.shopfields {
+  float: right;
+}
+.shopfields .line2 {
+  border-bottom: solid 2px black;
+}
+.shopfields .line1 {
+  border-bottom: solid 1px black;
+}
+.shopfields th {
+  color: #555;
+  text-align: left;
+  _padding: 4px;
+}
+.shopfields td,
+.shopfields th {
+  padding: 0.2em 0.8em;
+}
+.shopfields tr > td {
+  /* first cell left aligned */
+
+  text-align: left;
+}
+.shopfields div {
+  margin-bottom: 0.3em;
+}
+.cartcontainer {
+  background-color: #f2ece4;
+}
+.fields {
+  padding: 1em;
+}
+.divider {
+  background-color: #ffffff;
+}
+fieldset {
+  border: none;
+  _margin: auto;
+}
+fieldset div {
+  margin: 2px;
+}
+.fields h3 {
+  display: block;
+}
+.fields label {
+  display: inline-block;
+  width: 100px;
+}
+.short {
+  width: auto !important;
+}
+.note {
+  font-size: 1em;
+  line-height: 1.2em;
+  color: Maroon;
+  padding: 10px;
+  display: none;
+}
+input,
+select {
+  border: 1px solid #92875d;
+}
+option {
+  background-color: White;
+}
+.required input,
+.required select {
+  background: #f5fada url(../img/requiredok.png) no-repeat right top;
+}
+#plural {
+  display: none;
+}
+.shiftBack {
+  background-position: right bottom !important;
+}
+.hideBack {
+  background-position: right 1000px !important;
+}
+#flag {
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+  margin: 0;
+}
+.pieces {
+  width: 4em;
+  text-align: right;
+}
+#sumline {
+  border-bottom: solid 1px #999;
+}
+.r {
+  text-align: right;
+}
+input[type=submit] {
+  color: #996633;
+  width: auto;
+  padding: 2px;
+  background-color: White;
+  border: solid 2px #996633;
+  border-radius: 3px;
+}
+#tax {
+  width: 9em;
+  text-align: right;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+.email {
+  background-image: url(../img/email.gif);
+  background-position: 97% 3%;
+  background-repeat: no-repeat;
+}
+tr#last td {
+  border-bottom: none;
+}
+td,
+th {
+  text-align: center;
+  padding: 4px;
+}
+/* product.css */
+.ProductsOverview {
+  background: url(/img/products.png) no-repeat top right;
+  background-position: center 90px;
+}
+.ProductsTeaFiles {
+  _background: url(/img/persistence2.png) no-repeat top right;
+}
+.ProductsTeaFiles h1 {
+  margin-bottom: 30px;
+}
+.functionbar {
+  font-size: 1.4em;
+  line-height: 1.1em;
+  padding: 1px 4px 2px 4px;
+  display: inline;
+  color: white;
+}
+.functionbar span {
+  margin-right: 16px;
+}
+.storeimage {
+  background: url(/img/storeheadback.png);
+  font-size: 1.4em;
+  line-height: 1.1em;
+  padding: 1px 4px 2px 4px;
+  display: inline;
+  color: white;
+}
+.storeimage span {
+  margin-right: 16px;
+}
+.visualsimage {
+  background: url(/img/visualheadback.png);
+  font-size: 1.4em;
+  line-height: 1.1em;
+  padding: 1px 4px 2px 4px;
+  display: inline;
+  color: white;
+}
+.visualsimage span {
+  margin-right: 16px;
+}
+.follow {
+  white-space: pre;
+  line-height: 2em;
+  padding: 5px 8px 5px 40px;
+  color: #eee;
+  border-radius: 4px;
+  background: 10px center no-repeat #8e8584;
+}
+.follow:hover {
+  color: #fff;
+  background-color: #ba9466;
+}
+.follow.twitter {
+  background-image: url('/img/twitter.png');
+}
+.follow.github {
+  background-image: url('/img/github.png');
+}
+.marginless {
+  margin-top: 0;
+}
+h2 {
+  line-height: 1em;
+}
+h1,
+h2,
+h3 {
+  color: black;
+}
+h2 .sub {
+  font-size: .7em;
+  line-height: 1em;
+}
+/* head */
+#talk {
+  width: 95%;
+  box-shadow: 0 0 8px #aaa;
+  background: url(/img/chartlines.png) -45px;
+  display: table;
+  height: 160px;
+  margin: 8px;
+}
+#talk1 {
+  background: url(/img/chartstore.png) no-repeat;
+}
+#talk2 {
+  background: url(/img/chartvisualize.png) no-repeat;
+}
+#talk3 {
+  background: url(/img/chartanalyze.png) no-repeat;
+}
+#talk4 {
+  background: url(/img/chartprocess.png) no-repeat;
+}
+#talk > div {
+  display: table-cell;
+  width: 25%;
+  position: relative;
+}
+#talk .text {
+  height: 19px;
+}
+#talk .main {
+  height: 140px;
+}
+#talk2 .main,
+#talk3 .main,
+#talk4 .main {
+  border-left: dashed 1px #bbb;
+}
+/* debug */
+.lime {
+  background-color: lime !important;
+}
+.tags {
+  line-height: 1.7em;
+}
+.tag {
+  border-radius: 4px;
+  border: solid 1px #e0e0e0;
+  padding: 2px 4px;
+  color: #555;
+  background-color: #fff;
+}
+.article {
+  __border-top: dotted 1px #555;
+}
+@media (min-width: 1200px) {
+  aside,
+  aside a {
+    width: 200px;
+  }
+  aside a {
+    width: 200px \9;
+    /* Override the previous IE8-9 hack */
+  
+  }
+}
+aside {
+  width: 200px;
+}
+aside ul {
+  position: fixed;
+}
+aside .nav-list {
+  padding-left: 20px;
+}
+aside a {
+  border-bottom: 1px solid #aaa;
+  color: #333;
+  text-align: right;
+}
+.nav-list > .active > a,
+.nav-list > .active > a:hover {
+  background-color: #eee;
+  color: #000;
+  font-weight: bold;
+  text-align: left;
+  text-shadow: none;
+}
+.orange {
+  background-color: orange;
+}
+.red {
+  background-color: orangered;
+}
+.removehover:hover {
+  background-position: 0;
+  /* this removes the hover effect */
+
+}
+.table h4 {
+  margin-top: 0;
+}
+.claim {
+  background-color: #fae478;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.whitetable {
+  background-color: white;
+}
+section {
+  margin-bottom: 3em;
+}
+.carousel {
+  cursor: pointer;
+  background-color: white;
+  box-shadow: 1px 1px 6px #999;
+}
+.carousel-indicators li {
+  background-color: #8f5c03;
+}
+.carousel-indicators li.active {
+  background-color: orange;
+}
+.tagline {
+  display: inline-block;
+  font-family: 'serif';
+  font-size: 2em;
+  letter-spacing: 1px;
+  color: #333;
+  line-height: 1.1em;
+  padding: 20px 50px 10px 10px;
+  background-color: white;
+}

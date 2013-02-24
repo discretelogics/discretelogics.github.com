@@ -1,0 +1,67 @@
+﻿<html lang="en"><meta charset="utf-8"><head><style>body, td
+{
+    font-family: Verdana;
+    font-size: .8em;
+    background-color: #f0f0f0;
+}
+table
+{    
+    margin: 1em;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+td
+{
+    padding: 4px;
+    color: Navy;
+}
+table tr td:first-child
+{
+    color: Black;
+}
+tr
+{
+    border-bottom: dotted 1px #ccc;
+}
+.bar{    background-color: Orange;}
+</style><title>TeaFile API - benchmark </title></head>
+    <body>
+    <table><tr><td>benchmark</td><td colspan=5>runs</td><td>relative</td><td>ops / second</tr>
+<tr><td>allocate array</td><td align=right>0.34</td><td align=right>3.18</td><td align=right>2.99</td><td align=right>2.25</td><td align=right>2.89</td><td><div class='bar' style='width:1px'>&nbsp;</div></td><td>2,146,917,885</td></tr>
+<tr><td>fill array</td><td align=right>32.37</td><td align=right>10.89</td><td align=right>10.43</td><td align=right>10.34</td><td align=right>9.73</td><td><div class='bar' style='width:4px'>&nbsp;</div></td><td>338,938,472</td></tr>
+<tr><td>sum array</td><td align=right>45.45</td><td align=right>4.76</td><td align=right>4.95</td><td align=right>4.75</td><td align=right>5.44</td><td><div class='bar' style='width:4px'>&nbsp;</div></td><td>382,488,747</td></tr>
+<tr><td>fill list</td><td align=right>151.25</td><td align=right>59.34</td><td align=right>47.50</td><td align=right>54.21</td><td align=right>54.84</td><td><div class='bar' style='width:20px'>&nbsp;</div></td><td>68,093,489</td></tr>
+<tr><td>sum list</td><td align=right>15.84</td><td align=right>6.12</td><td align=right>6.09</td><td align=right>6.27</td><td align=right>5.92</td><td><div class='bar' style='width:2px'>&nbsp;</div></td><td>621,314,054</td></tr>
+<tr><td>fill list pre</td><td align=right>24.13</td><td align=right>21.41</td><td align=right>20.79</td><td align=right>21.32</td><td align=right>21.29</td><td><div class='bar' style='width:6px'>&nbsp;</div></td><td>229,487,069</td></tr>
+<tr><td>sum list pre</td><td align=right>7.71</td><td align=right>6.00</td><td align=right>5.94</td><td align=right>6.16</td><td align=right>6.06</td><td><div class='bar' style='width:2px'>&nbsp;</div></td><td>784,333,411</td></tr>
+<tr><td>fill teafile<double></td><td align=right>367.30</td><td align=right>363.14</td><td align=right>362.28</td><td align=right>365.78</td><td align=right>366.75</td><td><div class='bar' style='width:100px'>&nbsp;</div></td><td>13,696,733</td></tr>
+<tr><td>sum teafile<double></td><td align=right>371.06</td><td align=right>354.65</td><td align=right>349.43</td><td align=right>349.48</td><td align=right>350.36</td><td><div class='bar' style='width:97px'>&nbsp;</div></td><td>14,084,587</td></tr>
+<tr><td>TeaFile<double>.OpenMemoryMapping</td><td align=right>24.68</td><td align=right>0.71</td><td align=right>0.66</td><td align=right>0.67</td><td align=right>0.69</td><td><div class='bar' style='width:2px'>&nbsp;</div></td><td>912,079,212</td></tr>
+<tr><td>memmap sum += view[i]</td><td align=right>336.70</td><td align=right>313.87</td><td align=right>314.92</td><td align=right>314.30</td><td align=right>313.87</td><td><div class='bar' style='width:87px'>&nbsp;</div></td><td>15,687,176</td></tr>
+<tr><td>memmap sum += view[i] 2nd run</td><td align=right>333.12</td><td align=right>308.39</td><td align=right>310.37</td><td align=right>311.92</td><td align=right>311.56</td><td><div class='bar' style='width:86px'>&nbsp;</div></td><td>15,869,289</td></tr>
+<tr><td>TeaFile<double>.OpenRawMemoryMapping</td><td align=right>8.11</td><td align=right>0.20</td><td align=right>0.35</td><td align=right>0.33</td><td align=right>0.33</td><td><div class='bar' style='width:1px'>&nbsp;</div></td><td>2,681,080,154</td></tr>
+<tr><td>memmap raw sum += view[i]</td><td align=right>22.00</td><td align=right>12.69</td><td align=right>20.99</td><td align=right>20.96</td><td align=right>20.91</td><td><div class='bar' style='width:5px'>&nbsp;</div></td><td>256,272,789</td></tr>
+<tr><td>memmap raw sum += view[i] 2nd run</td><td align=right>11.77</td><td align=right>10.40</td><td align=right>10.35</td><td align=right>10.55</td><td align=right>10.43</td><td><div class='bar' style='width:3px'>&nbsp;</div></td><td>467,238,192</td></tr>
+<tr><td>memmap raw sum += view[i] 3rd run</td><td align=right>11.78</td><td align=right>10.49</td><td align=right>10.41</td><td align=right>10.33</td><td align=right>10.52</td><td><div class='bar' style='width:3px'>&nbsp;</div></td><td>466,950,199</td></tr>
+<tr><td>memmap raw sum += view[i] 4th run, pointer only</td><td align=right>11.76</td><td align=right>10.43</td><td align=right>10.35</td><td align=right>10.43</td><td align=right>10.27</td><td><div class='bar' style='width:3px'>&nbsp;</div></td><td>469,632,616</td></tr>
+<tr><td>memmap raw sum using ticks</td><td align=right>36.80</td><td align=right>29.21</td><td align=right>29.89</td><td align=right>29.71</td><td align=right>29.45</td><td><div class='bar' style='width:8px'>&nbsp;</div></td><td>161,224,896</td></tr>
+</table>
+<table><tr><td>computer specs</td></tr>
+<tr><td>Name</td><td>SPIKEY</td></tr>
+<tr><td>Manufacturer</td><td>To Be Filled By O.E.M.</td></tr>
+<tr><td>Model</td><td>To Be Filled By O.E.M.</td></tr>
+<tr><td>OperatingSystem</td><td>Microsoft Windows 8 Pro</td></tr>
+<tr><td>OperatingSystemVersion</td><td>6.2.9200</td></tr>
+<tr><td>OperatingSystemServicePack</td><td></td></tr>
+<tr><td>NumberOfDisks</td><td></td></tr>
+<tr><td>SystemDiskModel</td><td>OCZ-VERTEX3 ATA Device</td></tr>
+<tr><td>NumberOfProcessors</td><td></td></tr>
+<tr><td>ProcessorName</td><td>Intel(R) Core(TM) i7-3770 CPU @ 3.40GHz</td></tr>
+<tr><td>ProcessorDescription</td><td>Intel64 Family 6 Model 58 Stepping 9</td></tr>
+<tr><td>ProcessorClockSpeedMhz</td><td></td></tr>
+<tr><td>MemoryMBytes</td><td></td></tr>
+<tr><td>L1KBytes</td><td></td></tr>
+<tr><td>L2KBytes</td><td></td></tr>
+</table>
+    </body>
+</html>
