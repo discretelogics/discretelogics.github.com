@@ -1,0 +1,684 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>teafile Module &mdash; TeaFiles 0.7.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dtheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TeaFiles 0.7.4 documentation" href="index.html" />
+    <link rel="next" title="clockwise module" href="clockwise.html" />
+    <link rel="prev" title="Python API for TeaFiles" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="clockwise.html" title="clockwise module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Python API for TeaFiles"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="teafile-module">
+<h1><tt class="xref py py-mod docutils literal"><span class="pre">teafile</span></tt> Module<a class="headerlink" href="#teafile-module" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="teafiles.teafile.TeaFile">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">TeaFile</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create, write and read or just inspect a file in the TeaFile format.</p>
+<p>1. <strong>create</strong> and <strong>write</strong> a teafile holding Time/Price/Volume
+items.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;acme.tea&quot;</span><span class="p">,</span> <span class="s">&quot;Time Price Volume&quot;</span><span class="p">,</span> <span class="s">&quot;qdq&quot;</span><span class="p">,</span> <span class="s">&quot;prices of acme at NYSE&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;decimals&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;url&quot;</span><span class="p">:</span> <span class="s">&quot;www.acme.com&quot;</span> <span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">45.11</span><span class="p">,</span> <span class="mi">4500</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">46.33</span><span class="p">,</span> <span class="mi">1100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note: Arguments of tf.write show up in intellisense with their names &#8220;Time&#8221;, &#8220;Price&#8221; and &#8220;Volume&#8221;.</p>
+<p>2. <strong>read</strong> a teafile. TeaFiles are self describung  a filename is sufficient, - we might have no clue what is inside the file, due to
+TeaFiles</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&quot;acme.tea&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">TPV(Time=2011-03-04 09:00:00:000, Price=45.11, Volume=4500)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">TPV(Time=2011-03-04 10:00:00:000, Price=46.33, Volume=1100)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Since the item structure is described in the file, we can always open the data items in the file.
+We can even do so on many platforms and with many applications, like from R on Linux, Mac OS or Windows,
+or using proprietary C++ or C# code.</p>
+<p>3. <strong>describe</strong>: See the <cite>description</cite> property about accessing the values passed to create. As a teaser, lets access
+the content description and namevalues collection for the file above:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">contentdescription</span>
+<span class="go">u&#39;prices of acme at NYSE&#39;</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">namevalues</span>
+<span class="go">{u&#39;url&#39;: u&#39;www.acme.com&#39;, u&#39;decimals&#39;: 2}</span>
+</pre></div>
+</div>
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TeaFile.create">
+<em class="property">static </em><tt class="descname">create</tt><big>(</big><em>filename</em>, <em>fieldnames</em>, <em>fieldformat=None</em>, <em>contentdescription=None</em>, <em>namevalues=None</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>creates a new file and writes its header based on the description passed.
+leaves the file open, such that items can be added immediately. the caller must close the
+file finally.</p>
+<dl class="docutils">
+<dt>args:</dt>
+<dd><ul class="first last simple">
+<li><strong>filename</strong>:   The filename, that will internally be passed to io.open, so the same rules apply.</li>
+<li><strong>fieldnames</strong>: The name of fields passed either as a string that seperates each
+fieldname by whitespace or as a list ot strings</li>
+<li><strong>fieldformat</strong>: Holds a composed by the format character for each field.
+the format characters are those used by the struct module.
+<em>example: &#8220;qdd&#8221; means that items stored in the file have 3 fields, the first is of
+type int64, the second and third are double values.</em>
+If omitted, all fields are considered to be of type int64.</li>
+<li><strong>contentdescription</strong>: A teafile can store one contentdescription, a string that describes what the
+contents in the file is about. examples: &#8220;Weather NYC&#8221;, &#8220;Network load&#8221;, &#8220;ACME stock&#8221;.
+Applications can use this string as the &#8220;title&#8221; of the time series, for instance in a chart.</li>
+<li><strong>namevalues</strong>: A collection of name-value pairs used to store descriptions about the file.
+Often additional properties, like the &#8220;data provider&#8221;, &#8220;feed&#8221;, &#8220;feed id&#8221;, &#8220;ticker&#8221;.
+By convention, the name &#8220;decimals&#8221; is used to store an integer describing how many
+numbers of decimals to be used to format floating point values. This api for instance makes
+use of this convention. Besides formatting, an application might also treat this number
+as the accuracy of floating point values.</li>
+</ul>
+</dd>
+</dl>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">teafiles</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="s">&quot;Time Temperature Humidity&quot;</span><span class="p">,</span> <span class="s">&quot;qdd&quot;</span><span class="p">)</span> <span class="c"># create a file with 3 fields of types int64, double, double</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mf">44.2</span><span class="p">,</span> <span class="mf">33.7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mf">45.1</span><span class="p">,</span> <span class="mf">31.8</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">itemcount</span>
+<span class="go">2L</span>
+</pre></div>
+</div>
+<p>note that itemcount is still accessible, even after the file is closed.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TeaFile.openread">
+<em class="property">static </em><tt class="descname">openread</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.openread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a TeaFile for read only.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">teafiles</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="s">&quot;Time Temperature Humidity&quot;</span><span class="p">,</span> <span class="s">&quot;qdd&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mf">44.2</span><span class="p">,</span> <span class="mf">33.7</span><span class="p">)</span>
+<span class="gp">... </span>    <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="mf">45.1</span><span class="p">,</span> <span class="mf">31.8</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>        <span class="n">pprint</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="gp">...</span>
+<span class="go">[TTH(Time=2011-03-01 00:00:00:000, Temperature=44.2, Humidity=33.7),</span>
+<span class="go"> TTH(Time=2011-03-02 00:00:00:000, Temperature=45.1, Humidity=31.8)]</span>
+</pre></div>
+</div>
+<p>The instance demonstrates that is is not writable by not having a write method at all:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span>
+<span class="gt">Traceback (most recent call last):</span>
+  <span class="c">...</span>
+<span class="gr">AttributeError</span>: <span class="n">TeaFile instance has no attribute &#39;write&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TeaFile.openwrite">
+<em class="property">static </em><tt class="descname">openwrite</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.openwrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a TeaFile for read and write.</p>
+<p>The file returned will have its <em>filepointer set to the end of the file</em>, as this function
+calls seekend() before returning the TeaFile instance.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;A B&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TeaFile</span><span class="o">.</span><span class="n">printitems</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">)</span>
+<span class="go">[AB(A=0, B=0), AB(A=1, B=10), AB(A=2, B=20)]</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openwrite</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>  <span class="c"># open the file to add more items</span>
+<span class="gp">... </span>    <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">77</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TeaFile</span><span class="o">.</span><span class="n">printitems</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">)</span>
+<span class="go">[AB(A=0, B=0), AB(A=1, B=10), AB(A=2, B=20), AB(A=7, B=77)]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.read">
+<tt class="descname">read</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read then next item at the position of the file pointer. If no more items exist, None is returned.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;A B&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">AB(A=0, B=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">AB(A=1, B=10)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">AB(A=2, B=20)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile._write">
+<tt class="descname">_write</tt><big>(</big><em>*itemValues</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile._write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Internal item write method accepting a value for each field.</p>
+<p>A <strong>typed write method</strong> will be created inside the create and openwrite methods, available
+as <strong>write(field1, field2, ....)</strong>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;acme.tea&quot;</span><span class="p">,</span> <span class="s">&quot;Time Price Volume&quot;</span><span class="p">,</span> <span class="s">&quot;qdq&quot;</span><span class="p">,</span> <span class="s">&quot;prices of acme at NYSE&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;decimals&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s">&quot;url&quot;</span><span class="p">:</span> <span class="s">&quot;www.acme.com&quot;</span> <span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">45.11</span><span class="p">,</span> <span class="mi">4500</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">46.33</span><span class="p">,</span> <span class="mi">1100</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Note: Arguments of the tf.write show up in intellisense with their names &#8220;Time&#8221;, &#8220;Price&#8221; and &#8220;Volume&#8221;. This however works usually
+only in interactive shells, not in py-script editors, since they do not instantiate the class.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.flush">
+<tt class="descname">flush</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.flush" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush buffered bytes to disk.</p>
+<p>When items are written via write, they do not land directly in the file, but are buffered in memory. flush
+persists them on disk. Since the number of items in a TeaFile is computed from the size of the file, the
+<cite>itemcount</cite> property is accuraty only after items have been flushed.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;A&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openwrite</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">itemcount</span>
+<span class="go">3L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="mi">71</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">itemcount</span>
+<span class="go">3L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">itemcount</span>
+<span class="go">4L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.seekitem">
+<tt class="descname">seekitem</tt><big>(</big><em>itemindex</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.seekitem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the file pointer to the item at index <cite>temindex</cite>.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="s">&quot;A&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=1)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">seekitem</span><span class="p">(</span><span class="mi">7</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=7)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">seekitem</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=2)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.seekend">
+<tt class="descname">seekend</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.seekend" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the file pointer past the last item.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;A&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="go">A(A=0)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">seekend</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c"># nothing returned, we are at the end of file</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.items">
+<tt class="descname">items</tt><big>(</big><em>start=0</em>, <em>end=None</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns an iterator over the items in the file allowing start and end to be passed as item index.
+Calling this method will modify the filepointer.</p>
+<p>Optional, the range of the iterator can be returned</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;A&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="go">&lt;generator object items at 0x...&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+<span class="go">[A(A=0), A(A=1), A(A=2), A(A=3), A(A=4), A(A=5), A(A=6), A(A=7), A(A=8), A(A=9)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="go">[A(A=2), A(A=3), A(A=4), A(A=5)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="go">[A(A=1), A(A=2), A(A=3), A(A=4), A(A=5)]</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.TeaFile.itemcount">
+<tt class="descname">itemcount</tt><a class="headerlink" href="#teafiles.teafile.TeaFile.itemcount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of items in the file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.close">
+<tt class="descname">close</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the file.</p>
+<p>TeaFile implements the context manager protocol and using this protocol is prefered, so manually closing the file
+should be required primarily in interactive mode.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.TeaFile.description">
+<tt class="descname">description</tt><a class="headerlink" href="#teafiles.teafile.TeaFile.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the description of the file.</p>
+<p>TeaFile describe the structure of its items and annotations about its content in their header. This
+property returns this description which in turn (optionally) holds
+* the itemdescription describing field names, types and offsets
+* a contentdescription describing the content
+* a namevalue collection holding name-value pairs and
+* a timescale describing how time stored as numbers shall be interpreted as time.:</p>
+<div class="highlight-python"><pre>tf = TeaFile.create('lab.tea', 'Time Price Volume', 'qdq', 'ACME stock', {'exchange': 'nyse', 'decimals': 2})
+tf.description
+# returns:
+
+ItemDescription
+Name:       TPV
+Size:       24
+Fields:
+[Time         Type:  Int64   Offset: 0   IsTime:0   IsEventTime:0,
+ Price        Type: Double   Offset: 8   IsTime:0   IsEventTime:0,
+ Volume       Type:  Int64   Offset:16   IsTime:0   IsEventTime:0]
+
+ContentDescription
+ACME stock
+
+NameValues
+{'feed': 'bluum', 'decimals': 2, 'exchange': 'nyse'}
+TimeScale
+Epoch:           719162
+Ticks per Day: 86400000
+Wellknown Scale:   Java</pre>
+</div>
+<p>Note that the description object remains valid even after the file is closed.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.TeaFile.getvaluestring">
+<tt class="descname">getvaluestring</tt><big>(</big><em>field</em>, <em>item</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.getvaluestring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the string representation of an item, considerung the number of decimals if available.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">,</span> <span class="s">&#39;Time Price&#39;</span><span class="p">,</span> <span class="s">&#39;qd&#39;</span><span class="p">,</span> <span class="s">&#39;ACME stock&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;exchange&#39;</span><span class="p">:</span> <span class="s">&#39;nyse&#39;</span><span class="p">,</span> <span class="s">&#39;decimals&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mf">44.444444</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mf">44.333333</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;lab.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">item</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">item</span>                                    <span class="c"># decimals=2 is not considered</span>
+<span class="go">TP(Time=2010-02-03 00:00:00:000, Price=44.444444)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pricefield</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">itemdescription</span><span class="o">.</span><span class="n">fields</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pricefield</span>
+<span class="go">Price        Type: Double   Offset: 8   IsTime:0   IsEventTime:0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span><span class="o">.</span><span class="n">getvaluestring</span><span class="p">(</span><span class="n">pricefield</span><span class="p">,</span> <span class="n">item</span><span class="p">)</span>     <span class="c"># decimals=2 is considered</span>
+<span class="go">44.44</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TeaFile.printitems">
+<em class="property">static </em><tt class="descname">printitems</tt><big>(</big><em>filename</em>, <em>maxnumberofitems=10</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.printitems" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints all items in the file. By default at most 10 items are printed.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="s">&quot;A B&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">i</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TeaFile</span><span class="o">.</span><span class="n">printitems</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">)</span>
+<span class="go">[AB(A=0, B=0), AB(A=1, B=10), AB(A=2, B=20), AB(A=3, B=30), AB(A=4, B=40), AB(A=5, B=50), AB(A=6, B=60), AB(A=7, B=70), AB(A=8, B=80), AB(A=9, B=90)]</span>
+<span class="go">10 of 40 items</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TeaFile</span><span class="o">.</span><span class="n">printitems</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="go">[AB(A=0, B=0), AB(A=1, B=10), AB(A=2, B=20), AB(A=3, B=30), AB(A=4, B=40)]</span>
+<span class="go">5 of 40 items</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TeaFile.printsnapshot">
+<em class="property">static </em><tt class="descname">printsnapshot</tt><big>(</big><em>filename</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TeaFile.printsnapshot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints a snapshot of an existing file, that is its complete description and the first 5 items.</p>
+<p>Example output:</p>
+<div class="highlight-python"><pre>&gt;&gt; TeaFile.printsnapshot('lab.tea')
+TeaFile('lab.tea') 40 items
+
+ItemDescription
+Name:       AB
+Size:       16
+Fields:
+[A            Type:  Int64   Offset: 0   IsTime:0   IsEventTime:0,
+ B            Type:  Int64   Offset: 8   IsTime:0   IsEventTime:0]
+
+ContentDescription
+None
+
+NameValues
+None
+
+TimeScale
+Epoch:           719162
+Ticks per Day: 86400000
+Wellknown Scale:   Java
+
+Items
+AB(A=0, B=0)
+AB(A=1, B=10)
+AB(A=2, B=20)
+AB(A=3, B=30)
+AB(A=4, B=40)</pre>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="teafiles.teafile.TimeScale">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">TimeScale</tt><big>(</big><em>epoch</em>, <em>ticksperday</em><big>)</big><a class="headerlink" href="#teafiles.teafile.TimeScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>The TeaFile format is time format agnostic. Times in such file can be integral or float values
+counting seconds, milliseconds from an epoch like 0001-01-01 or 1970-01-01. The epoch together
+with the tick size define the <cite>time scale</cite> modeled by this class. These values are stored in the file.</p>
+<p>In order to support many platforms, the epoch value of 1970-01-01 and a tick size of Milliseconds is recommended.
+Moreover, APIs for TeaFiles should primarily support this time scale before any other, to allow exchange
+between applications and operating systems. In this spirit, the clockwise module in this package uses this
+1970 / millisecond time scale.</p>
+<dl class="staticmethod">
+<dt id="teafiles.teafile.TimeScale.Java">
+<em class="property">static </em><tt class="descname">Java</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.teafile.TimeScale.Java" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a TimeScale instance with the epoch 1970-01-01 and millisecond resolution.
+This time scale is that used by Java, so we call this the Java TimeScale.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.TimeScale.wellknownname">
+<tt class="descname">wellknownname</tt><a class="headerlink" href="#teafiles.teafile.TimeScale.wellknownname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns &#8216;Java&#8217; if epoch == 719162 (1970-01-01) and ticksperday == 86400 * 1000.
+Returns &#8216;Net&#8217; if epoch == 0 (0001-01-01) and ticksperday == 86400 * 1000 * 1000 * 10.
+Returns None otherwise.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="teafiles.teafile.TeaFileDescription">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">TeaFileDescription</tt><a class="headerlink" href="#teafiles.teafile.TeaFileDescription" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Holds the description of a time series. Its attributes are the</dt>
+<dd>itemdescription, describing the item&#8217;s fields and layout
+contentdescription, a simple string describing what the time series is about
+namevalues, a collection of name-value pairs holding int32,double,text or uuid values and the
+timescale, describing the format of times inside the file</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="teafiles.teafile.ItemDescription">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">ItemDescription</tt><a class="headerlink" href="#teafiles.teafile.ItemDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>The item description describes the item type.
+Each teafile is a homogenous collection of items and an instance of this class describes
+the fields of this item, that is</p>
+<blockquote>
+<div>the name of each field
+the field&#8217;s offset inside the item
+its type.</div></blockquote>
+<dl class="staticmethod">
+<dt id="teafiles.teafile.ItemDescription.create">
+<em class="property">static </em><tt class="descname">create</tt><big>(</big><em>itemname</em>, <em>fieldnames</em>, <em>fieldformat</em><big>)</big><a class="headerlink" href="#teafiles.teafile.ItemDescription.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an ItemDescription instance to be used for the creation of a new TeaFile.</p>
+<p>itemname is the name for the items in the file (eg &#8220;Tick&#8221;)
+fieldnames is a list of the names (eg [&#8220;Time&#8221;, &#8220;Price&#8221;, &#8220;Volume&#8221;]).
+Alternatively, fieldnames is a string that holds fieldnames separated
+by whitspace (&#8220;Time Price Volume&#8221;)</p>
+<p>fieldformat specifies the layout of the item as used by
+struct.pack(fmt, ...). However the following restrictions apply:</p>
+<blockquote>
+<div>1. the repeat oerator is not allowed. So while &#8220;4h&#8221; means the same as
+&#8220;hhhh&#8221; for struct.pack/unpack, this method allows only the latter
+without repeat number.
+2. padding bytes (format character &#8216;x&#8217;) are not available.
+3. Only these formats are allowed:
+&#8220;b&#8221;, &#8220;h&#8221;, &#8220;i&#8221;, &#8220;q&#8221;, &#8220;B&#8221;, &#8220;H&#8221;, &#8220;I&#8221;, &#8220;Q&#8221;, &#8220;f&#8221;, &#8220;d&#8221;.</div></blockquote>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.teafile.ItemDescription.getfieldbyoffset">
+<tt class="descname">getfieldbyoffset</tt><big>(</big><em>offset</em><big>)</big><a class="headerlink" href="#teafiles.teafile.ItemDescription.getfieldbyoffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a field given its offset</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="teafiles.teafile.FieldType">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">FieldType</tt><a class="headerlink" href="#teafiles.teafile.FieldType" title="Permalink to this definition">¶</a></dt>
+<dd><p>An enumeration of field types and utility functions related to.</p>
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Double">
+<tt class="descname">Double</tt><em class="property"> = 10</em><a class="headerlink" href="#teafiles.teafile.FieldType.Double" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Float">
+<tt class="descname">Float</tt><em class="property"> = 9</em><a class="headerlink" href="#teafiles.teafile.FieldType.Float" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Int16">
+<tt class="descname">Int16</tt><em class="property"> = 2</em><a class="headerlink" href="#teafiles.teafile.FieldType.Int16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Int32">
+<tt class="descname">Int32</tt><em class="property"> = 3</em><a class="headerlink" href="#teafiles.teafile.FieldType.Int32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Int64">
+<tt class="descname">Int64</tt><em class="property"> = 4</em><a class="headerlink" href="#teafiles.teafile.FieldType.Int64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.Int8">
+<tt class="descname">Int8</tt><em class="property"> = 1</em><a class="headerlink" href="#teafiles.teafile.FieldType.Int8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.UInt16">
+<tt class="descname">UInt16</tt><em class="property"> = 6</em><a class="headerlink" href="#teafiles.teafile.FieldType.UInt16" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.UInt32">
+<tt class="descname">UInt32</tt><em class="property"> = 7</em><a class="headerlink" href="#teafiles.teafile.FieldType.UInt32" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.UInt64">
+<tt class="descname">UInt64</tt><em class="property"> = 8</em><a class="headerlink" href="#teafiles.teafile.FieldType.UInt64" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.teafile.FieldType.UInt8">
+<tt class="descname">UInt8</tt><em class="property"> = 5</em><a class="headerlink" href="#teafiles.teafile.FieldType.UInt8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.FieldType.getformatcharacter">
+<em class="property">static </em><tt class="descname">getformatcharacter</tt><big>(</big><em>fieldtype</em><big>)</big><a class="headerlink" href="#teafiles.teafile.FieldType.getformatcharacter" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the formatting character of a field type, as used by the <cite>struct</cite> module</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.FieldType.getfromformatcharacter">
+<em class="property">static </em><tt class="descname">getfromformatcharacter</tt><big>(</big><em>c</em><big>)</big><a class="headerlink" href="#teafiles.teafile.FieldType.getfromformatcharacter" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the field type given its formatting character as used by the <cite>struct</cite> module</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.FieldType.getmagicvalue">
+<em class="property">static </em><tt class="descname">getmagicvalue</tt><big>(</big><em>fieldtype</em><big>)</big><a class="headerlink" href="#teafiles.teafile.FieldType.getmagicvalue" title="Permalink to this definition">¶</a></dt>
+<dd><p>given a fieldtype, get a magic value. This is used for analyzing the item layout.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.FieldType.getname">
+<em class="property">static </em><tt class="descname">getname</tt><big>(</big><em>fieldtype</em><big>)</big><a class="headerlink" href="#teafiles.teafile.FieldType.getname" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the string representation of <cite>fieldtype`</cite></p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="teafiles.teafile.FieldType.getsize">
+<em class="property">static </em><tt class="descname">getsize</tt><big>(</big><em>fieldtype</em><big>)</big><a class="headerlink" href="#teafiles.teafile.FieldType.getsize" title="Permalink to this definition">¶</a></dt>
+<dd><p>get the size of a field type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="teafiles.teafile.Field">
+<em class="property">class </em><tt class="descclassname">teafiles.teafile.</tt><tt class="descname">Field</tt><a class="headerlink" href="#teafiles.teafile.Field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Describes a field inside an item.</p>
+<dl class="docutils">
+<dt>Attributes are:</dt>
+<dd><ul class="first last simple">
+<li>name</li>
+<li>offset</li>
+<li>istime</li>
+<li>iseventtime</li>
+<li>index</li>
+<li>formatchar</li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="teafiles.teafile.Field.getvalue">
+<tt class="descname">getvalue</tt><big>(</big><em>item</em><big>)</big><a class="headerlink" href="#teafiles.teafile.Field.getvalue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a field and an item, returns the value of this field.</p>
+<p>If the field is a time field, the value is packed into a <cite>Time</cite>, unless
+configured otherwise by setting <cite>use_time_decoration</cite> to False.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Python API for TeaFiles</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="clockwise.html"
+                        title="next chapter"><tt class="docutils literal docutils literal docutils literal"><span class="pre">clockwise</span></tt> module</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/teafiles.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="clockwise.html" title="clockwise module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Python API for TeaFiles"
+             >previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, discretelogics.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

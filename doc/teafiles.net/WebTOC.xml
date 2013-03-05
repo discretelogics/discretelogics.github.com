@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="7fddcd23-47b9-47a7-942c-71b4f3a4199a" Title="TeaTime Namespace" Url="html/N_TeaTime.htm">
+    <HelpTOCNode Id="33bb44e4-4339-4506-b43b-eb70ad3ff749" Title="Event(T) Structure" Url="html/T_TeaTime_Event_1.htm">
+      <HelpTOCNode Title="Event(T) Members" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+      <HelpTOCNode Title="Event(T) Constructor " Url="html/M_TeaTime_Event_1__ctor.htm" />
+      <HelpTOCNode Id="53d9b6bb-0aef-456e-bd54-07efdaa320d4" Title="Event(T) Fields" Url="html/Fields_T_TeaTime_Event_1.htm">
+        <HelpTOCNode Title="Time Field" Url="html/F_TeaTime_Event_1_Time.htm" />
+        <HelpTOCNode Title="Value Field" Url="html/F_TeaTime_Event_1_Value.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a2dd78d5-c8c6-4486-9166-d0eaf180d014" Title="Event(T) Methods" Url="html/Methods_T_TeaTime_Event_1.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_Event_1_ToString.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f44b4829-3e10-4e1b-8b9b-b9fc8cf8ac31" Title="EventTimeAttribute Class" Url="html/T_TeaTime_EventTimeAttribute.htm">
+      <HelpTOCNode Title="EventTimeAttribute Members" Url="html/AllMembers_T_TeaTime_EventTimeAttribute.htm" />
+      <HelpTOCNode Title="EventTimeAttribute Constructor " Url="html/M_TeaTime_EventTimeAttribute__ctor.htm" />
+    </HelpTOCNode>
+    <HelpTOCNode Id="639e7652-5949-46b7-9d8f-1b8392387ec2" Title="Field Class" Url="html/T_TeaTime_Field.htm">
+      <HelpTOCNode Title="Field Members" Url="html/AllMembers_T_TeaTime_Field.htm" />
+      <HelpTOCNode Title="Field Constructor " Url="html/M_TeaTime_Field__ctor.htm" />
+      <HelpTOCNode Id="de90b242-a633-4054-b804-4a45b6ee8661" Title="Field Methods" Url="html/Methods_T_TeaTime_Field.htm">
+        <HelpTOCNode Title="GetValue Method " Url="html/M_TeaTime_Field_GetValue.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_Field_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="a974015c-c57e-467d-8cc9-aac5b786ab92" Title="Field Properties" Url="html/Properties_T_TeaTime_Field.htm">
+        <HelpTOCNode Title="FieldType Property " Url="html/P_TeaTime_Field_FieldType.htm" />
+        <HelpTOCNode Title="Index Property " Url="html/P_TeaTime_Field_Index.htm" />
+        <HelpTOCNode Title="IsEventTime Property " Url="html/P_TeaTime_Field_IsEventTime.htm" />
+        <HelpTOCNode Title="IsTime Property " Url="html/P_TeaTime_Field_IsTime.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P_TeaTime_Field_Name.htm" />
+        <HelpTOCNode Title="Offset Property " Url="html/P_TeaTime_Field_Offset.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="FieldType Enumeration" Url="html/T_TeaTime_FieldType.htm" />
+    <HelpTOCNode Id="ae30b28c-4a46-43b1-8965-6fc4041482fa" Title="FileFormatException Class" Url="html/T_TeaTime_FileFormatException.htm">
+      <HelpTOCNode Title="FileFormatException Members" Url="html/AllMembers_T_TeaTime_FileFormatException.htm" />
+      <HelpTOCNode Id="f7daf203-3069-481e-969e-ce76426fa1ae" Title="FileFormatException Constructor " Url="html/Overload_TeaTime_FileFormatException__ctor.htm">
+        <HelpTOCNode Title="FileFormatException Constructor " Url="html/M_TeaTime_FileFormatException__ctor.htm" />
+        <HelpTOCNode Title="FileFormatException Constructor (String)" Url="html/M_TeaTime_FileFormatException__ctor_1.htm" />
+        <HelpTOCNode Title="FileFormatException Constructor (String, Exception)" Url="html/M_TeaTime_FileFormatException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="476bf92c-8a6b-4d6f-b47d-c1fd3eac682c" Title="IItemCollection Interface" Url="html/T_TeaTime_IItemCollection.htm">
+      <HelpTOCNode Title="IItemCollection Members" Url="html/AllMembers_T_TeaTime_IItemCollection.htm" />
+      <HelpTOCNode Id="e4882940-a89f-4c86-b0e5-469faa4c57c7" Title="IItemCollection Methods" Url="html/Methods_T_TeaTime_IItemCollection.htm">
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/M_TeaTime_IItemCollection_GetEnumerator.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fce35e9e-88f6-4ee8-864e-a941c48ed363" Title="IItemCollection Properties" Url="html/Properties_T_TeaTime_IItemCollection.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_TeaTime_IItemCollection_Count.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/P_TeaTime_IItemCollection_Item.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="0dcc1949-bc40-4321-9ef7-c734670cbe3b" Title="IItemCollection(T) Interface" Url="html/T_TeaTime_IItemCollection_1.htm">
+      <HelpTOCNode Title="IItemCollection(T) Members" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+      <HelpTOCNode Id="27f88edf-14b7-495a-89ed-9ce05775e7bd" Title="IItemCollection(T) Properties" Url="html/Properties_T_TeaTime_IItemCollection_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_TeaTime_IItemCollection_1_Count.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/P_TeaTime_IItemCollection_1_Item.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="76fac33c-4a03-4021-ba35-f4ea000efe13" Title="InternalErrorException Class" Url="html/T_TeaTime_InternalErrorException.htm">
+      <HelpTOCNode Title="InternalErrorException Members" Url="html/AllMembers_T_TeaTime_InternalErrorException.htm" />
+      <HelpTOCNode Id="f1ec01aa-f8c0-4e82-bcee-2e51d90d359e" Title="InternalErrorException Constructor " Url="html/Overload_TeaTime_InternalErrorException__ctor.htm">
+        <HelpTOCNode Title="InternalErrorException Constructor " Url="html/M_TeaTime_InternalErrorException__ctor.htm" />
+        <HelpTOCNode Title="InternalErrorException Constructor (String)" Url="html/M_TeaTime_InternalErrorException__ctor_1.htm" />
+        <HelpTOCNode Title="InternalErrorException Constructor (String, Exception)" Url="html/M_TeaTime_InternalErrorException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="31e17567-17c5-4fe4-9f58-34f422c9c551" Title="InvalidFieldTypeException Class" Url="html/T_TeaTime_InvalidFieldTypeException.htm">
+      <HelpTOCNode Title="InvalidFieldTypeException Members" Url="html/AllMembers_T_TeaTime_InvalidFieldTypeException.htm" />
+      <HelpTOCNode Id="6d43215b-f94b-4997-98fb-7af99c922339" Title="InvalidFieldTypeException Constructor " Url="html/Overload_TeaTime_InvalidFieldTypeException__ctor.htm">
+        <HelpTOCNode Title="InvalidFieldTypeException Constructor " Url="html/M_TeaTime_InvalidFieldTypeException__ctor.htm" />
+        <HelpTOCNode Title="InvalidFieldTypeException Constructor (String)" Url="html/M_TeaTime_InvalidFieldTypeException__ctor_1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3de26c7a-1711-437b-a482-0173b2a08d99" Title="InvalidStateException Class" Url="html/T_TeaTime_InvalidStateException.htm">
+      <HelpTOCNode Title="InvalidStateException Members" Url="html/AllMembers_T_TeaTime_InvalidStateException.htm" />
+      <HelpTOCNode Id="3da9fd1f-a724-4cd6-89e6-6eef2c0bd535" Title="InvalidStateException Constructor " Url="html/Overload_TeaTime_InvalidStateException__ctor.htm">
+        <HelpTOCNode Title="InvalidStateException Constructor " Url="html/M_TeaTime_InvalidStateException__ctor.htm" />
+        <HelpTOCNode Title="InvalidStateException Constructor (String)" Url="html/M_TeaTime_InvalidStateException__ctor_1.htm" />
+        <HelpTOCNode Title="InvalidStateException Constructor (String, Exception)" Url="html/M_TeaTime_InvalidStateException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f35c7ed1-3909-4291-8306-b14911c6c1c5" Title="Item Class" Url="html/T_TeaTime_Item.htm">
+      <HelpTOCNode Title="Item Members" Url="html/AllMembers_T_TeaTime_Item.htm" />
+      <HelpTOCNode Id="094df78d-f6b5-4f79-b8db-1fdda90e0752" Title="Item Methods" Url="html/Methods_T_TeaTime_Item.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_Item_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="419eae34-0544-44a1-9ef7-0efcc213cf46" Title="Item Properties" Url="html/Properties_T_TeaTime_Item.htm">
+        <HelpTOCNode Title="Values Property " Url="html/P_TeaTime_Item_Values.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="08a92ad2-3e68-425d-a415-6e56767d75ef" Title="ItemDescription Class" Url="html/T_TeaTime_ItemDescription.htm">
+      <HelpTOCNode Title="ItemDescription Members" Url="html/AllMembers_T_TeaTime_ItemDescription.htm" />
+      <HelpTOCNode Id="9295afe5-83b8-4cf8-b33d-9626f0176b77" Title="ItemDescription Methods" Url="html/Methods_T_TeaTime_ItemDescription.htm">
+        <HelpTOCNode Title="FindFieldByOffset Method " Url="html/M_TeaTime_ItemDescription_FindFieldByOffset.htm" />
+        <HelpTOCNode Title="GetFieldByName Method " Url="html/M_TeaTime_ItemDescription_GetFieldByName.htm" />
+        <HelpTOCNode Id="47ce59df-d25b-4066-b135-60d3cc3a5f9b" Title="GetValueString Method " Url="html/Overload_TeaTime_ItemDescription_GetValueString.htm">
+          <HelpTOCNode Title="GetValueString Method (Item)" Url="html/M_TeaTime_ItemDescription_GetValueString.htm" />
+          <HelpTOCNode Title="GetValueString Method (Item, String)" Url="html/M_TeaTime_ItemDescription_GetValueString_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="IsAccessibleWith Method " Url="html/M_TeaTime_ItemDescription_IsAccessibleWith.htm" />
+        <HelpTOCNode Id="3809969d-cf09-4c61-81d3-5e32ad4064b1" Title="ToString Method " Url="html/Overload_TeaTime_ItemDescription_ToString.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_ItemDescription_ToString.htm" />
+          <HelpTOCNode Title="ToString Method (String)" Url="html/M_TeaTime_ItemDescription_ToString_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="ecef01df-5bdc-42cf-9880-4b7b7f8bb4e3" Title="ItemDescription Properties" Url="html/Properties_T_TeaTime_ItemDescription.htm">
+        <HelpTOCNode Title="EventTimeField Property " Url="html/P_TeaTime_ItemDescription_EventTimeField.htm" />
+        <HelpTOCNode Title="Fields Property " Url="html/P_TeaTime_ItemDescription_Fields.htm" />
+        <HelpTOCNode Title="HasEventTime Property " Url="html/P_TeaTime_ItemDescription_HasEventTime.htm" />
+        <HelpTOCNode Title="ItemSize Property " Url="html/P_TeaTime_ItemDescription_ItemSize.htm" />
+        <HelpTOCNode Title="ItemTypeName Property " Url="html/P_TeaTime_ItemDescription_ItemTypeName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ItemDescriptionElements Enumeration" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+    <HelpTOCNode Id="4d78ad50-5a01-4a74-a8fc-81a83f76b39b" Title="ItemException Class" Url="html/T_TeaTime_ItemException.htm">
+      <HelpTOCNode Title="ItemException Members" Url="html/AllMembers_T_TeaTime_ItemException.htm" />
+      <HelpTOCNode Id="85f3dbb3-1e73-47f4-8038-ad595ebf5636" Title="ItemException Constructor " Url="html/Overload_TeaTime_ItemException__ctor.htm">
+        <HelpTOCNode Title="ItemException Constructor " Url="html/M_TeaTime_ItemException__ctor.htm" />
+        <HelpTOCNode Title="ItemException Constructor (String)" Url="html/M_TeaTime_ItemException__ctor_1.htm" />
+        <HelpTOCNode Title="ItemException Constructor (String, Exception)" Url="html/M_TeaTime_ItemException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e19a2cbc-6cdf-4a99-ae71-7211dd0cb851" Title="ManagedMemoryMapping(T) Class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm">
+      <HelpTOCNode Title="ManagedMemoryMapping(T) Members" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+      <HelpTOCNode Id="9524015b-0e09-4968-b14b-a6a1081e0530" Title="ManagedMemoryMapping(T) Methods" Url="html/Methods_T_TeaTime_ManagedMemoryMapping_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_TeaTime_ManagedMemoryMapping_1_Dispose.htm" />
+        <HelpTOCNode Title="Read Method " Url="html/M_TeaTime_ManagedMemoryMapping_1_Read.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="56f63211-3978-454c-b840-22953972dd43" Title="ManagedMemoryMapping(T) Properties" Url="html/Properties_T_TeaTime_ManagedMemoryMapping_1.htm">
+        <HelpTOCNode Title="Item Property " Url="html/P_TeaTime_ManagedMemoryMapping_1_Item.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="697ea1c3-e0ee-4bdd-9be1-50c5d0c79097" Title="NameValue Class" Url="html/T_TeaTime_NameValue.htm">
+      <HelpTOCNode Title="NameValue Members" Url="html/AllMembers_T_TeaTime_NameValue.htm" />
+      <HelpTOCNode Id="0f660a4b-cc24-48d9-b61b-5185a79322ba" Title="NameValue Constructor " Url="html/Overload_TeaTime_NameValue__ctor.htm">
+        <HelpTOCNode Title="NameValue Constructor (String, Double)" Url="html/M_TeaTime_NameValue__ctor.htm" />
+        <HelpTOCNode Title="NameValue Constructor (String, Guid)" Url="html/M_TeaTime_NameValue__ctor_1.htm" />
+        <HelpTOCNode Title="NameValue Constructor (String, Int32)" Url="html/M_TeaTime_NameValue__ctor_2.htm" />
+        <HelpTOCNode Title="NameValue Constructor (String, String)" Url="html/M_TeaTime_NameValue__ctor_3.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="985917f0-788c-4b4f-945e-2385df91c7c5" Title="NameValue Methods" Url="html/Methods_T_TeaTime_NameValue.htm">
+        <HelpTOCNode Title="GetValue(T) Method " Url="html/M_TeaTime_NameValue_GetValue__1.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_NameValue_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="5e8c7fec-b581-446b-b166-0c5ab0919dd1" Title="NameValue Properties" Url="html/Properties_T_TeaTime_NameValue.htm">
+        <HelpTOCNode Title="Name Property " Url="html/P_TeaTime_NameValue_Name.htm" />
+        <HelpTOCNode Title="ValueText Property " Url="html/P_TeaTime_NameValue_ValueText.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="3296077d-c4c5-4c84-9209-20699d18ca57" Title="NameValueCollection Class" Url="html/T_TeaTime_NameValueCollection.htm">
+      <HelpTOCNode Title="NameValueCollection Members" Url="html/AllMembers_T_TeaTime_NameValueCollection.htm" />
+      <HelpTOCNode Title="NameValueCollection Constructor " Url="html/M_TeaTime_NameValueCollection__ctor.htm" />
+      <HelpTOCNode Id="ef526e5f-2106-4b87-88d9-ec8f52bdb115" Title="NameValueCollection Methods" Url="html/Methods_T_TeaTime_NameValueCollection.htm">
+        <HelpTOCNode Id="ed5c6fc4-3915-46c2-aaf9-e9cb19e75a08" Title="Add Method " Url="html/Overload_TeaTime_NameValueCollection_Add.htm">
+          <HelpTOCNode Title="Add Method (NameValue)" Url="html/M_TeaTime_NameValueCollection_Add_4.htm" />
+          <HelpTOCNode Title="Add Method (String, Double)" Url="html/M_TeaTime_NameValueCollection_Add.htm" />
+          <HelpTOCNode Title="Add Method (String, Guid)" Url="html/M_TeaTime_NameValueCollection_Add_1.htm" />
+          <HelpTOCNode Title="Add Method (String, Int32)" Url="html/M_TeaTime_NameValueCollection_Add_2.htm" />
+          <HelpTOCNode Title="Add Method (String, String)" Url="html/M_TeaTime_NameValueCollection_Add_3.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="From Method " Url="html/M_TeaTime_NameValueCollection_From.htm" />
+        <HelpTOCNode Title="GetEnumerator Method " Url="html/M_TeaTime_NameValueCollection_GetEnumerator.htm" />
+        <HelpTOCNode Title="GetValue(T) Method " Url="html/M_TeaTime_NameValueCollection_GetValue__1.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_NameValueCollection_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="179d2f6d-dd4f-4624-8317-81c2b77e29ae" Title="NameValueCollection Properties" Url="html/Properties_T_TeaTime_NameValueCollection.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_TeaTime_NameValueCollection_Count.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="06499754-7f49-47ad-9477-42627f7c58ec" Title="RawMemoryMapping(T) Class" Url="html/T_TeaTime_RawMemoryMapping_1.htm">
+      <HelpTOCNode Title="RawMemoryMapping(T) Members" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+      <HelpTOCNode Id="50a9a1d1-5bcf-43eb-904b-cc6be5ae4264" Title="RawMemoryMapping(T) Methods" Url="html/Methods_T_TeaTime_RawMemoryMapping_1.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_TeaTime_RawMemoryMapping_1_Dispose.htm" />
+        <HelpTOCNode Title="OpenRead Method " Url="html/M_TeaTime_RawMemoryMapping_1_OpenRead.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="664f4d25-7fd4-4c58-8fb5-c9d82854d492" Title="RawMemoryMapping(T) Properties" Url="html/Properties_T_TeaTime_RawMemoryMapping_1.htm">
+        <HelpTOCNode Title="ItemAreaEnd Property " Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaEnd.htm" />
+        <HelpTOCNode Title="ItemAreaStart Property " Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaStart.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Title="ScaleCollisionBehavior Enumeration" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+    <HelpTOCNode Id="06e6037b-8ff6-4dc8-8bab-1213ca788982" Title="TeaFile Class" Url="html/T_TeaTime_TeaFile.htm">
+      <HelpTOCNode Title="TeaFile Members" Url="html/AllMembers_T_TeaTime_TeaFile.htm" />
+      <HelpTOCNode Id="34b06bb4-0666-47e1-a301-7d728277a208" Title="TeaFile Methods" Url="html/Methods_T_TeaTime_TeaFile.htm">
+        <HelpTOCNode Title="Dispose Method " Url="html/M_TeaTime_TeaFile_Dispose.htm" />
+        <HelpTOCNode Title="GetDescription Method " Url="html/M_TeaTime_TeaFile_GetDescription.htm" />
+        <HelpTOCNode Title="GetEventTime Method " Url="html/M_TeaTime_TeaFile_GetEventTime.htm" />
+        <HelpTOCNode Id="19bdf690-d858-41a0-aede-119721ed0f23" Title="GetFieldValue Method " Url="html/Overload_TeaTime_TeaFile_GetFieldValue.htm">
+          <HelpTOCNode Title="GetFieldValue Method (Int32, Field)" Url="html/M_TeaTime_TeaFile_GetFieldValue.htm" />
+          <HelpTOCNode Title="GetFieldValue Method (Item, Field)" Url="html/M_TeaTime_TeaFile_GetFieldValue_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="7aefc667-af23-42c8-b1e4-299273524307" Title="OpenRead Method " Url="html/Overload_TeaTime_TeaFile_OpenRead.htm">
+          <HelpTOCNode Title="OpenRead Method (Stream)" Url="html/M_TeaTime_TeaFile_OpenRead.htm" />
+          <HelpTOCNode Title="OpenRead Method (String)" Url="html/M_TeaTime_TeaFile_OpenRead_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Read Method " Url="html/M_TeaTime_TeaFile_Read.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3c00e683-a24f-4332-b91c-cc71049504bf" Title="TeaFile Properties" Url="html/Properties_T_TeaTime_TeaFile.htm">
+        <HelpTOCNode Title="Description Property " Url="html/P_TeaTime_TeaFile_Description.htm" />
+        <HelpTOCNode Title="ItemAreaEnd Property " Url="html/P_TeaTime_TeaFile_ItemAreaEnd.htm" />
+        <HelpTOCNode Title="ItemAreaSize Property " Url="html/P_TeaTime_TeaFile_ItemAreaSize.htm" />
+        <HelpTOCNode Title="ItemAreaStart Property " Url="html/P_TeaTime_TeaFile_ItemAreaStart.htm" />
+        <HelpTOCNode Title="Items Property " Url="html/P_TeaTime_TeaFile_Items.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P_TeaTime_TeaFile_Name.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="4bc3e70a-3509-464b-948b-a44977e4136e" Title="TeaFile(T) Class" Url="html/T_TeaTime_TeaFile_1.htm">
+      <HelpTOCNode Title="TeaFile(T) Members" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+      <HelpTOCNode Id="ee04dd2f-4b0b-40fd-83c1-15dc31182fbf" Title="TeaFile(T) Methods" Url="html/Methods_T_TeaTime_TeaFile_1.htm">
+        <HelpTOCNode Title="Append Method " Url="html/M_TeaTime_TeaFile_1_Append.htm" />
+        <HelpTOCNode Title="Close Method " Url="html/M_TeaTime_TeaFile_1_Close.htm" />
+        <HelpTOCNode Id="03229308-1e60-4100-bcfd-1f55f24f938c" Title="Create Method " Url="html/Overload_TeaTime_TeaFile_1_Create.htm">
+          <HelpTOCNode Title="Create Method (Stream, String, NameValueCollection, Boolean)" Url="html/M_TeaTime_TeaFile_1_Create.htm" />
+          <HelpTOCNode Title="Create Method (String, String, NameValueCollection, Boolean)" Url="html/M_TeaTime_TeaFile_1_Create_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Dispose Method " Url="html/M_TeaTime_TeaFile_1_Dispose.htm" />
+        <HelpTOCNode Title="Flush Method " Url="html/M_TeaTime_TeaFile_1_Flush.htm" />
+        <HelpTOCNode Title="OpenMemoryMapping Method " Url="html/M_TeaTime_TeaFile_1_OpenMemoryMapping.htm" />
+        <HelpTOCNode Title="OpenRawMemoryMapping Method " Url="html/M_TeaTime_TeaFile_1_OpenRawMemoryMapping.htm" />
+        <HelpTOCNode Id="89339747-d88a-4db8-bc3a-5c92becc7a91" Title="OpenRead Method " Url="html/Overload_TeaTime_TeaFile_1_OpenRead.htm">
+          <HelpTOCNode Title="OpenRead Method (Stream, ItemDescriptionElements)" Url="html/M_TeaTime_TeaFile_1_OpenRead.htm" />
+          <HelpTOCNode Title="OpenRead Method (String, ItemDescriptionElements)" Url="html/M_TeaTime_TeaFile_1_OpenRead_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="6d5d9198-933d-43a4-a907-393d11a9c185" Title="OpenWrite Method " Url="html/Overload_TeaTime_TeaFile_1_OpenWrite.htm">
+          <HelpTOCNode Title="OpenWrite Method (Stream, ItemDescriptionElements)" Url="html/M_TeaTime_TeaFile_1_OpenWrite.htm" />
+          <HelpTOCNode Title="OpenWrite Method (String, ItemDescriptionElements)" Url="html/M_TeaTime_TeaFile_1_OpenWrite_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="Read Method " Url="html/M_TeaTime_TeaFile_1_Read.htm" />
+        <HelpTOCNode Title="SetFilePointerToEnd Method " Url="html/M_TeaTime_TeaFile_1_SetFilePointerToEnd.htm" />
+        <HelpTOCNode Title="SetFilePointerToItem Method " Url="html/M_TeaTime_TeaFile_1_SetFilePointerToItem.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_TeaFile_1_ToString.htm" />
+        <HelpTOCNode Title="Truncate Method " Url="html/M_TeaTime_TeaFile_1_Truncate.htm" />
+        <HelpTOCNode Id="5e1fa9bd-b6f1-4e3b-91f8-7c08558d4284" Title="Write Method " Url="html/Overload_TeaTime_TeaFile_1_Write.htm">
+          <HelpTOCNode Title="Write Method (IEnumerable(T))" Url="html/M_TeaTime_TeaFile_1_Write.htm" />
+          <HelpTOCNode Title="Write Method (T)" Url="html/M_TeaTime_TeaFile_1_Write_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="fb8dd5b5-f988-4003-a23d-036cfebf1a15" Title="TeaFile(T) Properties" Url="html/Properties_T_TeaTime_TeaFile_1.htm">
+        <HelpTOCNode Title="Count Property " Url="html/P_TeaTime_TeaFile_1_Count.htm" />
+        <HelpTOCNode Title="Description Property " Url="html/P_TeaTime_TeaFile_1_Description.htm" />
+        <HelpTOCNode Title="ItemAreaEnd Property " Url="html/P_TeaTime_TeaFile_1_ItemAreaEnd.htm" />
+        <HelpTOCNode Title="ItemAreaSize Property " Url="html/P_TeaTime_TeaFile_1_ItemAreaSize.htm" />
+        <HelpTOCNode Title="ItemAreaStart Property " Url="html/P_TeaTime_TeaFile_1_ItemAreaStart.htm" />
+        <HelpTOCNode Title="Items Property " Url="html/P_TeaTime_TeaFile_1_Items.htm" />
+        <HelpTOCNode Title="Name Property " Url="html/P_TeaTime_TeaFile_1_Name.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cd23a3f2-d437-42fc-ae3d-1e2246908c7a" Title="TeaFileDescription Class" Url="html/T_TeaTime_TeaFileDescription.htm">
+      <HelpTOCNode Title="TeaFileDescription Members" Url="html/AllMembers_T_TeaTime_TeaFileDescription.htm" />
+      <HelpTOCNode Title="TeaFileDescription Constructor " Url="html/M_TeaTime_TeaFileDescription__ctor.htm" />
+      <HelpTOCNode Id="131c9edf-3474-42d5-a752-2578ed04be5e" Title="TeaFileDescription Methods" Url="html/Methods_T_TeaTime_TeaFileDescription.htm">
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_TeaFileDescription_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="59bc2b52-5c43-4cfb-88f3-6e006bf8e505" Title="TeaFileDescription Properties" Url="html/Properties_T_TeaTime_TeaFileDescription.htm">
+        <HelpTOCNode Title="ContentDescription Property " Url="html/P_TeaTime_TeaFileDescription_ContentDescription.htm" />
+        <HelpTOCNode Title="ItemDescription Property " Url="html/P_TeaTime_TeaFileDescription_ItemDescription.htm" />
+        <HelpTOCNode Title="NameValues Property " Url="html/P_TeaTime_TeaFileDescription_NameValues.htm" />
+        <HelpTOCNode Title="TimeFieldOffsets Property " Url="html/P_TeaTime_TeaFileDescription_TimeFieldOffsets.htm" />
+        <HelpTOCNode Title="Timescale Property " Url="html/P_TeaTime_TeaFileDescription_Timescale.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="466cd64f-85c7-4284-8fc1-5c1003a4b933" Title="Time Structure" Url="html/T_TeaTime_Time.htm">
+      <HelpTOCNode Title="Time Members" Url="html/AllMembers_T_TeaTime_Time.htm" />
+      <HelpTOCNode Id="ff4704f8-2bf1-4dfe-8482-2cd429a315e4" Title="Time Constructor " Url="html/Overload_TeaTime_Time__ctor.htm">
+        <HelpTOCNode Title="Time Constructor (Int64)" Url="html/M_TeaTime_Time__ctor_3.htm" />
+        <HelpTOCNode Title="Time Constructor (Int32, Int32, Int32)" Url="html/M_TeaTime_Time__ctor.htm" />
+        <HelpTOCNode Title="Time Constructor (Int32, Int32, Int32, Int32, Int32, Int32)" Url="html/M_TeaTime_Time__ctor_1.htm" />
+        <HelpTOCNode Title="Time Constructor (Int32, Int32, Int32, Int32, Int32, Int32, Int32)" Url="html/M_TeaTime_Time__ctor_2.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="96db626b-6251-40cc-8ab6-adf016cd7a2a" Title="Time Methods" Url="html/Methods_T_TeaTime_Time.htm">
+        <HelpTOCNode Title="AddDays Method " Url="html/M_TeaTime_Time_AddDays.htm" />
+        <HelpTOCNode Title="AddHours Method " Url="html/M_TeaTime_Time_AddHours.htm" />
+        <HelpTOCNode Title="AddMinutes Method " Url="html/M_TeaTime_Time_AddMinutes.htm" />
+        <HelpTOCNode Title="AddSeconds Method " Url="html/M_TeaTime_Time_AddSeconds.htm" />
+        <HelpTOCNode Title="Compare Method " Url="html/M_TeaTime_Time_Compare.htm" />
+        <HelpTOCNode Id="0fa033fb-7fc0-42ca-8552-fc5868a43d12" Title="Equals Method " Url="html/Overload_TeaTime_Time_Equals.htm">
+          <HelpTOCNode Title="Equals Method (Object)" Url="html/M_TeaTime_Time_Equals.htm" />
+          <HelpTOCNode Title="Equals Method (Time)" Url="html/M_TeaTime_Time_Equals_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_TeaTime_Time_GetHashCode.htm" />
+        <HelpTOCNode Id="5f6d7a43-e36b-40c0-88ce-44e25d7c316c" Title="ToString Method " Url="html/Overload_TeaTime_Time_ToString.htm">
+          <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_Time_ToString.htm" />
+          <HelpTOCNode Title="ToString Method (String)" Url="html/M_TeaTime_Time_ToString_1.htm" />
+        </HelpTOCNode>
+      </HelpTOCNode>
+      <HelpTOCNode Id="2a8cf41c-d5ce-45a2-9823-9dca641621c5" Title="Time Operators and Type Conversions" Url="html/Operators_T_TeaTime_Time.htm">
+        <HelpTOCNode Id="3b4bfdbb-ee69-424c-9522-c4748db040cb" Title="Equality Operator " Url="html/Overload_TeaTime_Time_op_Equality.htm">
+          <HelpTOCNode Title="Equality Operator (DateTime, Time)" Url="html/M_TeaTime_Time_op_Equality.htm" />
+          <HelpTOCNode Title="Equality Operator (Time, DateTime)" Url="html/M_TeaTime_Time_op_Equality_1.htm" />
+          <HelpTOCNode Title="Equality Operator (Time, Time)" Url="html/M_TeaTime_Time_op_Equality_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GreaterThan Operator " Url="html/M_TeaTime_Time_op_GreaterThan.htm" />
+        <HelpTOCNode Title="GreaterThanOrEqual Operator " Url="html/M_TeaTime_Time_op_GreaterThanOrEqual.htm" />
+        <HelpTOCNode Id="087a96dd-4e96-4716-bb2a-da126eb13692" Title="Implicit Conversion Operators" Url="html/Overload_TeaTime_Time_op_Implicit.htm">
+          <HelpTOCNode Title="Implicit Conversion (DateTime to Time)" Url="html/M_TeaTime_Time_op_Implicit.htm" />
+          <HelpTOCNode Title="Implicit Conversion (Time to DateTime)" Url="html/M_TeaTime_Time_op_Implicit_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="e047e318-b3ed-4a73-b771-d5e057add41a" Title="Inequality Operator " Url="html/Overload_TeaTime_Time_op_Inequality.htm">
+          <HelpTOCNode Title="Inequality Operator (DateTime, Time)" Url="html/M_TeaTime_Time_op_Inequality.htm" />
+          <HelpTOCNode Title="Inequality Operator (Time, DateTime)" Url="html/M_TeaTime_Time_op_Inequality_1.htm" />
+          <HelpTOCNode Title="Inequality Operator (Time, Time)" Url="html/M_TeaTime_Time_op_Inequality_2.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="LessThan Operator " Url="html/M_TeaTime_Time_op_LessThan.htm" />
+        <HelpTOCNode Title="LessThanOrEqual Operator " Url="html/M_TeaTime_Time_op_LessThanOrEqual.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="1d8af8cf-d465-4ac2-b5a1-ad09d5161879" Title="Time Properties" Url="html/Properties_T_TeaTime_Time.htm">
+        <HelpTOCNode Title="Date Property " Url="html/P_TeaTime_Time_Date.htm" />
+        <HelpTOCNode Title="Day Property " Url="html/P_TeaTime_Time_Day.htm" />
+        <HelpTOCNode Title="DayOfWeek Property " Url="html/P_TeaTime_Time_DayOfWeek.htm" />
+        <HelpTOCNode Title="DayOfYear Property " Url="html/P_TeaTime_Time_DayOfYear.htm" />
+        <HelpTOCNode Title="Hour Property " Url="html/P_TeaTime_Time_Hour.htm" />
+        <HelpTOCNode Title="Millisecond Property " Url="html/P_TeaTime_Time_Millisecond.htm" />
+        <HelpTOCNode Title="Minute Property " Url="html/P_TeaTime_Time_Minute.htm" />
+        <HelpTOCNode Title="Month Property " Url="html/P_TeaTime_Time_Month.htm" />
+        <HelpTOCNode Title="NetTime Property " Url="html/P_TeaTime_Time_NetTime.htm" />
+        <HelpTOCNode Title="Scale Property " Url="html/P_TeaTime_Time_Scale.htm" />
+        <HelpTOCNode Title="ScaleCollisionBehavior Property " Url="html/P_TeaTime_Time_ScaleCollisionBehavior.htm" />
+        <HelpTOCNode Title="Second Property " Url="html/P_TeaTime_Time_Second.htm" />
+        <HelpTOCNode Title="Ticks Property " Url="html/P_TeaTime_Time_Ticks.htm" />
+        <HelpTOCNode Title="Year Property " Url="html/P_TeaTime_Time_Year.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="9da4438c-459d-4f3b-b3c6-4ba1a7a5f5fe" Title="Timescale Structure" Url="html/T_TeaTime_Timescale.htm">
+      <HelpTOCNode Title="Timescale Members" Url="html/AllMembers_T_TeaTime_Timescale.htm" />
+      <HelpTOCNode Id="dce6d9ba-e345-4753-b804-6c7fca26d8b3" Title="Timescale Fields" Url="html/Fields_T_TeaTime_Timescale.htm">
+        <HelpTOCNode Title="MicrosecondsPerDay Field" Url="html/F_TeaTime_Timescale_MicrosecondsPerDay.htm" />
+        <HelpTOCNode Title="MillisecondsPerDay Field" Url="html/F_TeaTime_Timescale_MillisecondsPerDay.htm" />
+        <HelpTOCNode Title="SecondsPerDay Field" Url="html/F_TeaTime_Timescale_SecondsPerDay.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="18ac49b1-e623-4ae4-b5a8-c8c496e03417" Title="Timescale Methods" Url="html/Methods_T_TeaTime_Timescale.htm">
+        <HelpTOCNode Id="235ff6d6-5a63-4f60-a9e8-e675573293e6" Title="Equals Method " Url="html/Overload_TeaTime_Timescale_Equals.htm">
+          <HelpTOCNode Title="Equals Method (Object)" Url="html/M_TeaTime_Timescale_Equals.htm" />
+          <HelpTOCNode Title="Equals Method (Timescale)" Url="html/M_TeaTime_Timescale_Equals_1.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Id="bf192a6d-82e1-442e-a779-2efa2f8b6c9f" Title="FromEpoch Method " Url="html/Overload_TeaTime_Timescale_FromEpoch.htm">
+          <HelpTOCNode Title="FromEpoch Method (Int64, Int64)" Url="html/M_TeaTime_Timescale_FromEpoch_1.htm" />
+          <HelpTOCNode Title="FromEpoch Method (Int32, Int32, Int32, Int64)" Url="html/M_TeaTime_Timescale_FromEpoch.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="GetHashCode Method " Url="html/M_TeaTime_Timescale_GetHashCode.htm" />
+        <HelpTOCNode Title="ScaleToNet Method " Url="html/M_TeaTime_Timescale_ScaleToNet.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/M_TeaTime_Timescale_ToString.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7316575f-0a40-4ce6-9d02-659e59b04202" Title="Timescale Operators" Url="html/Operators_T_TeaTime_Timescale.htm">
+        <HelpTOCNode Title="Equality Operator " Url="html/M_TeaTime_Timescale_op_Equality.htm" />
+        <HelpTOCNode Title="Inequality Operator " Url="html/M_TeaTime_Timescale_op_Inequality.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="f9dae2f9-532a-40b6-9033-342d5ef1fd0b" Title="Timescale Properties" Url="html/Properties_T_TeaTime_Timescale.htm">
+        <HelpTOCNode Title="Epoch Property " Url="html/P_TeaTime_Timescale_Epoch.htm" />
+        <HelpTOCNode Title="Java Property " Url="html/P_TeaTime_Timescale_Java.htm" />
+        <HelpTOCNode Title="Net Property " Url="html/P_TeaTime_Timescale_Net.htm" />
+        <HelpTOCNode Title="TicksPerDay Property " Url="html/P_TeaTime_Timescale_TicksPerDay.htm" />
+        <HelpTOCNode Title="WellKnownName Property " Url="html/P_TeaTime_Timescale_WellKnownName.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e49aaf91-4c16-47e0-8c88-899621353813" Title="TimescaleException Class" Url="html/T_TeaTime_TimescaleException.htm">
+      <HelpTOCNode Title="TimescaleException Members" Url="html/AllMembers_T_TeaTime_TimescaleException.htm" />
+      <HelpTOCNode Id="d1aba984-e1d9-4756-b27a-f24cad6de62a" Title="TimescaleException Constructor " Url="html/Overload_TeaTime_TimescaleException__ctor.htm">
+        <HelpTOCNode Title="TimescaleException Constructor " Url="html/M_TeaTime_TimescaleException__ctor.htm" />
+        <HelpTOCNode Title="TimescaleException Constructor (String)" Url="html/M_TeaTime_TimescaleException__ctor_1.htm" />
+        <HelpTOCNode Title="TimescaleException Constructor (String, Exception)" Url="html/M_TeaTime_TimescaleException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ff1b3beb-3db8-42aa-8352-0f925e48e67f" Title="TypeMismatchException Class" Url="html/T_TeaTime_TypeMismatchException.htm">
+      <HelpTOCNode Title="TypeMismatchException Members" Url="html/AllMembers_T_TeaTime_TypeMismatchException.htm" />
+      <HelpTOCNode Id="acc0d972-f208-4d21-be92-a7ffd945d4f2" Title="TypeMismatchException Constructor " Url="html/Overload_TeaTime_TypeMismatchException__ctor.htm">
+        <HelpTOCNode Title="TypeMismatchException Constructor " Url="html/M_TeaTime_TypeMismatchException__ctor.htm" />
+        <HelpTOCNode Title="TypeMismatchException Constructor (String, Exception)" Url="html/M_TeaTime_TypeMismatchException__ctor_1.htm" />
+        <HelpTOCNode Title="TypeMismatchException Constructor (String, String)" Url="html/M_TeaTime_TypeMismatchException__ctor_2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>

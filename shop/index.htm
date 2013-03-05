@@ -7,7 +7,6 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
     <link href="/css/discretelogics.css" rel="stylesheet">
@@ -15,6 +14,18 @@
     
 
     
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30699711-1']);
+        _gaq.push(['_setDomainName', 'discretelogics.com']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
 </head>
 <body>
 
@@ -25,10 +36,10 @@
             <div class="navbar offset3">
                 <ul class="nav">
                     <li ><a href="/">Products</a></li>
+                    <li ><a href="/shop">Shop</a></li>
+                    <li ><a href="/resources">Downloads</a></li>
                     <li     class="active"
-><a href="/shop">Shop</a></li>
-                    <li ><a href="/resources">Resources</a></li>
-                    <li ><a href="/about">About</a></li>
+><a href="/about">About</a></li>
                 </ul>
             </div>
         </div>
@@ -49,60 +60,64 @@
     <div class="span7 offset1 cartcontainer">
         <form method="post">
         <input type="hidden" id="htax" name="Tax" />
-        <div class="fields">
-            <h4>Cart</h4>
-            <fieldset>
-                <legend></legend>
-                <table class="shopfields">
-                    <thead>
-                        <tr class="line1">
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>Unit Price in €</th>
-                            <th>Total Price</th>
-                            <th></th>
+            <div class="fields">
+                <h4>Cart</h4>
+                <fieldset>
+                    <legend></legend>
+                    <table class="shopfields"> 
+                        <thead>
+                            <tr class="line1">
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Unit Price in €</th>
+                                <th>Total Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td><b>TeaShell</b></td>
+                            <td class="r"><input id="nTeaShell" name="nTeaShell" autofocus="autofocus" type="number" class="pieces" value="0" min="0" /> pcs</td>
+                            <td>€ 99</td>
+                            <td class="r">€ <span id="teashelltotal">0.00</span></td>
+                            <td></td>
+                        </tr>                    
+                        <tr>
+                            <td><b>TeaHouse</b></td>
+                            <td class="r"><input id="nTeaHouse" name="nTeaHouse" type="number" class="pieces" value="0" min="0" /> pcs</td>
+                            <td>€ 399</td>
+                            <td class="r">€ <span id="teahousetotal">0.00</span></td>
+                            <td></td>
                         </tr>
-                    </thead>
-                    <tr>
-                        <td><b>TeaShell</b></td>
-                        <td class="r"><input id="nTeaShell" name="nTeaShell" autofocus="autofocus" type="number" class="pieces" value="0" min="0" /> pcs</td>
-                        <td>€ 99</td>
-                        <td class="r">€ <span id="teashelltotal">0.00</span></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td><b>TeaHouse</b></td>
-                        <td class="r"><input id="nTeaHouse" name="nTeaHouse" type="number" class="pieces" value="0" min="0" /> pcs</td>
-                        <td>€ 399</td>
-                        <td class="r">€ <span id="teahousetotal">0.00</span></td>
-                        <td></td>
-                    </tr>
-                    <tr class="line1">
-                        <td><b>TeaHouse&nbsp;Trial</b></td>
-                        <td class="r"><input id="nTeaHouseTrial" name="nTeaHouseTrial" type="number" class="pieces" value="0" min="0" max="1" /> pcs</td>
-                        <td>€ 0</td>
-                        <td class="r">€ <span id="teahousetrialtotal">0.00</span></td>
-                        <td>(free)</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="r">€ <span id="tax">0.00</span></td>
-                        <td>20% vat</td>
-                    </tr>
-                    <tr id="last">
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="r">€ <span id="total">0.00</span></td>
-                        <td>total</td>
-                    </tr>
-                </table>
-            </fieldset>
-        </div>
+                        <tr class="line1">
+                            <td><b>TeaHouse&nbsp;Trial</b></td>
+                            <td class="r"><input id="nTeaHouseTrial" name="nTeaHouseTrial" type="number" class="pieces" value="0" min="0" max="1" /> pcs</td>
+                            <td>€ 0</td>
+                            <td class="r">€ <span id="teahousetrialtotal">0.00</span></td>
+                            <td>(free)</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="r">€ <span id="tax">0.00</span></td>
+                            <td>20% vat</td>
+                        </tr>
+                        <tr id="last">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="r">€ <span id="total">0.00</span></td>
+                            <td>total</td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </div>
+            
+            <div class="fields">
+                Each license allows usage of the software one a single machine.
+            </div>
 
-        <div class="divider" style="clear: both">&nbsp;</div>
+            <div class="divider" style="clear: both">&nbsp;</div>
 
         <div class="fields">
             <h4>Licensee</h4>

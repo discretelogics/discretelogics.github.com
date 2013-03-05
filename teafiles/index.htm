@@ -7,7 +7,6 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400,700' rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/responsive.css" rel="stylesheet">
     <link href="/css/discretelogics.css" rel="stylesheet">
@@ -17,6 +16,18 @@
 
 
     
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-30699711-1']);
+        _gaq.push(['_setDomainName', 'discretelogics.com']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
 </head>
 <body>
 
@@ -29,7 +40,7 @@
                     <li     class="active"
 ><a href="/">Products</a></li>
                     <li ><a href="/shop">Shop</a></li>
-                    <li ><a href="/resources">Resources</a></li>
+                    <li ><a href="/resources">Downloads</a></li>
                     <li ><a href="/about">About</a></li>
                 </ul>
             </div>
@@ -92,7 +103,6 @@
             <li>DiscreteLogics publishes the format and</li>
             <li>releases APIs for C#, C++ and Python under the GPL</li>
         </ul>
-
         <p>TeaFiles provide <span class="claim">fast read/write access to time series data</span> from any software package on any platform. 
             Time Series are considered homogeneous collections of items, ordered by their timestamp. Items are stored
             in raw binary format, such that data can be memory mapped for fast read/write
@@ -149,8 +159,7 @@
     <div class="span9 ">
             <h2 id="teafilesnet" >TeaFiles.Net</h2>
 
-        <p><b>TeaFiles.Net</b> is a .Net assembly, published at Codeplex: <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
-.</p>
+        <p><b>TeaFiles.Net</b> is a .Net assembly, published at Github: <a href="https://github.com/discretelogics/TeaFiles.Net">https://github.com/discretelogics/TeaFiles.Net</a>.</p>
 
         <h4>Create a TeaFile and write values</h4>
         <div class="highlight"><pre><span class="c1">// the time series item type</span>
@@ -264,15 +273,14 @@ Time=17.01.2012 21:00:57 Price=505 Volume=5000
 
         <h4>Installation</h4>
         <p>Using <b>NuGet</b> Package Manager: Add the package "TeaFiles.Net" to your project.<br />
-            Alternatively, download the assembly from <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
- and reference it from your project.</p>
+            Alternatively, download the source code from github and reference it from your project.</p>
 
         <h4>Source</h4>
-        <a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
-
+        <a href="http://github.com/discretelogics/TeaFiles.Net" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles.Net</a>
+ 
 
         <h4>Documentation</h4>
-        <p><a href="http://discretelogics.com/doc/teafiles.net/">discretelogics.com/doc/teafiles.net</a></p>
+        <p><a href="/doc/teafiles.net/">discretelogics.com/doc/teafiles.net</a></p>
 
 
     </div>
@@ -336,12 +344,11 @@ the .Net API when reading a TeaFile. (This Description class could easily be cre
 by tools or even the C Preprocessor.)</p>
 
         <h4>Source</h4>
-        <p><a href="http://github.com/discretelogics/TeaFiles" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles</a>
+        <p><a href="http://github.com/discretelogics/TeaFiles.Cpp" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles.Cpp</a>
 </p>
 
         <h4>Documentation</h4>
         <p>Not available yet. The source code is well readable and examples are included in the source.</p>
-
 
     </div>
 </div>
@@ -410,7 +417,7 @@ TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376)
         <p><a href="https://bitbucket.org/discretelogics/teafiles.py">bitbucket.org/discretelogics/teafiles.py</a></p>
 
         <h4>Documentation</h4>
-        <p>Full documentation is at <a href="http://discretelogics.com/doc/teafiles.py/">discretelogics.com/doc/teafiles.py</a></p>
+        <p>Full documentation is at <a href="/doc/teafiles.py/">discretelogics.com/doc/teafiles.py</a></p>
 
     </div>
 </div>
@@ -426,19 +433,18 @@ TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376)
 .</p>
         <p>APIs governed by this license:</p>
         <ul>
-            <li><a href="https://bitbucket.org/discretelogics/teafiles.py" target=&#39;_blank&#39; >bitbucket.org/discretelogics/teafiles.py</a>
+            <li><a href="http://github.com/discretelogics/TeaFiles.Net" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles.Net</a>
 </li>
-            <li><a href="http://teafiles.codeplex.com" target=&#39;_blank&#39; >teafiles.codeplex.com</a>
+            <li><a href="http://github.com/discretelogics/TeaFiles.Cpp" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles.Cpp</a>
 </li>
-            <li><a href="http://github.com/discretelogics/TeaFiles" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles</a>
-</li>
+            <li><a href="http://github.com/discretelogics/TeaFiles.Py" target=&#39;_blank&#39; >github.com/discretelogics/TeaFiles.Py</a>
+</li>            
         </ul>
         <br />
         <p>If your usage is not covered by GPLv3 please contact us to negotiate license conditions.</p>
 
     </div>
 </div>
-
 
             </div>
             <aside class="span3">

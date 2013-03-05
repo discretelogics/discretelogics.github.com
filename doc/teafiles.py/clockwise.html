@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>clockwise module &mdash; TeaFiles 0.7.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dtheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TeaFiles 0.7.4 documentation" href="index.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="teafile Module" href="teafiles.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="teafiles.html" title="teafile Module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="clockwise-module">
+<h1><tt class="xref py py-mod docutils literal"><span class="pre">clockwise</span></tt> module<a class="headerlink" href="#clockwise-module" title="Permalink to this headline">¶</a></h1>
+<img alt="_images/clockwise.jpg" src="_images/clockwise.jpg" />
+<dl class="docutils">
+<dt>right! date and time.</dt>
+<dd>(module name after the movie clockwise, starring monthy python john cleese)</dd>
+</dl>
+<dl class="class">
+<dt id="teafiles.clockwise.DateTime">
+<em class="property">class </em><tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">DateTime</tt><big>(</big><em>year=1970</em>, <em>month=1</em>, <em>day=1</em>, <em>hours=0</em>, <em>minutes=0</em>, <em>seconds=0</em>, <em>milliseconds=0</em>, <em>ticks=None</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.DateTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Holds a date and time value measured in milliseconds since the unix
+epoch 1970-01-01. This value, the number of &#8220;ticks&#8221;, is the only state
+maintained by this class.</p>
+<ol class="arabic simple">
+<li>Either <strong>ticks</strong> are passed, in which case all other arguments are ignored.</li>
+<li>Otherwise all other arguments are used to compute the ticks to be stored.</li>
+</ol>
+<ul class="simple">
+<li><em>year</em>:   beween 1 .. 9999</li>
+<li><em>month</em>:  between 1 .. 12</li>
+<li><em>day</em>:    between 1 .. 31</li>
+<li><em>hours</em>, <em>minutes</em>, <em>seconds</em> and <em>milliseconds</em> are not checked to be in any range, they
+are multiplied with their respective number of milliseconds and summed up to the
+value of _ticks.</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">()</span>
+<span class="go">1970-01-01 00:00:00:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">()</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">1970</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">86400000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">427</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">427L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">5240000</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">946972619000L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">88</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">5240000</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">11L</span>
+</pre></div>
+</div>
+<dl class="staticmethod">
+<dt id="teafiles.clockwise.DateTime.parse">
+<em class="property">static </em><tt class="descname">parse</tt><big>(</big><em>timestring</em>, <em>format</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.DateTime.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an instance by parsing &lt;timestring&gt; using &lt;format&gt;.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">&quot;2007-05-07 19:22:11&quot;</span><span class="p">,</span> <span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s"> %H:%M:%S&quot;</span><span class="p">)</span>
+<span class="go">2007-05-07 19:22:11:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">&quot;2007-04-09 09:22:11&quot;</span><span class="p">,</span> <span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s"> %H:%M:%S&quot;</span><span class="p">)</span>
+<span class="go">2007-04-09 09:22:11:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s">&quot;2007-04-09&quot;</span><span class="p">,</span> <span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="go">2007-04-09 00:00:00:000</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.clockwise.DateTime.ticks">
+<tt class="descname">ticks</tt><a class="headerlink" href="#teafiles.clockwise.DateTime.ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the internal representation of date and time, which are ticks, meaning the number of
+milliseconds since the epoch.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">()</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">300L</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">946684800000L</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="teafiles.clockwise.DateTime.date">
+<tt class="descname">date</tt><a class="headerlink" href="#teafiles.clockwise.DateTime.date" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the date part, that is a DateTime with a time of 00:00:00:000.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">+</span> <span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span>
+<span class="go">2000-03-04 00:00:05:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t</span><span class="o">.</span><span class="n">date</span>
+<span class="go">2000-03-04 00:00:00:000</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.clockwise.DateTime.totimeandms">
+<tt class="descname">totimeandms</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.clockwise.DateTime.totimeandms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the date and time parts as a tuple holding (time.time, milliseconds).
+Since this method uses <cite>time.gmtime</cite>, errors with negative tick values
+can arise when using CPython (not in IronPython).</p>
+<p>This method is used internally but can also serve as an interface to python&#8217;s standard library time.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mo">00</span><span class="p">,</span> <span class="mi">14</span><span class="p">)</span><span class="o">.</span><span class="n">totimeandms</span><span class="p">()</span>
+<span class="go">(time.struct_time(tm_year=2011, tm_mon=4, tm_mday=5, tm_hour=22, tm_min=0, tm_sec=14, tm_wday=1, tm_yday=95, tm_isdst=0), 0L)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2011</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mo">00</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">333</span><span class="p">)</span><span class="o">.</span><span class="n">totimeandms</span><span class="p">()</span>
+<span class="go">(time.struct_time(tm_year=2011, tm_mon=4, tm_mday=5, tm_hour=22, tm_min=0, tm_sec=14, tm_wday=1, tm_yday=95, tm_isdst=0), 333L)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">DateTime</span><span class="p">()</span><span class="o">.</span><span class="n">totimeandms</span><span class="p">()</span>
+<span class="go">(time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0), 0)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p>Supported operations:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="45%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operation</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">==</span> <span class="pre">t2</span></tt></td>
+<td>t1.ticks == t2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">!=</span> <span class="pre">t2</span></tt></td>
+<td>t1.ticks != t2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">&gt;</span>&nbsp; <span class="pre">t2</span></tt></td>
+<td>t1.ticks &gt; t2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">&gt;=</span> <span class="pre">t2</span></tt></td>
+<td>t1.ticks &gt;= t2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">&lt;</span>&nbsp; <span class="pre">t2</span></tt></td>
+<td>t1.ticks &lt;  t2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">t1</span> <span class="pre">&lt;=</span> <span class="pre">t2</span></tt></td>
+<td>t1.ticks &lt;= t2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">d2</span> <span class="pre">=</span> <span class="pre">d1</span> <span class="pre">+</span>&nbsp; <span class="pre">duration</span></tt></td>
+<td>adds duration, returning a new DateTime</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">t</span> <span class="pre">+=</span> <span class="pre">Duration</span></tt></td>
+<td>adds duration to t assigning new DateTime to t</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">int(DateTime)</span></tt></td>
+<td>returns ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">math.trunc(DateTime)</span></tt></td>
+<td>returns itself</td>
+</tr>
+</tbody>
+</table>
+<dl class="class">
+<dt id="teafiles.clockwise.Duration">
+<em class="property">class </em><tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">Duration</tt><big>(</big><em>weeks=0</em>, <em>days=0</em>, <em>hours=0</em>, <em>minutes=0</em>, <em>seconds=0</em>, <em>milliseconds=0</em>, <em>ticks=None</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.Duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores a duration as number of milliseconds. In combination with <cite>DateTime</cite>
+provides time arithmetic.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">7000</span><span class="p">)</span>      <span class="c"># 7000 milliseconds</span>
+<span class="go">0 days 00:00:07:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>          <span class="c"># factory functions</span>
+<span class="go">3 days 00:00:00:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span> <span class="o">+</span> <span class="n">Duration</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="mi">144</span>
+<span class="go">14 days 03:00:00:144</span>
+</pre></div>
+</div>
+<p>Initialize a duration from a number holding its milliseconds.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">teafiles.clockwise</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">()</span>
+<span class="go">0 days 00:00:00:000</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="go">0 days 00:00:00:003</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">1003</span><span class="p">)</span>
+<span class="go">0 days 00:00:01:003</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">86400</span> <span class="o">+</span> <span class="mi">1050</span><span class="p">)</span>
+<span class="go">0 days 00:01:27:450</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">86400000</span> <span class="o">+</span> <span class="mi">1050</span><span class="p">)</span>
+<span class="go">1 days 00:00:01:050</span>
+</pre></div>
+</div>
+<dl class="attribute">
+<dt id="teafiles.clockwise.Duration.ticks">
+<tt class="descname">ticks</tt><a class="headerlink" href="#teafiles.clockwise.Duration.ticks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the underlying number of ticks, that is the number of milliseconds.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">1033</span><span class="p">)</span><span class="o">.</span><span class="n">ticks</span>
+<span class="go">1033L</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="teafiles.clockwise.Duration.totimedelta">
+<tt class="descname">totimedelta</tt><big>(</big><big>)</big><a class="headerlink" href="#teafiles.clockwise.Duration.totimedelta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the duration to a <cite>datetime.timedelta</cite> instance.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">totimedelta</span><span class="p">()</span>
+<span class="go">datetime.timedelta(0, 0, 33000)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">totimedelta</span><span class="p">()</span>
+<span class="go">datetime.timedelta(0, 33)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">totimedelta</span><span class="p">()</span>
+<span class="go">datetime.timedelta(0, 1980)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">totimedelta</span><span class="p">()</span>
+<span class="go">datetime.timedelta(1, 32400)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">33</span><span class="p">)</span><span class="o">.</span><span class="n">totimedelta</span><span class="p">()</span>
+<span class="go">datetime.timedelta(33)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p>Supported Operations:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="48%" />
+<col width="52%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operation</th>
+<th class="head">Result</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">==</span> <span class="pre">d2</span></tt></td>
+<td>d1.ticks == d2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">!=</span> <span class="pre">d2</span></tt></td>
+<td>d1.ticks != d2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">&gt;</span>&nbsp; <span class="pre">d2</span></tt></td>
+<td>d1.ticks &gt; d2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">&gt;=</span> <span class="pre">d2</span></tt></td>
+<td>d1.ticks &gt;= d2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">&lt;</span>&nbsp; <span class="pre">d2</span></tt></td>
+<td>d1.ticks &lt;  d2.ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">d1</span> <span class="pre">&lt;=</span> <span class="pre">d2</span></tt></td>
+<td>d1.ticks &lt;= d2.ticks</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">d</span> <span class="pre">=</span> <span class="pre">d1</span> <span class="pre">+</span> <span class="pre">2</span></tt></td>
+<td>adds both durations, returning new Duration</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">d</span> <span class="pre">+=</span> <span class="pre">d2</span></tt></td>
+<td>adds d2 to d, assigning new Duration to d</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">int(Duration)</span></tt></td>
+<td>returns ticks</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">math.trunc(Duration)</span></tt></td>
+<td>returns itself</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="utility-functions">
+<h2>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="teafiles.clockwise.range">
+<tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">range</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.range" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overrides the range method, allowing DateTime ranges. Requires exactly 3 arguments to have effect (otherwise normal range method
+is called): start (DateTime), end (DateTime) and step (Duration)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">DateTime</span><span class="p">(</span><span class="mi">2001</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Duration</span><span class="p">(</span><span class="n">weeks</span><span class="o">=</span><span class="mi">2</span><span class="p">)):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="n">t</span>
+<span class="gp">...</span>
+<span class="go">2000-09-01 00:00:00:000</span>
+<span class="go">2000-09-15 00:00:00:000</span>
+<span class="go">2000-09-29 00:00:00:000</span>
+<span class="go">2000-10-13 00:00:00:000</span>
+<span class="go">2000-10-27 00:00:00:000</span>
+<span class="go">2000-11-10 00:00:00:000</span>
+<span class="go">2000-11-24 00:00:00:000</span>
+<span class="go">2000-12-08 00:00:00:000</span>
+<span class="go">2000-12-22 00:00:00:000</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="teafiles.clockwise.rangen">
+<tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">rangen</tt><big>(</big><em>startdate</em>, <em>stepduration</em>, <em>count</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.rangen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple creation of DateTime sequences. Generate &lt;count&gt; DateTimes starting
+with &lt;startdate&gt; incremented by &lt;stepduration&gt;.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">rangen</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="mi">10</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="k">print</span> <span class="n">t</span>
+<span class="gp">...</span>
+<span class="go">2000-09-01 00:00:00:000</span>
+<span class="go">2000-09-02 00:00:00:000</span>
+<span class="go">2000-09-03 00:00:00:000</span>
+<span class="go">2000-09-04 00:00:00:000</span>
+<span class="go">2000-09-05 00:00:00:000</span>
+<span class="go">2000-09-06 00:00:00:000</span>
+<span class="go">2000-09-07 00:00:00:000</span>
+<span class="go">2000-09-08 00:00:00:000</span>
+<span class="go">2000-09-09 00:00:00:000</span>
+<span class="go">2000-09-10 00:00:00:000</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="teafiles.clockwise.isdatetime">
+<tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">isdatetime</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.isdatetime" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="teafiles.clockwise.isduration">
+<tt class="descclassname">teafiles.clockwise.</tt><tt class="descname">isduration</tt><big>(</big><em>value</em><big>)</big><a class="headerlink" href="#teafiles.clockwise.isduration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#"><tt class="docutils literal"><span class="pre">clockwise</span></tt> module</a><ul>
+<li><a class="reference internal" href="#utility-functions">Utility functions</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="teafiles.html"
+                        title="previous chapter"><tt class="docutils literal"><span class="pre">teafile</span></tt> Module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="next chapter">Examples</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/clockwise.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="teafiles.html" title="teafile Module"
+             >previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, discretelogics.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

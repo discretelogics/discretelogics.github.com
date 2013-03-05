@@ -1,0 +1,166 @@
+/* File    : TOC.css
+// Author  : Eric Woodruff  (Eric@EWoodruff.us)
+// Updated : 09/07/2007
+//
+// Stylesheet for the table of content
+*/
+
+*
+{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+
+body
+{
+    font-family: verdana, arial, sans-serif;
+    font-size: 90%;
+    color: White;
+	overflow: hidden;
+}
+
+input
+{
+	font-size: 8.5pt;
+}
+
+img
+{
+    border: 0;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+img.TreeNodeImg
+{
+    cursor: pointer;
+}
+
+img.TOCLink
+{
+    cursor: pointer;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+a.SelectedNode, a.UnselectedNode
+{
+	color: black;
+    text-decoration: none;
+	padding: 1px 3px 1px 3px;
+    white-space: nowrap;
+}
+
+a.SelectedNode
+{
+	background-color: #ffffff;
+    border: solid 1px #999999;
+	padding: 0px 2px 0px 2px;
+}
+
+a.UnselectedNode:hover, a.SelectedNode:hover
+{
+    background-color: #E8F53D;
+    border: solid 1px #999999;
+    padding: 0px 2px 0px 2px;
+    color: #800000;
+}
+
+.Visible
+{
+    display: block;
+    margin-left: 2em;
+}
+
+.Hidden
+{
+    display: none;
+}
+
+.Tree
+{
+    
+    color: Black;
+    width: 300px;
+    overflow: hidden;
+}
+
+.TreeNode, .TreeItem
+{
+    white-space: nowrap;
+    margin: 2px 2px 2px 2px;
+}
+
+.TOCDiv
+{
+    background-color: #f8f9f4;    
+	position: relative;
+	float: left;
+	width: 300px;
+    height: 100%;
+}
+
+.TOCSizer
+{
+	clear: none;
+	float: left;
+	width: 10px;
+    height: 100%;
+    border-left: solid 1px #eee;
+    background-image: url(/Content/msdn2010.png);
+    background-position: -1467px 50px;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: w-resize;
+}
+
+.TopicContent
+{
+	position: relative;
+	float: right;
+    background-color: white;
+    height: 100%;
+    border: 0;
+}
+
+.SearchOpts
+{
+    padding: 5px 5px 0px 5px;
+    background-color: lightgrey;
+    color: black;
+    width: 300px;
+}
+
+.NavOpts
+{
+    display: none; /* hide ugly nav options */
+    padding: 5px 5px 0px 5px;
+    background-color: lightgrey;
+    color: black;
+    width: 300px;
+}
+
+.IndexOpts
+{
+    padding: 5px 5px 0px 5px;
+    background-color: lightgrey;
+    color: black;
+    width: 300px;
+}
+
+.IndexItem
+{
+    white-space: nowrap;
+    margin: 2px 2px 2px 2px;
+}
+
+.IndexSubItem
+{
+    white-space: nowrap;
+    margin: 2px 2px 2px 12px;
+}
+
+.PaddedText
+{
+    margin: 10px 10px 10px 10px;
+}

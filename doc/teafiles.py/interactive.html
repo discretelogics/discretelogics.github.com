@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>teafiles.TeaFile in interactive use &mdash; TeaFiles 0.7.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dtheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TeaFiles 0.7.4 documentation" href="index.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="teafiles-teafile-in-interactive-use">
+<h1>teafiles.TeaFile in interactive use<a class="headerlink" href="#teafiles-teafile-in-interactive-use" title="Permalink to this headline">¶</a></h1>
+<p>A sample interactive session using TeaFiles api for Python.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">teafiles</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="s">&#39;acme.tea&#39;</span><span class="p">,</span> <span class="s">&#39;Time Price Volume&#39;</span><span class="p">,</span> <span class="s">&#39;qdq&#39;</span><span class="p">,</span> <span class="s">&#39;acme prices&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s">&#39;exchange&#39;</span><span class="p">:</span> <span class="s">&#39;nyse&#39;</span><span class="p">,</span> <span class="s">&#39;decimals&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">})</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">),</span> <span class="n">DateTime</span><span class="p">(</span><span class="mi">2001</span><span class="p">),</span> <span class="n">Duration</span><span class="p">(</span><span class="n">weeks</span><span class="o">=</span><span class="mi">1</span><span class="p">)):</span>
+<span class="gp">... </span>        <span class="kn">import</span> <span class="nn">random</span>
+<span class="gp">... </span>        <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10000</span><span class="p">))</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">TeaFile</span><span class="o">.</span><span class="n">printsnapshot</span><span class="p">(</span><span class="s">&#39;acme.tea&#39;</span><span class="p">)</span>
+<span class="go">TeaFile(&#39;acme.tea&#39;) 53 items</span>
+
+<span class="go">ItemDescription</span>
+<span class="go">Name:       TPV</span>
+<span class="go">Size:       24</span>
+<span class="go">Fields:</span>
+<span class="go">[Time         Type:  Int64   Offset: 0   IsTime:1   IsEventTime:1,</span>
+<span class="go"> Price        Type: Double   Offset: 8   IsTime:0   IsEventTime:0,</span>
+<span class="go"> Volume       Type:  Int64   Offset:16   IsTime:0   IsEventTime:0]</span>
+
+<span class="go">ContentDescription</span>
+<span class="go">acme prices</span>
+
+<span class="go">NameValues</span>
+<span class="go">{u&#39;decimals&#39;: 2, u&#39;exchange&#39;: u&#39;nyse&#39;}</span>
+
+<span class="go">TimeScale</span>
+<span class="go">Epoch:           719162</span>
+<span class="go">Ticks per Day: 86400000</span>
+<span class="go">Wellknown Scale:   Java</span>
+
+<span class="go">Items</span>
+<span class="go">TPV(Time=2000-01-01 00:00:00:000, Price=37.579128977028674, Volume=8047)</span>
+<span class="go">TPV(Time=2000-01-08 00:00:00:000, Price=10.618929589509186, Volume=232)</span>
+<span class="go">TPV(Time=2000-01-15 00:00:00:000, Price=73.08506970525428, Volume=1711)</span>
+<span class="go">TPV(Time=2000-01-22 00:00:00:000, Price=73.7749103916519, Volume=4397)</span>
+<span class="go">TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&#39;acme.tea&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">50</span><span class="p">)))</span>
+<span class="go">[TPV(Time=2000-12-16 00:00:00:000, Price=62.654885677497305, Volume=8097),</span>
+<span class="go"> TPV(Time=2000-12-23 00:00:00:000, Price=28.267048873450907, Volume=9226),</span>
+<span class="go"> TPV(Time=2000-12-30 00:00:00:000, Price=34.48653142780683, Volume=7790)]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)))</span>
+<span class="go">[TPV(Time=2000-01-01 00:00:00:000, Price=37.579128977028674, Volume=8047),</span>
+<span class="go"> TPV(Time=2000-01-08 00:00:00:000, Price=10.618929589509186, Volume=232),</span>
+<span class="go"> TPV(Time=2000-01-15 00:00:00:000, Price=73.08506970525428, Volume=1711),</span>
+<span class="go"> TPV(Time=2000-01-22 00:00:00:000, Price=73.7749103916519, Volume=4397),</span>
+<span class="go"> TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376),</span>
+<span class="go"> TPV(Time=2000-02-05 00:00:00:000, Price=5.253065316994842, Volume=3213),</span>
+<span class="go"> TPV(Time=2000-02-12 00:00:00:000, Price=77.30547456663894, Volume=1740),</span>
+<span class="go"> TPV(Time=2000-02-19 00:00:00:000, Price=70.41257838854919, Volume=3450),</span>
+<span class="go"> TPV(Time=2000-02-26 00:00:00:000, Price=26.454005280919326, Volume=8699),</span>
+<span class="go"> TPV(Time=2000-03-04 00:00:00:000, Price=18.6317489603937, Volume=8166)]</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="k">def</span> <span class="nf">showdecimals</span><span class="p">():</span>
+<span class="gp">... </span>    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">&#39;.&#39;</span><span class="p">):</span>
+<span class="gp">... </span>        <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+<span class="gp">... </span>            <span class="n">nvs</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">description</span><span class="o">.</span><span class="n">namevalues</span>
+<span class="gp">... </span>            <span class="k">print</span><span class="p">(</span><span class="s">&#39;{} {} {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">nvs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;Decimals&#39;</span><span class="p">),</span> <span class="n">nvs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;DisplayName&#39;</span><span class="p">)))</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">showdecimals</span><span class="p">()</span>
+<span class="go">AA.day.tea 2 Alcoa, Inc.</span>
+<span class="go">AA.tick.tea 2 Alcoa, Inc.</span>
+<span class="go">AXP.day.tea 2 American Express Co.</span>
+<span class="go">BA.day.tea 2 Boeing Co. (The)</span>
+<span class="go">BAC.day.tea 2 Bank of America Corp.</span>
+<span class="go">CAT.day.tea 2 Caterpillar Inc.</span>
+<span class="go">CSCO.day.tea 2 Cisco Systems, Inc.</span>
+<span class="go">CVX.day.tea 2 Chevron Corporation</span>
+<span class="go">DD.day.tea 2 Du Pont (E.I.) de Nemours &amp; Co</span>
+<span class="go">DIS.day.tea 2 WALT DISNEY-DISNEY C</span>
+<span class="go">GE.day.tea 2 General Electric Co</span>
+<span class="go">HD.day.tea 2 HOME DEPOT INC</span>
+<span class="go">HPQ.day.tea 2 Hewlett-Packard Co</span>
+<span class="go">IBM.day.tea 2 International Business Machines Corp.</span>
+<span class="go">INTC.day.tea 2 Intel Corporation</span>
+<span class="go">JNJ.day.tea 2 Johnson &amp; Johnson</span>
+<span class="go">JPM.day.tea 2 JPMorgan Chase &amp; Co.</span>
+<span class="go">KFT.day.tea 2 Kraft Foods, Inc.</span>
+<span class="go">KO.day.tea 2 Coca-Cola Co (The)</span>
+<span class="go">MCD.day.tea 2 McDonald&#39;s Corp</span>
+<span class="go">MMM.day.tea 2 3M Co</span>
+<span class="go">MRK.day.tea 2 Merck &amp; Co., Inc</span>
+<span class="go">MSFT.day.tea 2 Microsoft Corporation</span>
+<span class="go">PFE.day.tea 2 PFIZER INC</span>
+<span class="go">PG.day.tea 2 Procter &amp; Gamble Co.</span>
+<span class="go">T.day.tea 2 AT&amp;T Inc</span>
+<span class="go">TRV.day.tea 2 Travelers Companies Inc (The)</span>
+<span class="go">UTX.day.tea 2 United Technologies Corp.</span>
+<span class="go">VZ.day.tea 2 Verizon Communications Inc</span>
+<span class="go">WMT.day.tea 2 Wal-Mart Stores, Inc.</span>
+<span class="go">XOM.day.tea 2 Exxon Mobil Corp.</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="examples.html"
+                        title="previous chapter">Examples</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/interactive.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="examples.html" title="Examples"
+             >previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, discretelogics.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Examples &mdash; TeaFiles 0.7.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/dtheme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.7.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="TeaFiles 0.7.4 documentation" href="index.html" />
+    <link rel="next" title="teafiles.TeaFile in interactive use" href="interactive.html" />
+    <link rel="prev" title="clockwise module" href="clockwise.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="interactive.html" title="teafiles.TeaFile in interactive use"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="clockwise.html" title="clockwise module"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>The examples below demonstrate how to accomplish common tasks with the Python TeaFiles API. They are mostly also available
+using APIs for C++ and C# to which they might be compared. The package source code holds the python code in the file
+examples.py in the root directory.</p>
+<div class="section" id="createticks">
+<h2>createticks<a class="headerlink" href="#createticks" title="Permalink to this headline">¶</a></h2>
+<p>Shows how to create a TeaFile and write items into it. Useful for test file creation.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">teafiles</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">def</span> <span class="nf">createticks</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">contentdescription</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">namevalues</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&quot;Time Price Volume&quot;</span><span class="p">,</span> <span class="s">&quot;qdq&quot;</span><span class="p">,</span> <span class="n">contentdescription</span><span class="p">,</span> <span class="n">namevalues</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">rangen</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Duration</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">n</span><span class="p">):</span>    <span class="c"># increments n times by 1 minute</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
+            <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This function accepts a filename, the number of random ticks to write into the file and optionally
+a content description and name-value collection. Details about the code</p>
+<blockquote>
+<div><div class="highlight-python"><pre>with TeaFile.create(filename, "Time Price", "qdq", contentdescription, namevalues) as tf:</pre>
+</div>
+</div></blockquote>
+<p>Beside the filename, we pass <tt class="xref py py-meth docutils literal"><span class="pre">teafiles.TeaFile.create()</span></tt> the structure of our items as a list of <em>field names</em>, here
+<strong>Time</strong>, <strong>Price</strong> and <strong>Volume</strong>.</p>
+<p>We then specify the respective <em>field type</em>, by passing the format string <strong>&#8220;qd&#8221;</strong>, that holds one character for each field.
+The characters correspond to those used by the <a class="reference external" href="http://docs.python.org/library/struct.html?highlight=struct#format-characters">struct module</a>, so for here we defined thefields to have types int64, double and int64.</p>
+<p>Content <strong>description</strong> is a simple string wile the name-value dictionary can hold for more structured descriptions. We pass both
+to store in the file.</p>
+<p>Finally the <strong>with</strong> clause: TeaFile implements the context manager methods __enter__ and __exit__, guaranteeing that any open
+file will be closed when the with block is left, even if an exception occurs. It is highly recommended to always use TeaFile
+instances that way. Manual calls to <tt class="xref py py-meth docutils literal"><span class="pre">TeaFile.close()</span></tt> should only be required in interactive sessions.</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">r</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>writes an item into the file. Note that this write method is dynamically created in the call to create and receives argument names &#8220;Time&#8221; and
+&#8220;Price&#8221; which is in particular convenient when using this api from an interactive commandline.</p>
+</div>
+<div class="section" id="sumprices">
+<h2>sumprices<a class="headerlink" href="#sumprices" title="Permalink to this headline">¶</a></h2>
+<p>Shows how to open a file and access its items.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">sumprices</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">Price</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>Again we use a factory method to open the file, this time we use <tt class="xref py py-meth docutils literal"><span class="pre">teafiles.TeaFile.openread()</span></tt> to open the file in read only mode. The
+with statement ensure that the file is closed at the end.</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">Price</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>We iterate over the items using items() which returns a generator (<a class="reference external" href="http://docs.python.org/reference/simple_stmts.html#the-yield-statement">generatoriterator</a>) over all items which are named tuples like:</p>
+<blockquote>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">tf</span> <span class="o">=</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="s">&quot;lab.tea&quot;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+<span class="go">[TPV(Time=1970-01-01 00:00:00:000, Price=61.195988356060546, Volume=611),</span>
+<span class="go"> TPV(Time=1970-01-01 00:01:00:000, Price=56.2617855404688, Volume=562),</span>
+<span class="go"> TPV(Time=1970-01-01 00:02:00:000, Price=0.3000058069409506, Volume=3)</span>
+<span class="go"> ...</span>
+<span class="go"> ]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="scenario-data-cleansing">
+<h2>scenario: data cleansing<a class="headerlink" href="#scenario-data-cleansing" title="Permalink to this headline">¶</a></h2>
+<p>ACME company receives data from stock exchanges holding prices and volums of transactions. Each transaction is stored as a
+&#8220;Tick&#8221; (Time, Price, Volume), one file per financial instrument. Clara is responsible to monitor the quality of the data
+stored in the files. It happens that ticks come in with wrong numbers, like a price of 0, or a price obviously out of
+reasonable range. It even happens that ticks are missing. Each day, Clara has to check 3000 files and make sure that
+their data is reasonable. To quickly identify files with potentially erroneous data, she runs the following data check algorithm
+on each file:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">for each day count the number of ticks</p>
+</li>
+<li><p class="first">compute the median of all daily tick-counts</p>
+</li>
+<li><p class="first">mark all those days that have a tick-count &lt; 1/2 * median as suspect</p>
+</li>
+<li><p class="first">In addition these descriptive measures are reported for each file:</p>
+<blockquote>
+<div><ul class="simple">
+<li>minimum and maximum price</li>
+<li>minimum and maximum tick count per session</li>
+<li>median of tick count</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>The python functions analyzeticks() implements the algorithm above. Before we can run it we need some test data, which we create
+by another function, called createsession().</p>
+</div>
+<div class="section" id="createsessions">
+<h2>createsessions<a class="headerlink" href="#createsessions" title="Permalink to this headline">¶</a></h2>
+<p>For each day were trading is open at the exchange, we define a time interval from 09:00 to 17:30 were transactions occur and
+create randomized values and spaced ticks. The code is straight forard:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">createsessions</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">numberofsessions</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">writedailyticks</span><span class="p">(</span><span class="n">teafile</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">isgoodday</span><span class="p">):</span>
+        <span class="sd">&#39;&#39;&#39; create a random series of ticks. if isgoodday is false, only 1% as much ticks will be written. &#39;&#39;&#39;</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">day</span> <span class="o">+</span> <span class="n">Duration</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>         <span class="c"># session begins at 09:00</span>
+        <span class="n">end</span> <span class="o">=</span> <span class="n">day</span> <span class="o">+</span> <span class="n">Duration</span><span class="p">(</span><span class="n">hours</span><span class="o">=</span><span class="mf">17.5</span><span class="p">)</span>    <span class="c"># session ends at 17:30</span>
+        <span class="k">while</span> <span class="n">t</span> <span class="o">&lt;</span> <span class="n">end</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">isgoodday</span> <span class="ow">or</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">99</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">price</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">100</span>
+                <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">price</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+            <span class="n">t</span> <span class="o">+=</span> <span class="n">Duration</span><span class="p">(</span><span class="n">seconds</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&quot;Time Price Volume&quot;</span><span class="p">,</span> <span class="s">&quot;qdq&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+        <span class="sd">&#39;&#39;&#39; write a file with random tick, similar to ticks as they occur on a stock exchange in reality:</span>
+<span class="sd">            for &lt;numberofsessions&gt; days we create ticks between 9:00 and 17:30. 10% of the days will</span>
+<span class="sd">            create only 1% as much ticks than the other days. This simulates bad data &#39;&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">rangen</span><span class="p">(</span><span class="n">DateTime</span><span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">numberofsessions</span><span class="p">):</span>
+            <span class="n">isgoodday</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">90</span>
+            <span class="n">writedailyticks</span><span class="p">(</span><span class="n">tf</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">isgoodday</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">tf</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="analyzeticks">
+<h2>analyzeticks<a class="headerlink" href="#analyzeticks" title="Permalink to this headline">¶</a></h2>
+<p>To detect days with unexpected low tick count value, we count ticks for each day. To this purpose we define a class
+TradingSession and create one for each day. Counting the ticks is straightfoward then:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">analyzeticks</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">displayvalues</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+
+    <span class="k">class</span> <span class="nc">_TradingSession</span><span class="p">:</span>
+        <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">begin</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">begin</span> <span class="o">=</span> <span class="n">begin</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">end</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">begin</span> <span class="o">+</span> <span class="n">Duration</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">tickcount</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">def</span> <span class="nf">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">begin</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">end</span><span class="p">),</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tickcount</span><span class="p">)])</span>
+
+    <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">openread</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="n">tf</span><span class="o">.</span><span class="n">itemcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;This file holds no items&quot;</span><span class="p">)</span>
+
+        <span class="n">tick</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+        <span class="n">session</span> <span class="o">=</span> <span class="n">_TradingSession</span><span class="p">(</span><span class="n">tick</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+        <span class="n">minprice</span> <span class="o">=</span> <span class="n">maxprice</span> <span class="o">=</span> <span class="n">tick</span><span class="o">.</span><span class="n">Price</span>
+        <span class="n">sessions</span> <span class="o">=</span> <span class="p">[</span><span class="n">session</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">tick</span> <span class="ow">in</span> <span class="n">tf</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">tick</span><span class="o">.</span><span class="n">Time</span> <span class="o">&gt;</span> <span class="n">session</span><span class="o">.</span><span class="n">end</span><span class="p">:</span>
+                <span class="n">session</span> <span class="o">=</span> <span class="n">_TradingSession</span><span class="p">(</span><span class="n">tick</span><span class="o">.</span><span class="n">Time</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+                <span class="n">sessions</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">session</span><span class="p">)</span>
+            <span class="n">session</span><span class="o">.</span><span class="n">tickcount</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">minprice</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">minprice</span><span class="p">,</span> <span class="n">tick</span><span class="o">.</span><span class="n">Price</span><span class="p">)</span>
+            <span class="n">maxprice</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maxprice</span><span class="p">,</span> <span class="n">tick</span><span class="o">.</span><span class="n">Price</span><span class="p">)</span>
+
+        <span class="n">mintransactions</span> <span class="o">=</span> <span class="n">maxtransactions</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">tickcount</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sessions</span><span class="p">:</span>
+            <span class="n">mintransactions</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">mintransactions</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">tickcount</span><span class="p">)</span>
+            <span class="n">maxtransactions</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maxtransactions</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">tickcount</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;min price = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">minprice</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;max price = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">maxprice</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;min ticks per session = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mintransactions</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;max ticks per session = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">maxtransactions</span><span class="p">))</span>
+
+        <span class="n">tickcounts</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">s</span><span class="o">.</span><span class="n">tickcount</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sessions</span><span class="p">])</span>
+        <span class="n">median</span> <span class="o">=</span> <span class="n">tickcounts</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">tickcounts</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">]</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&quot;median = {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">median</span><span class="p">))</span>
+
+        <span class="k">if</span> <span class="n">displayvalues</span><span class="p">:</span>
+            <span class="n">minimumexpectedtickspersession</span> <span class="o">=</span> <span class="n">median</span> <span class="o">/</span> <span class="mf">2.0</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">&quot;First 10 sessions:&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">sessions</span><span class="p">[:</span><span class="mi">15</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s">&quot;{} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="s">&quot;OK&quot;</span> <span class="k">if</span> <span class="n">s</span><span class="o">.</span><span class="n">tickcount</span> <span class="o">&gt;=</span> <span class="n">minimumexpectedtickspersession</span> <span class="k">else</span> <span class="s">&quot;QUESTIONABLE&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-data-from-yahoo-finance">
+<h2>download data from Yahoo Finance<a class="headerlink" href="#download-data-from-yahoo-finance" title="Permalink to this headline">¶</a></h2>
+<p>Python is particularly well suited to access data like available at Yahoo finance, as changes in such public api
+can be quickly adopted by modifications of the script.:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">urllib</span> <span class="kn">import</span> <span class="n">urlopen</span>
+<span class="k">def</span> <span class="nf">gethistoricalprices</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">startyear</span><span class="p">,</span> <span class="n">startmonth</span><span class="p">,</span> <span class="n">startday</span><span class="p">,</span> <span class="n">endyear</span><span class="p">,</span> <span class="n">endmonth</span><span class="p">,</span> <span class="n">endday</span><span class="p">):</span>
+
+    <span class="n">url</span> <span class="o">=</span> <span class="s">&quot;http://ichart.yahoo.com/table.csv?s={0}&amp;a={1:02}&amp;b={2:02}&amp;c={3:04}&amp;d={4:02}&amp;e={5:02}&amp;f={6:04}&amp;g=d&amp;ignore=.csv&quot;</span> \
+        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <span class="n">startmonth</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">startday</span><span class="p">,</span> <span class="n">startyear</span><span class="p">,</span> <span class="n">endmonth</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">endday</span><span class="p">,</span> <span class="n">endyear</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="c"># values arrive in timely reversed order, so we store them in a list and add them reversed to the file</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">&quot;utf8&quot;</span><span class="p">)</span>
+        <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+        <span class="n">parts</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
+
+        <span class="n">t</span> <span class="o">=</span> <span class="n">Time</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s">&quot;%Y-%m-</span><span class="si">%d</span><span class="s">&quot;</span><span class="p">)</span>
+        <span class="n">open_</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">high</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+        <span class="n">low</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+        <span class="n">close</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">volume</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+        <span class="n">adjclose</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">parts</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+
+        <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">t</span><span class="p">,</span> <span class="n">open_</span><span class="p">,</span> <span class="n">high</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">close</span><span class="p">,</span> <span class="n">adjclose</span><span class="p">,</span> <span class="n">volume</span><span class="p">))</span>
+
+    <span class="c"># create the file to store the received values</span>
+    <span class="k">with</span> <span class="n">TeaFile</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s">&quot;Time Open High Low Close AdjClose Volume&quot;</span><span class="p">,</span> <span class="s">&quot;qdddddq&quot;</span><span class="p">,</span> <span class="n">symbol</span><span class="p">,</span> <span class="p">{</span><span class="s">&quot;decimals:&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">})</span> <span class="k">as</span> <span class="n">tf</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">values</span><span class="p">):</span>
+            <span class="n">tf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="o">*</span><span class="n">item</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Examples</a><ul>
+<li><a class="reference internal" href="#createticks">createticks</a></li>
+<li><a class="reference internal" href="#sumprices">sumprices</a></li>
+<li><a class="reference internal" href="#scenario-data-cleansing">scenario: data cleansing</a></li>
+<li><a class="reference internal" href="#createsessions">createsessions</a></li>
+<li><a class="reference internal" href="#analyzeticks">analyzeticks</a></li>
+<li><a class="reference internal" href="#download-data-from-yahoo-finance">download data from Yahoo Finance</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="clockwise.html"
+                        title="previous chapter"><tt class="docutils literal docutils literal"><span class="pre">clockwise</span></tt> module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="interactive.html"
+                        title="next chapter">teafiles.TeaFile in interactive use</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/examples.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="interactive.html" title="teafiles.TeaFile in interactive use"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="clockwise.html" title="clockwise module"
+             >previous</a> |</li>
+        <li><a href="index.html">TeaFiles 0.7.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, discretelogics.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+  </body>
+</html>

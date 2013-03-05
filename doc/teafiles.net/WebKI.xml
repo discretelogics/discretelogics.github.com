@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+
+  <HelpKINode Title="Add method" Url="html/Overload_TeaTime_NameValueCollection_Add.htm" />
+  <HelpKINode Title="AddDays method" Url="html/M_TeaTime_Time_AddDays.htm" />
+  <HelpKINode Title="AddHours method" Url="html/M_TeaTime_Time_AddHours.htm" />
+  <HelpKINode Title="AddMinutes method" Url="html/M_TeaTime_Time_AddMinutes.htm" />
+  <HelpKINode Title="AddSeconds method" Url="html/M_TeaTime_Time_AddSeconds.htm" />
+  <HelpKINode Title="All enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="Append method" Url="html/M_TeaTime_TeaFile_1_Append.htm" />
+  <HelpKINode Title="Close method" Url="html/M_TeaTime_TeaFile_1_Close.htm" />
+  <HelpKINode Title="Compare method" Url="html/M_TeaTime_Time_Compare.htm" />
+  <HelpKINode Title="ContentDescription property" Url="html/P_TeaTime_TeaFileDescription_ContentDescription.htm" />
+  <HelpKINode Title="Count property" Url="html/P_TeaTime_IItemCollection_1_Count.htm" />
+  <HelpKINode Title="Count property" Url="html/P_TeaTime_IItemCollection_Count.htm" />
+  <HelpKINode Title="Count property" Url="html/P_TeaTime_NameValueCollection_Count.htm" />
+  <HelpKINode Title="Count property" Url="html/P_TeaTime_TeaFile_1_Count.htm" />
+  <HelpKINode Title="Create method" Url="html/Overload_TeaTime_TeaFile_1_Create.htm" />
+  <HelpKINode Title="Custom enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Date property" Url="html/P_TeaTime_Time_Date.htm" />
+  <HelpKINode Title="DateTime to Time conversion" Url="html/M_TeaTime_Time_op_Implicit.htm" />
+  <HelpKINode Title="Day property" Url="html/P_TeaTime_Time_Day.htm" />
+  <HelpKINode Title="DayOfWeek property" Url="html/P_TeaTime_Time_DayOfWeek.htm" />
+  <HelpKINode Title="DayOfYear property" Url="html/P_TeaTime_Time_DayOfYear.htm" />
+  <HelpKINode Title="Description property" Url="html/P_TeaTime_TeaFile_1_Description.htm" />
+  <HelpKINode Title="Description property" Url="html/P_TeaTime_TeaFile_Description.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_TeaTime_RawMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_TeaTime_TeaFile_1_Dispose.htm" />
+  <HelpKINode Title="Dispose method" Url="html/M_TeaTime_TeaFile_Dispose.htm" />
+  <HelpKINode Title="Double enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Epoch property" Url="html/P_TeaTime_Timescale_Epoch.htm" />
+  <HelpKINode Title="Equality operator" Url="html/M_TeaTime_Timescale_op_Equality.htm" />
+  <HelpKINode Title="Equality operator" Url="html/Overload_TeaTime_Time_op_Equality.htm" />
+  <HelpKINode Title="Equals method" Url="html/Overload_TeaTime_Timescale_Equals.htm" />
+  <HelpKINode Title="Equals method" Url="html/Overload_TeaTime_Time_Equals.htm" />
+  <HelpKINode Title="Event(Of T) structure" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="Event(Of T) structure" Url="html/T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="Event(Of T) structure">
+    <HelpKINode Title="about Event(Of T) structure" Url="html/T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_Event_1__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Event_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Event(Of T).Event constructor" Url="html/M_TeaTime_Event_1__ctor.htm" />
+  <HelpKINode Title="Event(Of T).Time field" Url="html/F_TeaTime_Event_1_Time.htm" />
+  <HelpKINode Title="Event(Of T).ToString method" Url="html/M_TeaTime_Event_1_ToString.htm" />
+  <HelpKINode Title="Event(Of T).Value field" Url="html/F_TeaTime_Event_1_Value.htm" />
+  <HelpKINode Title="Event&lt;T&gt; structure" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="Event&lt;T&gt; structure" Url="html/T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="Event&lt;T&gt; structure">
+    <HelpKINode Title="about Event&lt;T&gt; structure" Url="html/T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_Event_1__ctor.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_TeaTime_Event_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Event_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Event&lt;T&gt;.Event constructor" Url="html/M_TeaTime_Event_1__ctor.htm" />
+  <HelpKINode Title="Event&lt;T&gt;.Time field" Url="html/F_TeaTime_Event_1_Time.htm" />
+  <HelpKINode Title="Event&lt;T&gt;.ToString method" Url="html/M_TeaTime_Event_1_ToString.htm" />
+  <HelpKINode Title="Event&lt;T&gt;.Value field" Url="html/F_TeaTime_Event_1_Value.htm" />
+  <HelpKINode Title="EventTimeAttribute class" Url="html/AllMembers_T_TeaTime_EventTimeAttribute.htm" />
+  <HelpKINode Title="EventTimeAttribute class" Url="html/T_TeaTime_EventTimeAttribute.htm" />
+  <HelpKINode Title="EventTimeAttribute class">
+    <HelpKINode Title="about EventTimeAttribute class" Url="html/T_TeaTime_EventTimeAttribute.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_EventTimeAttribute.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_EventTimeAttribute__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EventTimeAttribute.EventTimeAttribute constructor" Url="html/M_TeaTime_EventTimeAttribute__ctor.htm" />
+  <HelpKINode Title="EventTimeField property" Url="html/P_TeaTime_ItemDescription_EventTimeField.htm" />
+  <HelpKINode Title="Field class" Url="html/AllMembers_T_TeaTime_Field.htm" />
+  <HelpKINode Title="Field class" Url="html/T_TeaTime_Field.htm" />
+  <HelpKINode Title="Field class">
+    <HelpKINode Title="about Field class" Url="html/T_TeaTime_Field.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Field.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_Field__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Field.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_Field.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Field.Field constructor" Url="html/M_TeaTime_Field__ctor.htm" />
+  <HelpKINode Title="Field.FieldType property" Url="html/P_TeaTime_Field_FieldType.htm" />
+  <HelpKINode Title="Field.GetValue method" Url="html/M_TeaTime_Field_GetValue.htm" />
+  <HelpKINode Title="Field.Index property" Url="html/P_TeaTime_Field_Index.htm" />
+  <HelpKINode Title="Field.IsEventTime property" Url="html/P_TeaTime_Field_IsEventTime.htm" />
+  <HelpKINode Title="Field.IsTime property" Url="html/P_TeaTime_Field_IsTime.htm" />
+  <HelpKINode Title="Field.Name property" Url="html/P_TeaTime_Field_Name.htm" />
+  <HelpKINode Title="Field.Offset property" Url="html/P_TeaTime_Field_Offset.htm" />
+  <HelpKINode Title="Field.ToString method" Url="html/M_TeaTime_Field_ToString.htm" />
+  <HelpKINode Title="FieldNames enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="FieldOffsets enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="Fields property" Url="html/P_TeaTime_ItemDescription_Fields.htm" />
+  <HelpKINode Title="FieldType enumeration" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="FieldType property" Url="html/P_TeaTime_Field_FieldType.htm" />
+  <HelpKINode Title="FieldTypes enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="FileFormatException class" Url="html/AllMembers_T_TeaTime_FileFormatException.htm" />
+  <HelpKINode Title="FileFormatException class" Url="html/T_TeaTime_FileFormatException.htm" />
+  <HelpKINode Title="FileFormatException class">
+    <HelpKINode Title="about FileFormatException class" Url="html/T_TeaTime_FileFormatException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_FileFormatException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_FileFormatException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="FileFormatException.FileFormatException constructor" Url="html/Overload_TeaTime_FileFormatException__ctor.htm" />
+  <HelpKINode Title="FindFieldByOffset method" Url="html/M_TeaTime_ItemDescription_FindFieldByOffset.htm" />
+  <HelpKINode Title="Float enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Flush method" Url="html/M_TeaTime_TeaFile_1_Flush.htm" />
+  <HelpKINode Title="From method" Url="html/M_TeaTime_NameValueCollection_From.htm" />
+  <HelpKINode Title="FromEpoch method" Url="html/Overload_TeaTime_Timescale_FromEpoch.htm" />
+  <HelpKINode Title="GetDescription method" Url="html/M_TeaTime_TeaFile_GetDescription.htm" />
+  <HelpKINode Title="GetEnumerator method" Url="html/M_TeaTime_IItemCollection_GetEnumerator.htm" />
+  <HelpKINode Title="GetEnumerator method" Url="html/M_TeaTime_NameValueCollection_GetEnumerator.htm" />
+  <HelpKINode Title="GetEventTime method" Url="html/M_TeaTime_TeaFile_GetEventTime.htm" />
+  <HelpKINode Title="GetFieldByName method" Url="html/M_TeaTime_ItemDescription_GetFieldByName.htm" />
+  <HelpKINode Title="GetFieldValue method" Url="html/Overload_TeaTime_TeaFile_GetFieldValue.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/M_TeaTime_Timescale_GetHashCode.htm" />
+  <HelpKINode Title="GetHashCode method" Url="html/M_TeaTime_Time_GetHashCode.htm" />
+  <HelpKINode Title="GetValue method" Url="html/M_TeaTime_Field_GetValue.htm" />
+  <HelpKINode Title="GetValue(Of T) method" Url="html/M_TeaTime_NameValueCollection_GetValue__1.htm" />
+  <HelpKINode Title="GetValue(Of T) method" Url="html/M_TeaTime_NameValue_GetValue__1.htm" />
+  <HelpKINode Title="GetValue&lt;T&gt; method" Url="html/M_TeaTime_NameValueCollection_GetValue__1.htm" />
+  <HelpKINode Title="GetValue&lt;T&gt; method" Url="html/M_TeaTime_NameValue_GetValue__1.htm" />
+  <HelpKINode Title="GetValueString method" Url="html/Overload_TeaTime_ItemDescription_GetValueString.htm" />
+  <HelpKINode Title="GreaterThan operator" Url="html/M_TeaTime_Time_op_GreaterThan.htm" />
+  <HelpKINode Title="GreaterThanOrEqual operator" Url="html/M_TeaTime_Time_op_GreaterThanOrEqual.htm" />
+  <HelpKINode Title="HasEventTime property" Url="html/P_TeaTime_ItemDescription_HasEventTime.htm" />
+  <HelpKINode Title="Hour property" Url="html/P_TeaTime_Time_Hour.htm" />
+  <HelpKINode Title="Ignore enumeration member" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="IItemCollection interface" Url="html/AllMembers_T_TeaTime_IItemCollection.htm" />
+  <HelpKINode Title="IItemCollection interface" Url="html/T_TeaTime_IItemCollection.htm" />
+  <HelpKINode Title="IItemCollection interface">
+    <HelpKINode Title="about IItemCollection interface" Url="html/T_TeaTime_IItemCollection.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_IItemCollection.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_IItemCollection.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_IItemCollection.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IItemCollection(Of T) interface" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="IItemCollection(Of T) interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="IItemCollection(Of T) interface">
+    <HelpKINode Title="about IItemCollection(Of T) interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_IItemCollection_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IItemCollection(Of T).Count property" Url="html/P_TeaTime_IItemCollection_1_Count.htm" />
+  <HelpKINode Title="IItemCollection(Of T).Item property" Url="html/P_TeaTime_IItemCollection_1_Item.htm" />
+  <HelpKINode Title="IItemCollection.Count property" Url="html/P_TeaTime_IItemCollection_Count.htm" />
+  <HelpKINode Title="IItemCollection.GetEnumerator method" Url="html/M_TeaTime_IItemCollection_GetEnumerator.htm" />
+  <HelpKINode Title="IItemCollection.Item property" Url="html/P_TeaTime_IItemCollection_Item.htm" />
+  <HelpKINode Title="IItemCollection&lt;T&gt; interface" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="IItemCollection&lt;T&gt; interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="IItemCollection&lt;T&gt; interface">
+    <HelpKINode Title="about IItemCollection&lt;T&gt; interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_IItemCollection_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IItemCollection&lt;T&gt;.Count property" Url="html/P_TeaTime_IItemCollection_1_Count.htm" />
+  <HelpKINode Title="IItemCollection&lt;T&gt;.Item property" Url="html/P_TeaTime_IItemCollection_1_Item.htm" />
+  <HelpKINode Title="Index property" Url="html/P_TeaTime_Field_Index.htm" />
+  <HelpKINode Title="Inequality operator" Url="html/M_TeaTime_Timescale_op_Inequality.htm" />
+  <HelpKINode Title="Inequality operator" Url="html/Overload_TeaTime_Time_op_Inequality.htm" />
+  <HelpKINode Title="Int16 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Int32 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Int64 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="Int8 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="InternalErrorException class" Url="html/AllMembers_T_TeaTime_InternalErrorException.htm" />
+  <HelpKINode Title="InternalErrorException class" Url="html/T_TeaTime_InternalErrorException.htm" />
+  <HelpKINode Title="InternalErrorException class">
+    <HelpKINode Title="about InternalErrorException class" Url="html/T_TeaTime_InternalErrorException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_InternalErrorException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_InternalErrorException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InternalErrorException.InternalErrorException constructor" Url="html/Overload_TeaTime_InternalErrorException__ctor.htm" />
+  <HelpKINode Title="InvalidFieldTypeException class" Url="html/AllMembers_T_TeaTime_InvalidFieldTypeException.htm" />
+  <HelpKINode Title="InvalidFieldTypeException class" Url="html/T_TeaTime_InvalidFieldTypeException.htm" />
+  <HelpKINode Title="InvalidFieldTypeException class">
+    <HelpKINode Title="about InvalidFieldTypeException class" Url="html/T_TeaTime_InvalidFieldTypeException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_InvalidFieldTypeException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_InvalidFieldTypeException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidFieldTypeException.InvalidFieldTypeException constructor" Url="html/Overload_TeaTime_InvalidFieldTypeException__ctor.htm" />
+  <HelpKINode Title="InvalidStateException class" Url="html/AllMembers_T_TeaTime_InvalidStateException.htm" />
+  <HelpKINode Title="InvalidStateException class" Url="html/T_TeaTime_InvalidStateException.htm" />
+  <HelpKINode Title="InvalidStateException class">
+    <HelpKINode Title="about InvalidStateException class" Url="html/T_TeaTime_InvalidStateException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_InvalidStateException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_InvalidStateException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidStateException.InvalidStateException constructor" Url="html/Overload_TeaTime_InvalidStateException__ctor.htm" />
+  <HelpKINode Title="IsAccessibleWith method" Url="html/M_TeaTime_ItemDescription_IsAccessibleWith.htm" />
+  <HelpKINode Title="IsEventTime property" Url="html/P_TeaTime_Field_IsEventTime.htm" />
+  <HelpKINode Title="IsTime property" Url="html/P_TeaTime_Field_IsTime.htm" />
+  <HelpKINode Title="Item class" Url="html/AllMembers_T_TeaTime_Item.htm" />
+  <HelpKINode Title="Item class" Url="html/T_TeaTime_Item.htm" />
+  <HelpKINode Title="Item class">
+    <HelpKINode Title="about Item class" Url="html/T_TeaTime_Item.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Item.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Item.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_Item.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Item property" Url="html/P_TeaTime_IItemCollection_1_Item.htm" />
+  <HelpKINode Title="Item property" Url="html/P_TeaTime_IItemCollection_Item.htm" />
+  <HelpKINode Title="Item property" Url="html/P_TeaTime_ManagedMemoryMapping_1_Item.htm" />
+  <HelpKINode Title="Item.ToString method" Url="html/M_TeaTime_Item_ToString.htm" />
+  <HelpKINode Title="Item.Values property" Url="html/P_TeaTime_Item_Values.htm" />
+  <HelpKINode Title="ItemAreaEnd property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="ItemAreaEnd property" Url="html/P_TeaTime_TeaFile_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="ItemAreaEnd property" Url="html/P_TeaTime_TeaFile_ItemAreaEnd.htm" />
+  <HelpKINode Title="ItemAreaSize property" Url="html/P_TeaTime_TeaFile_1_ItemAreaSize.htm" />
+  <HelpKINode Title="ItemAreaSize property" Url="html/P_TeaTime_TeaFile_ItemAreaSize.htm" />
+  <HelpKINode Title="ItemAreaStart property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaStart.htm" />
+  <HelpKINode Title="ItemAreaStart property" Url="html/P_TeaTime_TeaFile_1_ItemAreaStart.htm" />
+  <HelpKINode Title="ItemAreaStart property" Url="html/P_TeaTime_TeaFile_ItemAreaStart.htm" />
+  <HelpKINode Title="ItemDescription class" Url="html/AllMembers_T_TeaTime_ItemDescription.htm" />
+  <HelpKINode Title="ItemDescription class" Url="html/T_TeaTime_ItemDescription.htm" />
+  <HelpKINode Title="ItemDescription class">
+    <HelpKINode Title="about ItemDescription class" Url="html/T_TeaTime_ItemDescription.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_ItemDescription.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_ItemDescription.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_ItemDescription.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ItemDescription property" Url="html/P_TeaTime_TeaFileDescription_ItemDescription.htm" />
+  <HelpKINode Title="ItemDescription.EventTimeField property" Url="html/P_TeaTime_ItemDescription_EventTimeField.htm" />
+  <HelpKINode Title="ItemDescription.Fields property" Url="html/P_TeaTime_ItemDescription_Fields.htm" />
+  <HelpKINode Title="ItemDescription.FindFieldByOffset method" Url="html/M_TeaTime_ItemDescription_FindFieldByOffset.htm" />
+  <HelpKINode Title="ItemDescription.GetFieldByName method" Url="html/M_TeaTime_ItemDescription_GetFieldByName.htm" />
+  <HelpKINode Title="ItemDescription.GetValueString method" Url="html/Overload_TeaTime_ItemDescription_GetValueString.htm" />
+  <HelpKINode Title="ItemDescription.HasEventTime property" Url="html/P_TeaTime_ItemDescription_HasEventTime.htm" />
+  <HelpKINode Title="ItemDescription.IsAccessibleWith method" Url="html/M_TeaTime_ItemDescription_IsAccessibleWith.htm" />
+  <HelpKINode Title="ItemDescription.ItemSize property" Url="html/P_TeaTime_ItemDescription_ItemSize.htm" />
+  <HelpKINode Title="ItemDescription.ItemTypeName property" Url="html/P_TeaTime_ItemDescription_ItemTypeName.htm" />
+  <HelpKINode Title="ItemDescription.ToString method" Url="html/Overload_TeaTime_ItemDescription_ToString.htm" />
+  <HelpKINode Title="ItemDescriptionElements enumeration" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="ItemException class" Url="html/AllMembers_T_TeaTime_ItemException.htm" />
+  <HelpKINode Title="ItemException class" Url="html/T_TeaTime_ItemException.htm" />
+  <HelpKINode Title="ItemException class">
+    <HelpKINode Title="about ItemException class" Url="html/T_TeaTime_ItemException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_ItemException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_ItemException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ItemException.ItemException constructor" Url="html/Overload_TeaTime_ItemException__ctor.htm" />
+  <HelpKINode Title="ItemName enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="Items property" Url="html/P_TeaTime_TeaFile_1_Items.htm" />
+  <HelpKINode Title="Items property" Url="html/P_TeaTime_TeaFile_Items.htm" />
+  <HelpKINode Title="ItemSize enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="ItemSize property" Url="html/P_TeaTime_ItemDescription_ItemSize.htm" />
+  <HelpKINode Title="ItemTypeName property" Url="html/P_TeaTime_ItemDescription_ItemTypeName.htm" />
+  <HelpKINode Title="Java property" Url="html/P_TeaTime_Timescale_Java.htm" />
+  <HelpKINode Title="LessThan operator" Url="html/M_TeaTime_Time_op_LessThan.htm" />
+  <HelpKINode Title="LessThanOrEqual operator" Url="html/M_TeaTime_Time_op_LessThanOrEqual.htm" />
+  <HelpKINode Title="ManagedMemoryMapping(Of T) class" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="ManagedMemoryMapping(Of T) class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="ManagedMemoryMapping(Of T) class">
+    <HelpKINode Title="about ManagedMemoryMapping(Of T) class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ManagedMemoryMapping(Of T).Dispose method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="ManagedMemoryMapping(Of T).Item property" Url="html/P_TeaTime_ManagedMemoryMapping_1_Item.htm" />
+  <HelpKINode Title="ManagedMemoryMapping(Of T).Read method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Read.htm" />
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt; class">
+    <HelpKINode Title="about ManagedMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_ManagedMemoryMapping_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt;.Dispose method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt;.Item property" Url="html/P_TeaTime_ManagedMemoryMapping_1_Item.htm" />
+  <HelpKINode Title="ManagedMemoryMapping&lt;T&gt;.Read method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Read.htm" />
+  <HelpKINode Title="MicrosecondsPerDay field" Url="html/F_TeaTime_Timescale_MicrosecondsPerDay.htm" />
+  <HelpKINode Title="Millisecond property" Url="html/P_TeaTime_Time_Millisecond.htm" />
+  <HelpKINode Title="MillisecondsPerDay field" Url="html/F_TeaTime_Timescale_MillisecondsPerDay.htm" />
+  <HelpKINode Title="Minute property" Url="html/P_TeaTime_Time_Minute.htm" />
+  <HelpKINode Title="Month property" Url="html/P_TeaTime_Time_Month.htm" />
+  <HelpKINode Title="Name property" Url="html/P_TeaTime_Field_Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P_TeaTime_NameValue_Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P_TeaTime_TeaFile_1_Name.htm" />
+  <HelpKINode Title="Name property" Url="html/P_TeaTime_TeaFile_Name.htm" />
+  <HelpKINode Title="NameValue class" Url="html/AllMembers_T_TeaTime_NameValue.htm" />
+  <HelpKINode Title="NameValue class" Url="html/T_TeaTime_NameValue.htm" />
+  <HelpKINode Title="NameValue class">
+    <HelpKINode Title="about NameValue class" Url="html/T_TeaTime_NameValue.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_NameValue.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_NameValue__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_NameValue.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_NameValue.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NameValue.GetValue(Of T) method" Url="html/M_TeaTime_NameValue_GetValue__1.htm" />
+  <HelpKINode Title="NameValue.GetValue&lt;T&gt; method" Url="html/M_TeaTime_NameValue_GetValue__1.htm" />
+  <HelpKINode Title="NameValue.Name property" Url="html/P_TeaTime_NameValue_Name.htm" />
+  <HelpKINode Title="NameValue.NameValue constructor" Url="html/Overload_TeaTime_NameValue__ctor.htm" />
+  <HelpKINode Title="NameValue.ToString method" Url="html/M_TeaTime_NameValue_ToString.htm" />
+  <HelpKINode Title="NameValue.ValueText property" Url="html/P_TeaTime_NameValue_ValueText.htm" />
+  <HelpKINode Title="NameValueCollection class" Url="html/AllMembers_T_TeaTime_NameValueCollection.htm" />
+  <HelpKINode Title="NameValueCollection class" Url="html/T_TeaTime_NameValueCollection.htm" />
+  <HelpKINode Title="NameValueCollection class">
+    <HelpKINode Title="about NameValueCollection class" Url="html/T_TeaTime_NameValueCollection.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_NameValueCollection.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_NameValueCollection__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_NameValueCollection.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_NameValueCollection.htm" />
+  </HelpKINode>
+  <HelpKINode Title="NameValueCollection.Add method" Url="html/Overload_TeaTime_NameValueCollection_Add.htm" />
+  <HelpKINode Title="NameValueCollection.Count property" Url="html/P_TeaTime_NameValueCollection_Count.htm" />
+  <HelpKINode Title="NameValueCollection.From method" Url="html/M_TeaTime_NameValueCollection_From.htm" />
+  <HelpKINode Title="NameValueCollection.GetEnumerator method" Url="html/M_TeaTime_NameValueCollection_GetEnumerator.htm" />
+  <HelpKINode Title="NameValueCollection.GetValue(Of T) method" Url="html/M_TeaTime_NameValueCollection_GetValue__1.htm" />
+  <HelpKINode Title="NameValueCollection.GetValue&lt;T&gt; method" Url="html/M_TeaTime_NameValueCollection_GetValue__1.htm" />
+  <HelpKINode Title="NameValueCollection.NameValueCollection constructor" Url="html/M_TeaTime_NameValueCollection__ctor.htm" />
+  <HelpKINode Title="NameValueCollection.ToString method" Url="html/M_TeaTime_NameValueCollection_ToString.htm" />
+  <HelpKINode Title="NameValues property" Url="html/P_TeaTime_TeaFileDescription_NameValues.htm" />
+  <HelpKINode Title="Net property" Url="html/P_TeaTime_Timescale_Net.htm" />
+  <HelpKINode Title="NetDecimal enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="NetTime property" Url="html/P_TeaTime_Time_NetTime.htm" />
+  <HelpKINode Title="None enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="None enumeration member" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="Offset property" Url="html/P_TeaTime_Field_Offset.htm" />
+  <HelpKINode Title="OpenMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenMemoryMapping.htm" />
+  <HelpKINode Title="OpenRawMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenRawMemoryMapping.htm" />
+  <HelpKINode Title="OpenRead method" Url="html/M_TeaTime_RawMemoryMapping_1_OpenRead.htm" />
+  <HelpKINode Title="OpenRead method" Url="html/Overload_TeaTime_TeaFile_1_OpenRead.htm" />
+  <HelpKINode Title="OpenRead method" Url="html/Overload_TeaTime_TeaFile_OpenRead.htm" />
+  <HelpKINode Title="OpenWrite method" Url="html/Overload_TeaTime_TeaFile_1_OpenWrite.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T) class" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T) class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T) class">
+    <HelpKINode Title="about RawMemoryMapping(Of T) class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_RawMemoryMapping_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RawMemoryMapping(Of T).Dispose method" Url="html/M_TeaTime_RawMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T).ItemAreaEnd property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T).ItemAreaStart property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaStart.htm" />
+  <HelpKINode Title="RawMemoryMapping(Of T).OpenRead method" Url="html/M_TeaTime_RawMemoryMapping_1_OpenRead.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt; class">
+    <HelpKINode Title="about RawMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_RawMemoryMapping_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_RawMemoryMapping_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt;.Dispose method" Url="html/M_TeaTime_RawMemoryMapping_1_Dispose.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt;.ItemAreaEnd property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt;.ItemAreaStart property" Url="html/P_TeaTime_RawMemoryMapping_1_ItemAreaStart.htm" />
+  <HelpKINode Title="RawMemoryMapping&lt;T&gt;.OpenRead method" Url="html/M_TeaTime_RawMemoryMapping_1_OpenRead.htm" />
+  <HelpKINode Title="Read method" Url="html/M_TeaTime_ManagedMemoryMapping_1_Read.htm" />
+  <HelpKINode Title="Read method" Url="html/M_TeaTime_TeaFile_1_Read.htm" />
+  <HelpKINode Title="Read method" Url="html/M_TeaTime_TeaFile_Read.htm" />
+  <HelpKINode Title="Scale property" Url="html/P_TeaTime_Time_Scale.htm" />
+  <HelpKINode Title="ScaleCollisionBehavior enumeration" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="ScaleCollisionBehavior property" Url="html/P_TeaTime_Time_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="ScaleToNet method" Url="html/M_TeaTime_Timescale_ScaleToNet.htm" />
+  <HelpKINode Title="Second property" Url="html/P_TeaTime_Time_Second.htm" />
+  <HelpKINode Title="SecondsPerDay field" Url="html/F_TeaTime_Timescale_SecondsPerDay.htm" />
+  <HelpKINode Title="SetFilePointerToEnd method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToEnd.htm" />
+  <HelpKINode Title="SetFilePointerToItem method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToItem.htm" />
+  <HelpKINode Title="TeaFile class" Url="html/AllMembers_T_TeaTime_TeaFile.htm" />
+  <HelpKINode Title="TeaFile class" Url="html/T_TeaTime_TeaFile.htm" />
+  <HelpKINode Title="TeaFile class">
+    <HelpKINode Title="about TeaFile class" Url="html/T_TeaTime_TeaFile.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TeaFile.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_TeaFile.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_TeaFile.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TeaFile(Of T) class" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaFile(Of T) class" Url="html/T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaFile(Of T) class">
+    <HelpKINode Title="about TeaFile(Of T) class" Url="html/T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_TeaFile_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TeaFile(Of T).Append method" Url="html/M_TeaTime_TeaFile_1_Append.htm" />
+  <HelpKINode Title="TeaFile(Of T).Close method" Url="html/M_TeaTime_TeaFile_1_Close.htm" />
+  <HelpKINode Title="TeaFile(Of T).Count property" Url="html/P_TeaTime_TeaFile_1_Count.htm" />
+  <HelpKINode Title="TeaFile(Of T).Create method" Url="html/Overload_TeaTime_TeaFile_1_Create.htm" />
+  <HelpKINode Title="TeaFile(Of T).Description property" Url="html/P_TeaTime_TeaFile_1_Description.htm" />
+  <HelpKINode Title="TeaFile(Of T).Dispose method" Url="html/M_TeaTime_TeaFile_1_Dispose.htm" />
+  <HelpKINode Title="TeaFile(Of T).Flush method" Url="html/M_TeaTime_TeaFile_1_Flush.htm" />
+  <HelpKINode Title="TeaFile(Of T).ItemAreaEnd property" Url="html/P_TeaTime_TeaFile_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="TeaFile(Of T).ItemAreaSize property" Url="html/P_TeaTime_TeaFile_1_ItemAreaSize.htm" />
+  <HelpKINode Title="TeaFile(Of T).ItemAreaStart property" Url="html/P_TeaTime_TeaFile_1_ItemAreaStart.htm" />
+  <HelpKINode Title="TeaFile(Of T).Items property" Url="html/P_TeaTime_TeaFile_1_Items.htm" />
+  <HelpKINode Title="TeaFile(Of T).Name property" Url="html/P_TeaTime_TeaFile_1_Name.htm" />
+  <HelpKINode Title="TeaFile(Of T).OpenMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenMemoryMapping.htm" />
+  <HelpKINode Title="TeaFile(Of T).OpenRawMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenRawMemoryMapping.htm" />
+  <HelpKINode Title="TeaFile(Of T).OpenRead method" Url="html/Overload_TeaTime_TeaFile_1_OpenRead.htm" />
+  <HelpKINode Title="TeaFile(Of T).OpenWrite method" Url="html/Overload_TeaTime_TeaFile_1_OpenWrite.htm" />
+  <HelpKINode Title="TeaFile(Of T).Read method" Url="html/M_TeaTime_TeaFile_1_Read.htm" />
+  <HelpKINode Title="TeaFile(Of T).SetFilePointerToEnd method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToEnd.htm" />
+  <HelpKINode Title="TeaFile(Of T).SetFilePointerToItem method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToItem.htm" />
+  <HelpKINode Title="TeaFile(Of T).ToString method" Url="html/M_TeaTime_TeaFile_1_ToString.htm" />
+  <HelpKINode Title="TeaFile(Of T).Truncate method" Url="html/M_TeaTime_TeaFile_1_Truncate.htm" />
+  <HelpKINode Title="TeaFile(Of T).Write method" Url="html/Overload_TeaTime_TeaFile_1_Write.htm" />
+  <HelpKINode Title="TeaFile.Description property" Url="html/P_TeaTime_TeaFile_Description.htm" />
+  <HelpKINode Title="TeaFile.Dispose method" Url="html/M_TeaTime_TeaFile_Dispose.htm" />
+  <HelpKINode Title="TeaFile.GetDescription method" Url="html/M_TeaTime_TeaFile_GetDescription.htm" />
+  <HelpKINode Title="TeaFile.GetEventTime method" Url="html/M_TeaTime_TeaFile_GetEventTime.htm" />
+  <HelpKINode Title="TeaFile.GetFieldValue method" Url="html/Overload_TeaTime_TeaFile_GetFieldValue.htm" />
+  <HelpKINode Title="TeaFile.ItemAreaEnd property" Url="html/P_TeaTime_TeaFile_ItemAreaEnd.htm" />
+  <HelpKINode Title="TeaFile.ItemAreaSize property" Url="html/P_TeaTime_TeaFile_ItemAreaSize.htm" />
+  <HelpKINode Title="TeaFile.ItemAreaStart property" Url="html/P_TeaTime_TeaFile_ItemAreaStart.htm" />
+  <HelpKINode Title="TeaFile.Items property" Url="html/P_TeaTime_TeaFile_Items.htm" />
+  <HelpKINode Title="TeaFile.Name property" Url="html/P_TeaTime_TeaFile_Name.htm" />
+  <HelpKINode Title="TeaFile.OpenRead method" Url="html/Overload_TeaTime_TeaFile_OpenRead.htm" />
+  <HelpKINode Title="TeaFile.Read method" Url="html/M_TeaTime_TeaFile_Read.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt; class" Url="html/T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt; class">
+    <HelpKINode Title="about TeaFile&lt;T&gt; class" Url="html/T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_TeaFile_1.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_TeaFile_1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TeaFile&lt;T&gt;.Append method" Url="html/M_TeaTime_TeaFile_1_Append.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Close method" Url="html/M_TeaTime_TeaFile_1_Close.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Count property" Url="html/P_TeaTime_TeaFile_1_Count.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Create method" Url="html/Overload_TeaTime_TeaFile_1_Create.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Description property" Url="html/P_TeaTime_TeaFile_1_Description.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Dispose method" Url="html/M_TeaTime_TeaFile_1_Dispose.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Flush method" Url="html/M_TeaTime_TeaFile_1_Flush.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.ItemAreaEnd property" Url="html/P_TeaTime_TeaFile_1_ItemAreaEnd.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.ItemAreaSize property" Url="html/P_TeaTime_TeaFile_1_ItemAreaSize.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.ItemAreaStart property" Url="html/P_TeaTime_TeaFile_1_ItemAreaStart.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Items property" Url="html/P_TeaTime_TeaFile_1_Items.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Name property" Url="html/P_TeaTime_TeaFile_1_Name.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.OpenMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenMemoryMapping.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.OpenRawMemoryMapping method" Url="html/M_TeaTime_TeaFile_1_OpenRawMemoryMapping.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.OpenRead method" Url="html/Overload_TeaTime_TeaFile_1_OpenRead.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.OpenWrite method" Url="html/Overload_TeaTime_TeaFile_1_OpenWrite.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Read method" Url="html/M_TeaTime_TeaFile_1_Read.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.SetFilePointerToEnd method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToEnd.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.SetFilePointerToItem method" Url="html/M_TeaTime_TeaFile_1_SetFilePointerToItem.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.ToString method" Url="html/M_TeaTime_TeaFile_1_ToString.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Truncate method" Url="html/M_TeaTime_TeaFile_1_Truncate.htm" />
+  <HelpKINode Title="TeaFile&lt;T&gt;.Write method" Url="html/Overload_TeaTime_TeaFile_1_Write.htm" />
+  <HelpKINode Title="TeaFileDescription class" Url="html/AllMembers_T_TeaTime_TeaFileDescription.htm" />
+  <HelpKINode Title="TeaFileDescription class" Url="html/T_TeaTime_TeaFileDescription.htm" />
+  <HelpKINode Title="TeaFileDescription class">
+    <HelpKINode Title="about TeaFileDescription class" Url="html/T_TeaTime_TeaFileDescription.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TeaFileDescription.htm" />
+    <HelpKINode Title="constructor" Url="html/M_TeaTime_TeaFileDescription__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_TeaFileDescription.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_TeaFileDescription.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TeaFileDescription.ContentDescription property" Url="html/P_TeaTime_TeaFileDescription_ContentDescription.htm" />
+  <HelpKINode Title="TeaFileDescription.ItemDescription property" Url="html/P_TeaTime_TeaFileDescription_ItemDescription.htm" />
+  <HelpKINode Title="TeaFileDescription.NameValues property" Url="html/P_TeaTime_TeaFileDescription_NameValues.htm" />
+  <HelpKINode Title="TeaFileDescription.TeaFileDescription constructor" Url="html/M_TeaTime_TeaFileDescription__ctor.htm" />
+  <HelpKINode Title="TeaFileDescription.TimeFieldOffsets property" Url="html/P_TeaTime_TeaFileDescription_TimeFieldOffsets.htm" />
+  <HelpKINode Title="TeaFileDescription.Timescale property" Url="html/P_TeaTime_TeaFileDescription_Timescale.htm" />
+  <HelpKINode Title="TeaFileDescription.ToString method" Url="html/M_TeaTime_TeaFileDescription_ToString.htm" />
+  <HelpKINode Title="TeaTime namespace" Url="html/N_TeaTime.htm" />
+  <HelpKINode Title="TeaTime.Event(Of T) structure" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="TeaTime.Event(Of T) structure" Url="html/T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="TeaTime.Event&lt;T&gt; structure" Url="html/AllMembers_T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="TeaTime.Event&lt;T&gt; structure" Url="html/T_TeaTime_Event_1.htm" />
+  <HelpKINode Title="TeaTime.EventTimeAttribute class" Url="html/AllMembers_T_TeaTime_EventTimeAttribute.htm" />
+  <HelpKINode Title="TeaTime.EventTimeAttribute class" Url="html/T_TeaTime_EventTimeAttribute.htm" />
+  <HelpKINode Title="TeaTime.Field class" Url="html/AllMembers_T_TeaTime_Field.htm" />
+  <HelpKINode Title="TeaTime.Field class" Url="html/T_TeaTime_Field.htm" />
+  <HelpKINode Title="TeaTime.FieldType enumeration" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="TeaTime.FileFormatException class" Url="html/AllMembers_T_TeaTime_FileFormatException.htm" />
+  <HelpKINode Title="TeaTime.FileFormatException class" Url="html/T_TeaTime_FileFormatException.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection interface" Url="html/AllMembers_T_TeaTime_IItemCollection.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection interface" Url="html/T_TeaTime_IItemCollection.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection(Of T) interface" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection(Of T) interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection&lt;T&gt; interface" Url="html/AllMembers_T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="TeaTime.IItemCollection&lt;T&gt; interface" Url="html/T_TeaTime_IItemCollection_1.htm" />
+  <HelpKINode Title="TeaTime.InternalErrorException class" Url="html/AllMembers_T_TeaTime_InternalErrorException.htm" />
+  <HelpKINode Title="TeaTime.InternalErrorException class" Url="html/T_TeaTime_InternalErrorException.htm" />
+  <HelpKINode Title="TeaTime.InvalidFieldTypeException class" Url="html/AllMembers_T_TeaTime_InvalidFieldTypeException.htm" />
+  <HelpKINode Title="TeaTime.InvalidFieldTypeException class" Url="html/T_TeaTime_InvalidFieldTypeException.htm" />
+  <HelpKINode Title="TeaTime.InvalidStateException class" Url="html/AllMembers_T_TeaTime_InvalidStateException.htm" />
+  <HelpKINode Title="TeaTime.InvalidStateException class" Url="html/T_TeaTime_InvalidStateException.htm" />
+  <HelpKINode Title="TeaTime.Item class" Url="html/AllMembers_T_TeaTime_Item.htm" />
+  <HelpKINode Title="TeaTime.Item class" Url="html/T_TeaTime_Item.htm" />
+  <HelpKINode Title="TeaTime.ItemDescription class" Url="html/AllMembers_T_TeaTime_ItemDescription.htm" />
+  <HelpKINode Title="TeaTime.ItemDescription class" Url="html/T_TeaTime_ItemDescription.htm" />
+  <HelpKINode Title="TeaTime.ItemDescriptionElements enumeration" Url="html/T_TeaTime_ItemDescriptionElements.htm" />
+  <HelpKINode Title="TeaTime.ItemException class" Url="html/AllMembers_T_TeaTime_ItemException.htm" />
+  <HelpKINode Title="TeaTime.ItemException class" Url="html/T_TeaTime_ItemException.htm" />
+  <HelpKINode Title="TeaTime.ManagedMemoryMapping(Of T) class" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.ManagedMemoryMapping(Of T) class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.ManagedMemoryMapping&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.ManagedMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_ManagedMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.NameValue class" Url="html/AllMembers_T_TeaTime_NameValue.htm" />
+  <HelpKINode Title="TeaTime.NameValue class" Url="html/T_TeaTime_NameValue.htm" />
+  <HelpKINode Title="TeaTime.NameValueCollection class" Url="html/AllMembers_T_TeaTime_NameValueCollection.htm" />
+  <HelpKINode Title="TeaTime.NameValueCollection class" Url="html/T_TeaTime_NameValueCollection.htm" />
+  <HelpKINode Title="TeaTime.RawMemoryMapping(Of T) class" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.RawMemoryMapping(Of T) class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.RawMemoryMapping&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.RawMemoryMapping&lt;T&gt; class" Url="html/T_TeaTime_RawMemoryMapping_1.htm" />
+  <HelpKINode Title="TeaTime.ScaleCollisionBehavior enumeration" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="TeaTime.TeaFile class" Url="html/AllMembers_T_TeaTime_TeaFile.htm" />
+  <HelpKINode Title="TeaTime.TeaFile class" Url="html/T_TeaTime_TeaFile.htm" />
+  <HelpKINode Title="TeaTime.TeaFile(Of T) class" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaTime.TeaFile(Of T) class" Url="html/T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaTime.TeaFile&lt;T&gt; class" Url="html/AllMembers_T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaTime.TeaFile&lt;T&gt; class" Url="html/T_TeaTime_TeaFile_1.htm" />
+  <HelpKINode Title="TeaTime.TeaFileDescription class" Url="html/AllMembers_T_TeaTime_TeaFileDescription.htm" />
+  <HelpKINode Title="TeaTime.TeaFileDescription class" Url="html/T_TeaTime_TeaFileDescription.htm" />
+  <HelpKINode Title="TeaTime.Time structure" Url="html/AllMembers_T_TeaTime_Time.htm" />
+  <HelpKINode Title="TeaTime.Time structure" Url="html/T_TeaTime_Time.htm" />
+  <HelpKINode Title="TeaTime.Timescale structure" Url="html/AllMembers_T_TeaTime_Timescale.htm" />
+  <HelpKINode Title="TeaTime.Timescale structure" Url="html/T_TeaTime_Timescale.htm" />
+  <HelpKINode Title="TeaTime.TimescaleException class" Url="html/AllMembers_T_TeaTime_TimescaleException.htm" />
+  <HelpKINode Title="TeaTime.TimescaleException class" Url="html/T_TeaTime_TimescaleException.htm" />
+  <HelpKINode Title="TeaTime.TypeMismatchException class" Url="html/AllMembers_T_TeaTime_TypeMismatchException.htm" />
+  <HelpKINode Title="TeaTime.TypeMismatchException class" Url="html/T_TeaTime_TypeMismatchException.htm" />
+  <HelpKINode Title="ThrowException enumeration member" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="Ticks property" Url="html/P_TeaTime_Time_Ticks.htm" />
+  <HelpKINode Title="TicksPerDay property" Url="html/P_TeaTime_Timescale_TicksPerDay.htm" />
+  <HelpKINode Title="Time field" Url="html/F_TeaTime_Event_1_Time.htm" />
+  <HelpKINode Title="Time structure" Url="html/AllMembers_T_TeaTime_Time.htm" />
+  <HelpKINode Title="Time structure" Url="html/T_TeaTime_Time.htm" />
+  <HelpKINode Title="Time structure">
+    <HelpKINode Title="about Time structure" Url="html/T_TeaTime_Time.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Time.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_Time__ctor.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Time.htm" />
+    <HelpKINode Title="operators and type conversions" Url="html/Operators_T_TeaTime_Time.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_Time.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Time to DateTime conversion" Url="html/M_TeaTime_Time_op_Implicit_1.htm" />
+  <HelpKINode Title="Time.AddDays method" Url="html/M_TeaTime_Time_AddDays.htm" />
+  <HelpKINode Title="Time.AddHours method" Url="html/M_TeaTime_Time_AddHours.htm" />
+  <HelpKINode Title="Time.AddMinutes method" Url="html/M_TeaTime_Time_AddMinutes.htm" />
+  <HelpKINode Title="Time.AddSeconds method" Url="html/M_TeaTime_Time_AddSeconds.htm" />
+  <HelpKINode Title="Time.Compare method" Url="html/M_TeaTime_Time_Compare.htm" />
+  <HelpKINode Title="Time.Date property" Url="html/P_TeaTime_Time_Date.htm" />
+  <HelpKINode Title="Time.Day property" Url="html/P_TeaTime_Time_Day.htm" />
+  <HelpKINode Title="Time.DayOfWeek property" Url="html/P_TeaTime_Time_DayOfWeek.htm" />
+  <HelpKINode Title="Time.DayOfYear property" Url="html/P_TeaTime_Time_DayOfYear.htm" />
+  <HelpKINode Title="Time.Equality operator" Url="html/Overload_TeaTime_Time_op_Equality.htm" />
+  <HelpKINode Title="Time.Equals method" Url="html/Overload_TeaTime_Time_Equals.htm" />
+  <HelpKINode Title="Time.GetHashCode method" Url="html/M_TeaTime_Time_GetHashCode.htm" />
+  <HelpKINode Title="Time.GreaterThan operator" Url="html/M_TeaTime_Time_op_GreaterThan.htm" />
+  <HelpKINode Title="Time.GreaterThanOrEqual operator" Url="html/M_TeaTime_Time_op_GreaterThanOrEqual.htm" />
+  <HelpKINode Title="Time.Hour property" Url="html/P_TeaTime_Time_Hour.htm" />
+  <HelpKINode Title="Time.Inequality operator" Url="html/Overload_TeaTime_Time_op_Inequality.htm" />
+  <HelpKINode Title="Time.LessThan operator" Url="html/M_TeaTime_Time_op_LessThan.htm" />
+  <HelpKINode Title="Time.LessThanOrEqual operator" Url="html/M_TeaTime_Time_op_LessThanOrEqual.htm" />
+  <HelpKINode Title="Time.Millisecond property" Url="html/P_TeaTime_Time_Millisecond.htm" />
+  <HelpKINode Title="Time.Minute property" Url="html/P_TeaTime_Time_Minute.htm" />
+  <HelpKINode Title="Time.Month property" Url="html/P_TeaTime_Time_Month.htm" />
+  <HelpKINode Title="Time.NetTime property" Url="html/P_TeaTime_Time_NetTime.htm" />
+  <HelpKINode Title="Time.Scale property" Url="html/P_TeaTime_Time_Scale.htm" />
+  <HelpKINode Title="Time.ScaleCollisionBehavior property" Url="html/P_TeaTime_Time_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="Time.Second property" Url="html/P_TeaTime_Time_Second.htm" />
+  <HelpKINode Title="Time.Ticks property" Url="html/P_TeaTime_Time_Ticks.htm" />
+  <HelpKINode Title="Time.Time constructor" Url="html/Overload_TeaTime_Time__ctor.htm" />
+  <HelpKINode Title="Time.ToString method" Url="html/Overload_TeaTime_Time_ToString.htm" />
+  <HelpKINode Title="Time.Year property" Url="html/P_TeaTime_Time_Year.htm" />
+  <HelpKINode Title="TimeFieldOffsets property" Url="html/P_TeaTime_TeaFileDescription_TimeFieldOffsets.htm" />
+  <HelpKINode Title="Timescale property" Url="html/P_TeaTime_TeaFileDescription_Timescale.htm" />
+  <HelpKINode Title="Timescale structure" Url="html/AllMembers_T_TeaTime_Timescale.htm" />
+  <HelpKINode Title="Timescale structure" Url="html/T_TeaTime_Timescale.htm" />
+  <HelpKINode Title="Timescale structure">
+    <HelpKINode Title="about Timescale structure" Url="html/T_TeaTime_Timescale.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_Timescale.htm" />
+    <HelpKINode Title="fields" Url="html/Fields_T_TeaTime_Timescale.htm" />
+    <HelpKINode Title="methods" Url="html/Methods_T_TeaTime_Timescale.htm" />
+    <HelpKINode Title="operators" Url="html/Operators_T_TeaTime_Timescale.htm" />
+    <HelpKINode Title="properties" Url="html/Properties_T_TeaTime_Timescale.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Timescale.Epoch property" Url="html/P_TeaTime_Timescale_Epoch.htm" />
+  <HelpKINode Title="Timescale.Equality operator" Url="html/M_TeaTime_Timescale_op_Equality.htm" />
+  <HelpKINode Title="Timescale.Equals method" Url="html/Overload_TeaTime_Timescale_Equals.htm" />
+  <HelpKINode Title="Timescale.FromEpoch method" Url="html/Overload_TeaTime_Timescale_FromEpoch.htm" />
+  <HelpKINode Title="Timescale.GetHashCode method" Url="html/M_TeaTime_Timescale_GetHashCode.htm" />
+  <HelpKINode Title="Timescale.Inequality operator" Url="html/M_TeaTime_Timescale_op_Inequality.htm" />
+  <HelpKINode Title="Timescale.Java property" Url="html/P_TeaTime_Timescale_Java.htm" />
+  <HelpKINode Title="Timescale.MicrosecondsPerDay field" Url="html/F_TeaTime_Timescale_MicrosecondsPerDay.htm" />
+  <HelpKINode Title="Timescale.MillisecondsPerDay field" Url="html/F_TeaTime_Timescale_MillisecondsPerDay.htm" />
+  <HelpKINode Title="Timescale.Net property" Url="html/P_TeaTime_Timescale_Net.htm" />
+  <HelpKINode Title="Timescale.ScaleToNet method" Url="html/M_TeaTime_Timescale_ScaleToNet.htm" />
+  <HelpKINode Title="Timescale.SecondsPerDay field" Url="html/F_TeaTime_Timescale_SecondsPerDay.htm" />
+  <HelpKINode Title="Timescale.TicksPerDay property" Url="html/P_TeaTime_Timescale_TicksPerDay.htm" />
+  <HelpKINode Title="Timescale.ToString method" Url="html/M_TeaTime_Timescale_ToString.htm" />
+  <HelpKINode Title="Timescale.WellKnownName property" Url="html/P_TeaTime_Timescale_WellKnownName.htm" />
+  <HelpKINode Title="TimescaleException class" Url="html/AllMembers_T_TeaTime_TimescaleException.htm" />
+  <HelpKINode Title="TimescaleException class" Url="html/T_TeaTime_TimescaleException.htm" />
+  <HelpKINode Title="TimescaleException class">
+    <HelpKINode Title="about TimescaleException class" Url="html/T_TeaTime_TimescaleException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TimescaleException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_TimescaleException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TimescaleException.TimescaleException constructor" Url="html/Overload_TeaTime_TimescaleException__ctor.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_Event_1_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_Field_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_Item_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_NameValueCollection_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_NameValue_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_TeaFileDescription_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_TeaFile_1_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/M_TeaTime_Timescale_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/Overload_TeaTime_ItemDescription_ToString.htm" />
+  <HelpKINode Title="ToString method" Url="html/Overload_TeaTime_Time_ToString.htm" />
+  <HelpKINode Title="Truncate method" Url="html/M_TeaTime_TeaFile_1_Truncate.htm" />
+  <HelpKINode Title="TypeMismatchException class" Url="html/AllMembers_T_TeaTime_TypeMismatchException.htm" />
+  <HelpKINode Title="TypeMismatchException class" Url="html/T_TeaTime_TypeMismatchException.htm" />
+  <HelpKINode Title="TypeMismatchException class">
+    <HelpKINode Title="about TypeMismatchException class" Url="html/T_TeaTime_TypeMismatchException.htm" />
+    <HelpKINode Title="all members" Url="html/AllMembers_T_TeaTime_TypeMismatchException.htm" />
+    <HelpKINode Title="constructor" Url="html/Overload_TeaTime_TypeMismatchException__ctor.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TypeMismatchException.TypeMismatchException constructor" Url="html/Overload_TeaTime_TypeMismatchException__ctor.htm" />
+  <HelpKINode Title="UInt16 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="UInt32 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="UInt64 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="UInt8 enumeration member" Url="html/T_TeaTime_FieldType.htm" />
+  <HelpKINode Title="UseNewScale enumeration member" Url="html/T_TeaTime_ScaleCollisionBehavior.htm" />
+  <HelpKINode Title="Value field" Url="html/F_TeaTime_Event_1_Value.htm" />
+  <HelpKINode Title="Values property" Url="html/P_TeaTime_Item_Values.htm" />
+  <HelpKINode Title="ValueText property" Url="html/P_TeaTime_NameValue_ValueText.htm" />
+  <HelpKINode Title="WellKnownName property" Url="html/P_TeaTime_Timescale_WellKnownName.htm" />
+  <HelpKINode Title="Write method" Url="html/Overload_TeaTime_TeaFile_1_Write.htm" />
+  <HelpKINode Title="Year property" Url="html/P_TeaTime_Time_Year.htm" />
+</HelpKI>
