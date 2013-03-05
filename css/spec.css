@@ -1,0 +1,248 @@
+﻿/* normalize */
+
+body, div, span, ul, ol, h1, h2, h3, h4, h5, fieldset, a, p, fieldset, input, select
+{
+    margin: 0 0;
+    padding: 0;
+}
+html
+{
+    background: #7C846F none repeat scroll 0 0;
+    margin: 0 20px;
+    padding: 0 20px;
+}
+body
+{
+    font-family: verdana, Sans-Serif;
+    font-size: 100%;
+    background: url(/img/teafilespeclabel.png) no-repeat left 70px #FFFFFF;
+    margin: 0;
+    padding: 4em 4em;
+    box-shadow: 0 0 3px 3px #53584A;
+}
+#docdesc
+{
+    margin-left: 2em;
+}
+#docdesc span
+{
+    border-bottom: dotted 1px #aaa;
+}
+h1, h2, h3
+{
+    font-family: 'Trebuchet MS' , Sans-Serif;
+}
+h1
+{
+    color: #39220D;
+    font-size: 1.7em;
+    border-bottom: 1px solid #DEE0BA;
+    margin-bottom: 1em;
+}
+h2
+{
+    font-size: 1.3em;
+    color: #926c1e;
+    margin-top: 3em;
+}
+h3
+{
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 0.3em;
+    color: #666633;
+}
+h2 + h3
+{
+    margin-top: 0.75em;
+}
+h4
+{
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+h5
+{
+    font-weight: bold;
+    font-size: .9em;    
+    margin-bottom: .5em;
+    line-height: 1.5em;
+    color: #333;
+}
+p, ul, td, div
+{
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+}
+p
+{
+    line-height: 1.4em;
+}
+p + p
+{
+    margin-top: 1.4em;
+}
+#docdesc p
+{
+    margin-top: 0.4em;
+}
+a[href], a[href]:visited
+{
+    color: navy;
+}
+ul
+{
+    padding-left: 24px;
+    list-style-image: url(/img/circle1.png);
+}
+ul.arrows
+{
+    list-style-image: url(/img/arrow16.png);
+}
+li.spaced
+{
+    margin-bottom: 0.5em;
+}
+body
+{
+    
+}
+ul ul {    
+    list-style-type: square;
+}
+b
+{
+    color: #926c1e;
+}
+/* mandatory */
+.he
+{
+    margin: 1em 0;
+    font-size: 0.7em;
+}
+.he label
+{
+    border: solid 1px #926c1e;
+    padding: 1px 3px;
+    display: inline;	
+    color: #926c1e;    
+}
+.he span
+{
+    color: White;
+    background-color: #926c1e;
+    font-weight: bold;
+    border: solid 1px #926c1e;
+    padding: 1px 3px;
+    display: inline;	
+}
+/* optional */
+
+.he.optional label
+{
+    border: 1px solid #999966;
+    padding: 1px 3px;
+    display: inline;
+    color: #999966;
+}
+.he.optional span
+{
+    color: White;
+    background-color: #999966;
+    font-weight: bold;
+    border: solid 1px #999966;
+    padding: 1px 3px;
+    display: inline;	
+}
+.note
+{
+    margin-left: 3em;
+}
+/* api */
+.api
+{
+    border: 1px solid #CC9900;
+    background-color: #FBF9F0;
+    margin-top: 2em;
+    padding: 1em;
+}
+.api h3
+{
+    color:Black;
+    margin-top:0;
+}
+table
+{
+    border-collapse: collapse;
+    margin: 1em;
+}
+td
+{
+    padding: 2px 4px;
+}
+td.val
+{
+    border: 1px solid #999966;
+    background-color: #F1FFC6;
+}
+td.abbr
+{
+    border: solid 1px #333;
+    font-weight: normal;
+}
+abbr
+{
+    font-weight: bold;
+}
+.highlight
+{
+    color: #990000;
+    font-weight:bold;
+}
+.formula, .formula b
+{
+    color: #333;
+    line-height: 1em;
+    margin: 0.5em;
+}
+pre
+{
+    border-left: none;
+}
+pre.small
+{
+    font-size: 0.85em;
+    color: #333;
+    line-height: 1.1;
+}
+table.sample
+{
+    
+}
+tr > td + td + td + td
+{    
+    font-family: Verdana;
+    vertical-align: top;
+}
+.cut
+{
+    border-bottom: solid 1px #777;
+}
+.cutdot
+{
+    border-bottom: dashed 1px #aaa;
+}
+.sample .section
+{
+    background-color: #AD8118;
+    color: White;
+    padding: 0 4px;
+    border-radius: 2px;
+}
+.notes
+{
+    margin-top: 2em;
+    border: dotted 1px #777;
+    padding: 1em;
+}
