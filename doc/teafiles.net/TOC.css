@@ -107,7 +107,7 @@ a.UnselectedNode:hover, a.SelectedNode:hover
 	width: 10px;
     height: 100%;
     border-left: solid 1px #eee;
-    background-image: url(/Content/msdn2010.png);
+    background-image: url(icons/msdn2010.png);
     background-position: -1467px 50px;
     background-repeat: no-repeat;
     position: relative;
