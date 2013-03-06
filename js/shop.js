@@ -167,7 +167,10 @@ $(document).ready(function ()
       return false;
     };  
     var cn = $("#country option:selected").text();
-    $("#CountryName").val(cn);            
+    $("#CountryName").val(cn);
+
+    var $submitbtn = $("[type='submit']")
+    $submitbtn.css("background-color", "greenyellow").attr("disabled", "1");
               
     var order = getformvalues();
     var json = JSON.stringify(order);
@@ -179,9 +182,11 @@ $(document).ready(function ()
       data: json,
       success: function () {
         window.location = "shopreceived";
+        $submitbtn.css("background-color", "").attr("disabled", null);
       },
       error: function () {
         alert("The confirmation email could not be sent, please contact us directly by email: office@discretelogics.com");
+        $submitbtn.css("background-color", "").attr("disabled", null);
       }
     };
     $.ajax(cmd);                
