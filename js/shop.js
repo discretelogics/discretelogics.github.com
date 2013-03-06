@@ -181,7 +181,7 @@ $(document).ready(function ()
       contentType: "text", //
       data: json,
       success: function () {
-        window.location = "shopreceived";
+        window.location = "/shopreceived";
         $submitbtn.css("background-color", "").attr("disabled", null);
       },
       error: function () {
