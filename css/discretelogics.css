@@ -209,11 +209,6 @@ input[type=submit] {
   background: rgba(0, 0, 0, 0);
   border: none;
 }
-.email {
-  background-image: url(/img/email.gif);
-  background-position: 97% 3%;
-  background-repeat: no-repeat;
-}
 tr#last td {
   border-bottom: none;
 }
