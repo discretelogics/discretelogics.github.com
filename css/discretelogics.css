@@ -210,7 +210,7 @@ input[type=submit] {
   border: none;
 }
 .email {
-  background-image: url(../img/email.gif);
+  background-image: url(/img/email.gif);
   background-position: 97% 3%;
   background-repeat: no-repeat;
 }
@@ -223,13 +223,6 @@ th {
   padding: 4px;
 }
 /* product.css */
-.ProductsOverview {
-  background: url(/img/products.png) no-repeat top right;
-  background-position: center 90px;
-}
-.ProductsTeaFiles {
-  _background: url(/img/persistence2.png) no-repeat top right;
-}
 .ProductsTeaFiles h1 {
   margin-bottom: 30px;
 }
