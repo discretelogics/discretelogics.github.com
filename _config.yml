@@ -3,7 +3,7 @@
 permalink: /:categories/:year-:month-:day-:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-include: ["doc/_images", "doc/_static"]
+include: ["_images", "_static"]
 auto: true
 pygments: true
 
