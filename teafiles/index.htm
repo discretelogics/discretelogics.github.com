@@ -1,69 +1,11 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Discrete Logics : </title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/responsive.css" rel="stylesheet">
-    <link href="/css/discretelogics.css" rel="stylesheet">
-    <link href="/css/bootstrap-lightbox.css" rel="stylesheet">
-    
-    <link href="/css/code.css" rel="stylesheet">
-
-
-    
-        <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-30699711-1']);
-        _gaq.push(['_setDomainName', 'discretelogics.com']);
-        _gaq.push(['_trackPageview']);
-        (function () {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
-    </script>
-
-</head>
-<body>
-
-<header class="container">
-    <a class="logo" href="/">DISCRETELOGICS</a>
-    <div class="container-fluid menu">
-        <div class="row-fluid">
-            <div class="navbar offset3">
-                <ul class="nav">
-                    <li     class="active"
-><a href="/">Products</a></li>
-                    <li ><a href="/shop">Shop</a></li>
-                    <li ><a href="/resources">Downloads</a></li>
-                    <li ><a href="/about">About</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="navbar offset4 submenu">
-                    <ul class="nav">
-                        <li  ><a href="/">TeaTime</a></li>
-                        <li     class="active"
- ><a href="/teafiles">TeaFiles</a></li>
-                        <li  ><a href="/teashell">TeaShell</a></li>
-                        <li  ><a href="/teahouse">TeaHouse</a></li>                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-</header>
-
+---
+layout: main
+title: TeaFiles
+mainmenu: products
+---
 <div class="container">
     <div class="row">
-            <div class="span9 article">                
+            <div class="span9 article">
                 
 <br />
 <br />
@@ -171,7 +113,7 @@
 <span class="p">}</span>
 
 <span class="c1">// create file and write some values</span>
-<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">Create</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="n">tf</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">new</span> <span class="n">Tick</span> <span class="p">{</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">5</span><span class="p">,</span> <span class="n">Time</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">,</span> <span class="n">Volume</span> <span class="p">=</span> <span class="m">700</span> <span class="p">});</span>
     <span class="n">tf</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="k">new</span> <span class="n">Tick</span> <span class="p">{</span> <span class="n">Price</span> <span class="p">=</span> <span class="m">15</span><span class="p">,</span> <span class="n">Time</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">AddHours</span><span class="p">(</span><span class="m">1</span><span class="p">),</span> <span class="n">Volume</span> <span class="p">=</span> <span class="m">1700</span> <span class="p">});</span>
@@ -186,7 +128,7 @@
         <h4>Read the file - typed</h4>
 
         <div class="highlight"><pre><span class="c1">// read typed</span>
-<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="n">Tick</span> <span class="k">value</span> <span class="p">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">Read</span><span class="p">();</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="k">value</span><span class="p">);</span>
@@ -200,7 +142,7 @@
 
         <h4>Read the file - untyped</h4>
         <div class="highlight"><pre><span class="c1">// read untyped - we know nothing about the type of item in the file</span>
-<span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+<span class="k">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
 <span class="p">{</span>                
     <span class="k">foreach</span><span class="p">(</span><span class="n">Item</span> <span class="n">item</span> <span class="k">in</span> <span class="n">tf</span><span class="p">.</span><span class="n">Items</span><span class="p">)</span>
     <span class="p">{</span>
@@ -232,7 +174,7 @@ Price=15 Time=21.8.2011 00:50
         <h4>Description</h4>
         <p>Finally, lets see the description that was written into the file:</p>
 
-        <div class="highlight"><pre><span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
+        <div class="highlight"><pre><span class="k">using</span> <span class="p">(</span><span class="n">var</span> <span class="n">tf</span> <span class="p">=</span> <span class="n">TeaFile</span><span class="p">&lt;</span><span class="n">Tick</span><span class="p">&gt;.</span><span class="n">OpenRead</span><span class="p">(</span><span class="s">&quot;silver.tea&quot;</span><span class="p">))</span>
 <span class="p">{</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">Description</span><span class="p">);</span>
     <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;ItemAreaStart={0}&quot;</span><span class="p">,</span> <span class="n">tf</span><span class="p">.</span><span class="n">ItemAreaStart</span><span class="p">);</span>
@@ -467,27 +409,3 @@ TPV(Time=2000-01-29 00:00:00:000, Price=10.323610234110403, Volume=3376)
             </aside>
     </div>
 </div>
-<div class="footer">
-    <div class="container">
-        <div class="row-fluid">
-            <div class="span12">
-                <i class="icon-envelope"></i><a href="mailto:office@discretelogics.com">office@discretelogics.com</a>
-                <a class="follow twitter" href="http://twitter.com/discretelogics" target="extern">Follow on Twitter</a>
-                <a class="follow github" href="http://github.com/discretelogics" target="extern">Follow on Github </a>
-            </div>
-            <div class="span6"></div>
-        </div>
-    </div>
-</div>
-<script src="/js/jquery-1.9.0.js"></script>
-<script src="/js/bootstrap.js"></script>
-<script src="/js/bootstrap-lightbox.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $(document.body).scrollspy({ target: "aside" });
-            $("aside > ul").affix();
-        });
-    </script>
-</body>
-</html>

@@ -1,0 +1,48 @@
+---
+layout: bloglayout
+---
+
+<div class="blogpost">
+    <h3>{{ page.title }}</h3>
+    {{ content }}
+    <hr />
+    <p class="postfoot">Posted on {{ page.date | date_to_string }} by {{ page.author }}</p>
+    <!-- AddThis Button BEGIN -->
+    <div class="addthis_toolbox addthis_default_style">
+    <a class="addthis_button_twitter"></a>
+    <a class="addthis_button_email"></a>
+    <a class="addthis_button_reddit"></a>
+    <a class="addthis_button_hackernews"></a>
+    <a class="addthis_button_compact addthis_bubble_style"></a>
+    </div>
+    <script type="text/javascript">
+        var addthis_config = { "data_track_addressbar": false };
+        var addthis_share = { "title": "{{ page.title }}", "url": "http://discretelogics.com{{ page.url }}"  };
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-513c6ac36328ba2c"></script>
+    <!-- AddThis Button END -->
+
+    {% unless page.tags == empty %}
+    <ul class="tag_box inline">
+        <li><i class="icon-tags"></i></li>
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+    </ul>
+    {% endunless %}  
+    <hr>
+    <div class="pagination">
+        <ul>{% if page.previous %}
+            <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+            {% else %}
+            <li class="prev disabled"><a>&larr; Previous</a></li>
+            {% endif %}
+            {% if page.next %}
+            <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+            {% else %}
+            <li class="next disabled"><a>Next &rarr;</a>
+            {% endif %}
+        </ul>
+    </div>
+    <hr>
+</div>
+
