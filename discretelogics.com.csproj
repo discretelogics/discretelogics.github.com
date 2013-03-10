@@ -60,7 +60,6 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".hgignore" />
     <Content Include="blog\archive.html" />
     <Content Include="blog\index.html" />
     <Content Include="blog\_posts\2013-03-09-living-in-exciting-times.md" />
@@ -916,6 +915,9 @@
     <Content Include="_layouts\default.html" />
     <Content Include="_layouts\page.html" />
     <Content Include="_layouts\post.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blog\_posts\2013-03-10-new-product-teahouse-browse-time-series-by-chart.md" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

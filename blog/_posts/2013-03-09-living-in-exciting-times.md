@@ -14,7 +14,7 @@ unpreceded excitement. Since then? Even more exciting!
 #### Having the Choice
 Back then, google invented [Big Table](https://en.wikipedia.org/wiki/BigTable) and applied 
 [Map Reduce](https://en.wikipedia.org/wiki/MapReduce) to solve their persistence and processing 
-needs, <!-- more start --> demonstrating how software architects should think about their needs before going traditional ways 
+needs,   <!-- more start --> demonstrating how software architects should think about their needs before going traditional ways 
 (using relational SQL databases). The “NoSQL” movement evolved and new products approached data 
 storage and processing in new ways. Alex Popescu's [blog](http://nosql.mypopescu.com/kb/nosql) 
 collects citations what poeple actually consider NoSQL to be. “Having the choice” is Jan Lehnardt’s view.
