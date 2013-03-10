@@ -1,5 +1,5 @@
 server: true
-auto: false
+auto: true
 server_port: 4001
 
 markdown: rdiscount
