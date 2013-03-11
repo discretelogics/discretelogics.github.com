@@ -14,7 +14,7 @@ a Windows application to browse and visualize time series like financial, sensor
   
 #### Large files forced us to do it
 We built TeaHouse to have a tool that opens arbitrarily large time series and draws data of any format (temperatures, 
-prices, aggregated values). WeLeaving any "advanced" analysis operationsout, we put the focus on efficient data 
+prices, aggregated values). Leaving any "advanced" analysis operationsout, we set the focus on efficient data 
 access and versatile data handling so that it opens just any time series file.
 
 #### Data Access in TeaHouse
