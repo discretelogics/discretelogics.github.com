@@ -18,9 +18,9 @@ prices, aggregated values). Leaving "advanced" analysis operations out, we set t
 access and versatile data handling so that it opens just any time series file.
 
 #### Data Access in TeaHouse
-How we did it? When a file is opened with TeaHouse, the length of the file is already available from the file descriptor, 
+How do we open Gigabyte files in a Millisecond? When a file is opened with TeaHouse, the length of the file is already available from the file descriptor, 
 from which the number of items in the file can be computed. Then the last (most times 4kB large) 
-page is read from disk, enough to draw the available portion of the time series. So in summary, onlY a single page
+page is read from disk, enough to draw the available portion of the time series. So only a single page
 is read from disk when a file of any size is opened. And this holds independent of the filesize, so the file could be Tera 
 or Petabytes and the loading time would not become any longer. Upon scrolling, more pages are loaded from disk on demand, which goes 
 unnoticable for local files and still smooth for files accessed via LANs.
