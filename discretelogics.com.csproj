@@ -60,6 +60,7 @@
     <Folder Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="blog\archive.html" />
     <Content Include="blog\index.html" />
     <Content Include="blog\_posts\2013-03-09-living-in-exciting-times.md" />
