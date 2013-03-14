@@ -1,8 +1,10 @@
-server: true
-auto: true
+server: false
+auto: false
 server_port: 4001
-
 markdown: rdiscount
+
+description: "Time Series Analysis in Real Time and Historical. Time Series Persistence. Time Series Storage in Flat Files. Backtesting. Time Series Visualisation. Financial Chart. Chart"
+keywords: "time series, time series analysis, time series persistence, time series visualization, chart, financial chart, time series management"
 
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks

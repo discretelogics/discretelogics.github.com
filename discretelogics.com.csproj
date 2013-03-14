@@ -110,6 +110,7 @@
     <Content Include="_includes\JB\setup" />
     <Content Include="_includes\JB\sharing" />
     <Content Include="_includes\JB\tags_list" />
+    <None Include="_includes\meta" />
     <Content Include="_includes\teahouseversion.txt" />
     <Content Include="_layouts\bloglayout.html" />
     <Content Include="_layouts\main.html" />
