@@ -102,8 +102,7 @@
     <Content Include="downloads\DiscreteLogics.Yahoo.vsix" />
     <Content Include="Rakefile" />
     <Content Include="_config.yml" />
-    <Content Include="_includes\JB\analytics" />
-    <Content Include="_includes\JB\analytics-providers\google" />
+    <None Include="_includes\ga" />
     <Content Include="_includes\JB\categories_list" />
     <Content Include="_includes\JB\liquid_raw" />
     <Content Include="_includes\JB\pages_list" />

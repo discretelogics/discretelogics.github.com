@@ -2,5 +2,5 @@ _site
 .hg
 .hgignore
 obj
-.suo
+*.suo
 .user
