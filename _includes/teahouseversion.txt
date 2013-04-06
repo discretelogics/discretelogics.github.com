@@ -1,1 +1,1 @@
-﻿{% assign teahouseversion = "1.1.38.1" %}
+﻿{% assign teahouseversion = "1.2.43.1" %}
