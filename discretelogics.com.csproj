@@ -100,6 +100,7 @@
     <Content Include="downloads\DiscreteLogics.TeaShell.x64.msi" />
     <Content Include="downloads\DiscreteLogics.TeaShell.x86.msi" />
     <Content Include="downloads\DiscreteLogics.Yahoo.vsix" />
+    <Content Include="downloads\index.htm" />
     <Content Include="Rakefile" />
     <Content Include="_config.yml" />
     <None Include="_includes\ga" />
@@ -901,7 +902,7 @@
     <Content Include="js\jquery-1.9.0.js" />
     <Content Include="js\jquery.cookie.js" />
     <Content Include="js\shop.js" />
-    <Content Include="press\pressteahouse\index.htm" />
+    <Content Include="press\pressteahouse\_index.htm" />
     <Content Include="resources\benchmarks\teafilesbm.htm\index.htm" />
     <Content Include="resources\benchmarks\teafilesbm\index.htm" />
     <Content Include="resources\index.htm" />
