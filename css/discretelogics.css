@@ -2,6 +2,7 @@
 {
     background-color: #f3f2f1;
     overflow-y: scroll;
+    padding-top: 1em;
 }
 
 .logo,
@@ -637,7 +638,7 @@ section
 {
     font-size: 18px;
 }
-    
+
 
 .vhidden
 {
